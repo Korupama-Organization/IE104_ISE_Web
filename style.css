@@ -1,0 +1,30 @@
+#header{
+    display: flex;
+    width: 1440px;
+    height: 88px;
+    padding: 0 64px 0 64px;   
+    align-items: center;
+    gap: 64px;
+    background: var(--Neutral-50, #FAFAFA);
+}
+.hder
+{
+ display: flex;
+ align-items: center;
+ gap: 32px;
+ align-self: stretch;
+ color: var(--Neutral-950, #0A0A0A);
+ font-size: 24px;
+ font-family: Noto Sans Arabic, Time New Roman;
+ font-weight: 500;
+ word-wrap: break-word
+} 
+
+.navigation
+{
+display: flex;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
