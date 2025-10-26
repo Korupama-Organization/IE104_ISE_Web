@@ -8,7 +8,8 @@
     align-items: center;
     gap: 52px;
     background: var(--Neutral-50, #FAFAFA);
-    position: fixed;
+    position: sticky;
+    top:0;
 }
 
 .rHeader .navbar{
@@ -63,7 +64,7 @@
     font-family: "Gelasio", Noto Sans Arabic, Time New Roman;
     font-size: 20px;
     text-decoration: none;
-    line-height: inheri;
+    line-height: inherit;
 }
 
 .nav-item{
@@ -80,13 +81,11 @@
 
 .navigation:hover .dropdown-menu{display:block}
 
-/* Footer CSS */
-
-
+/* Footer */
 .footer {
   display: inline-flex;
   align-items: flex-start;
-  position: fixed;
+  position: static;
   bottom: 0;
 
 }
@@ -380,4 +379,3 @@
 .footer .text-wrapper-3 {
   font-size: 24px;
 }
-
