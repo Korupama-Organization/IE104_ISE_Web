@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component</title>
+    <link rel="stylesheet" href="../styles/daotao.css">
+    <style>
+        /* Reset cho component */
+        * {
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Tránh scrollbar */
+            background: transparent; /* Làm background trong suốt */
+        }
+        
+        /* Đảm bảo header fit perfectly */
+        .header {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Responsive cho object container */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; /* Ẩn menu trên mobile nếu cần */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="viet-logo">
+            <img src="../assets/khkttt_logo_vn.png" alt="Logo Trường Đại học UIT">
+        </div>
+        
+        <nav class="nav-menu">
+            <div class="nav-item">Giới thiệu</div>
+            <div class="nav-item">Bộ môn</div>
+            <div class="nav-item">Nghiên cứu</div>
+            <div class="nav-item">Tin tức</div>
+            <div class="nav-item">Phòng thực hành</div>
+            <div class="nav-item">Công nghệ</div>
+            <div class="nav-item">Liên hệ</div>
+        </nav>
+        
+        <div class="vietnam-flag">
+            <!-- Tạm thời ẩn flag vì chưa có file hình ảnh -->
+            <!-- <img src="../assets/vietnam-flag.png" alt="Vietnam Flag"> -->
+        </div>
+    </header>
+
+    <script>
+        // Tự động điều chỉnh chiều cao cho parent object
+        function adjustParentHeight() {
+            const header = document.querySelector('.header');
+            if (header && window.parent !== window) {
+                const height = header.offsetHeight;
+                // Gửi message cho parent window để adjust height
+                window.parent.postMessage({
+                    type: 'resize',
+                    height: height
+                }, '*');
+            }
+        }
+        
+        // Gọi khi DOM load và khi resize
+        document.addEventListener('DOMContentLoaded', adjustParentHeight);
+        window.addEventListener('resize', adjustParentHeight);
+        
+        // Gọi sau một chút để đảm bảo CSS đã load
+        setTimeout(adjustParentHeight, 100);
+    </script>
+</body>
+</html>

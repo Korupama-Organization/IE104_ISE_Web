@@ -93,7 +93,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 48px;
     line-height: 48px;
@@ -172,7 +172,7 @@ body {
 }
 
 .program-title {
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
@@ -269,7 +269,7 @@ body {
     position: absolute;
     top: 123px;
     left: 32px;
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 40px;
@@ -325,6 +325,46 @@ body {
     color: white;
 }
 
+.job-item a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29.25px;
+    color: #0a0a0a;
+    margin: 0 0 24px 24px; 
+    padding-left: 20px;
+    list-style: disc;
+}
+ol {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29.25px;
+    color: #0a0a0a;
+    margin: 0 0 24px 24px; 
+    padding-left: 20px;
+    list-style: decimal;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+
+ul ul {
+    margin: 8px 0 8px 20px;
+    list-style: circle;
+}
+
 .content-image {
     width: 100%;
     margin: 32px 0;
@@ -363,7 +403,9 @@ body {
     font-weight: 600;
     font-size: 16px;
     padding: 16px 12px;
-    text-align: left;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #065285;
     border-bottom: 2px solid #065285;
 }
 
@@ -384,14 +426,25 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: #0a0a0a;
-    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #d0d0d0;
 }
 
 .program-table tbody td:first-child {
     font-weight: 600;
     color: #083344;
     text-align: center;
+    vertical-align: middle;
     width: 60px;
+}
+
+/* Special styling for bold rows (like total) */
+.program-table tbody tr[style*="font-weight: bold"] td {
+    background-color: #f0f7ff;
+    font-weight: 600;
+    color: #083344;
+    border-top: 2px solid #065285;
 }
 
 /* Program List Section */
@@ -608,4 +661,12 @@ body {
         width: 100%;
         box-shadow: none;
     }
+}
+
+/* Header Object Component Styles */
+#header-object {
+    width: 100%;
+    border: none;
+    display: block;
+    transition: height 0.3s ease; /* Smooth height transition */
 }
