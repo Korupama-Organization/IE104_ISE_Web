@@ -1,28 +1,32 @@
 // ===== COMPONENT LOADING FUNCTIONS =====
 
+// Function to load header component
+async function loadHeader() {
+    try {
+        const response = await fetch('../components/header.html');
+        const html = await response.text();
+        const headerContainer = document.getElementById('header-container');
+        if (headerContainer) {
+            headerContainer.innerHTML = html;
+        }
+    } catch (error) {
+        console.error('Error loading header:', error);
+    }
+}
+
 // Function to load footer component
 async function loadFooter() {
     try {
         const response = await fetch('../components/footer.html');
-        const footerHTML = await response.text();
+        const html = await response.text();
         const footerContainer = document.getElementById('footer-container');
         if (footerContainer) {
-            footerContainer.innerHTML = footerHTML;
+            footerContainer.innerHTML = html;
         }
     } catch (error) {
         console.error('Error loading footer:', error);
     }
 }
-
-// Auto-resize object height based on content
-window.addEventListener('message', function(event) {
-    if (event.data.type === 'resize') {
-        const headerObject = document.getElementById('header-object');
-        if (headerObject) {
-            headerObject.style.height = event.data.height + 'px';
-        }
-    }
-});
 
 // ===== PROGRAM DATA AND STATE =====
 
@@ -240,6 +244,7 @@ window.addEventListener('resize', function() {
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
     // Load components
+    loadHeader();
     loadFooter();
 
     // Set default states - start with bachelor tab
