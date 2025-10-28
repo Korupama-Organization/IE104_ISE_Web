@@ -1,15 +1,34 @@
-/* Header CSS */
 
-#header{
+.header {
     display: flex;
     width: 1440px;
-    height: 72px;
-    padding: 0 64px 0 64px;   
+    height: auto; 
+    min-height: 100px; 
+    padding: 12px 64px; 
     align-items: center;
     gap: 52px;
     background: var(--Neutral-50, #FAFAFA);
     position: sticky;
-    top:0;
+    top: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+#header {
+    display: flex;
+    width: 1440px;
+    height: auto;
+    min-height: 100px;
+    padding: 12px 64px;
+    align-items: center;
+    gap: 52px;
+    background: var(--Neutral-50, #FAFAFA);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .rHeader .navbar{
@@ -81,23 +100,25 @@
 
 .navigation:hover .dropdown-menu{display:block}
 
-/* Footer */
 .footer {
-  display: inline-flex;
+  display: flex; 
   align-items: flex-start;
-  position: static;
+  justify-content: center; 
+  position: relative;
   bottom: 0;
-
+  width: 100%;
+  z-index: 10;
+  background-color: var(--Cyan-950, #083344); 
 }
 
 .footer .class {
   display: flex;
   width: 1440px;
+  max-width: 100%; 
   align-items: center;
   gap: 64px;
   padding: 32px 64px 64px;
   position: relative;
-  background-color: var(--Cyan-950, #083344);
 }
 
 .footer .frame {
