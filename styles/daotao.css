@@ -118,7 +118,6 @@ body {
     padding: 20px;
     height: fit-content; 
     position: sticky; 
-    top: 140px; 
 }
 
 .program-title {
@@ -314,10 +313,19 @@ ul ul {
 
 .content-image {
     width: 100%;
-    margin: 32px 0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    text-align: center;
+    margin-top: 8px;
 }
 
 .content-image img {
