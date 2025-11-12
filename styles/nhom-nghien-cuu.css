@@ -1,0 +1,118 @@
+/* ===== STYLES RIÊNG CHO TRANG CHI TIẾT NHÓM NGHIÊN CỨU ===== */
+
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+/* ===== CONTAINER & LAYOUT ===== */
+
+/* Container chính */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== TIÊU ĐỀ TRANG ===== */
+
+/* Section chứa tiêu đề trang */
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Tiêu đề h1 */
+.page-title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== NỘI DUNG CHÍNH ===== */
+
+/* Hình ảnh chính của nhóm */
+.page-content .main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Tiêu đề h2 cho các section (Hướng nghiên cứu, Giảng viên) */
+.research-directions h2, 
+.lecturers h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0891B2; /* Màu cyan */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0891B2; /* Gạch dưới màu cyan */
+    padding-bottom: 10px;
+}
+
+/* ===== HƯỚNG NGHIÊN CỨU ===== */
+
+/* Danh sách các hướng nghiên cứu */
+.research-directions ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===== GIẢNG VIÊN ===== */
+
+/* Mỗi giảng viên */
+.lecturers .lecturer {
+    margin-bottom: 30px;
+}
+
+/* Tên giảng viên */
+.lecturers h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.lecturers p, 
+.lecturers ul {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+.lecturers h4 {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .page-title h1 {
+        font-size: 28px;
+    }
+    
+    .research-directions h2, 
+    .lecturers h2 {
+        font-size: 24px;
+    }
+    
+    .lecturers h3 {
+        font-size: 20px;
+    }
+    
+    .lecturers p, 
+    .lecturers ul,
+    .research-directions ul {
+        font-size: 16px;
+    }
+}

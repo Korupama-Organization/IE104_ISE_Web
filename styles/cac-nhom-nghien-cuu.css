@@ -1,0 +1,89 @@
+/* ===== STYLES RIÊNG CHO TRANG CÁC NHÓM NGHIÊN CỨU ===== */
+
+/* Body style cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+/* Container chính */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== HERO SECTION ===== */
+
+/* Section giới thiệu chung ở đầu trang */
+.hero-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Tiêu đề chính */
+.hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Mô tả hero section */
+.hero-description {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ===== DANH SÁCH NHÓM NGHIÊN CỨU ===== */
+
+/* Grid layout cho các nhóm nghiên cứu */
+.research-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Link bao bọc card - xóa underline */
+.group-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Card của mỗi nhóm nghiên cứu */
+.group-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s; /* Hiệu ứng nâng lên khi hover */
+}
+
+/* Hiệu ứng hover - nâng card lên */
+.group-card-link:hover .group-card {
+    transform: translateY(-10px);
+}
+
+/* Hình ảnh trong card */
+.group-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.group-card-title {
+    padding: 20px;
+}
+
+.group-card-title h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

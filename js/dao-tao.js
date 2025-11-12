@@ -1,34 +1,5 @@
-// ===== HÀM TẢI THÀNH PHẦN =====
-
-// Hàm tải thành phần header
-async function loadHeader() {
-    try {
-        const response = await fetch('../components/header.html');
-        const html = await response.text();
-        const headerContainer = document.getElementById('header-container');
-        if (headerContainer) {
-            headerContainer.innerHTML = html;
-        }
-    } catch (error) {
-        console.error('Error loading header:', error);
-    }
-}
-
-// Hàm tải thành phần footer
-async function loadFooter() {
-    try {
-        const response = await fetch('../components/footer.html');
-        const html = await response.text();
-        const footerContainer = document.getElementById('footer-container');
-        if (footerContainer) {
-            footerContainer.innerHTML = html;
-        }
-    } catch (error) {
-        console.error('Error loading footer:', error);
-    }
-}
-
 // ===== DỮ LIỆU CHƯƠNG TRÌNH VÀ TRẠNG THÁI =====
+// Lưu ý: Header và Footer được tải bởi utils.js, không cần tải lại ở đây
 
 // Chương trình và tab đang hoạt động
 let currentProgram = 'cntt-bachelor';
@@ -246,16 +217,63 @@ window.addEventListener('resize', function() {
 
 // ===== KHỞI TẠO =====
 
+// Hàm khởi tạo tab dựa trên URL parameter
+function initializePage() {
+    // Kiểm tra URL parameters để xác định tab nào cần hiển thị
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab'); // Lấy giá trị của ?tab=
+    
+    // Xác định tab mặc định dựa trên URL parameter
+    let initialTab = 'bachelor'; // Mặc định là đại học
+    let initialProgram = 'cntt-bachelor';
+    
+    if (tabParam) {
+        switch(tabParam.toLowerCase()) {
+            case 'bachelor':
+                initialTab = 'bachelor';
+                initialProgram = 'cntt-bachelor';
+                break;
+            case 'master':
+                initialTab = 'master';
+                initialProgram = 'cntt-master';
+                break;
+            case 'phd':
+                initialTab = 'phd';
+                initialProgram = 'cntt-phd';
+                break;
+            default:
+                // Giữ giá trị mặc định nếu parameter không hợp lệ
+                initialTab = 'bachelor';
+                initialProgram = 'cntt-bachelor';
+        }
+    }
+    
+    console.log('Initializing page with tab:', initialTab, 'program:', initialProgram);
+    
+    // Kiểm tra xem các elements đã tồn tại chưa
+    const checkAndInit = () => {
+        const bachelorTab = document.getElementById('tab-bachelor');
+        if (bachelorTab) {
+            // Các elements đã sẵn sàng, chuyển tab
+            switchTab(initialTab);
+            selectProgram(initialProgram);
+            console.log('Page initialized successfully with tab:', initialTab);
+        } else {
+            // Chưa sẵn sàng, thử lại sau 100ms
+            console.log('Elements not ready, retrying...');
+            setTimeout(checkAndInit, 100);
+        }
+    };
+    
+    checkAndInit();
+}
+
 // Khởi tạo trang
 document.addEventListener('DOMContentLoaded', function() {
-    // Tải các thành phần
-    loadHeader();
-    loadFooter();
-
-    // Đặt trạng thái mặc định - bắt đầu với tab đại học
-    switchTab('bachelor');
-    selectProgram('cntt-bachelor');
-
+    // Header và Footer được tải bởi utils.js
+    // Đợi một chút để đảm bảo DOM đã được render hoàn toàn
+    setTimeout(initializePage, 100);
+    
     // Thêm scroll mượt cho mục điều hướng
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {
@@ -264,8 +282,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Navigation clicked:', this.textContent);
         });
     });
-    
-    console.log('Page initialized successfully');
 });
 
 // ===== HÀM TOÀN CỤC =====

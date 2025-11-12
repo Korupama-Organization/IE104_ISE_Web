@@ -1,18 +1,25 @@
 <header class="header">
     <!-- Logo Khoa Khoa học và Kỹ thuật thông tin -->
-    <div style="width: 200px; height: 100px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-        <img style="width: 200px; height: 100px" src="../assets/header-logo.png" alt="Logo Khoa KH-KTTT">
-    </div>
+    <a href="/" style="width: 200px; height: 100px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex; text-decoration: none;">
+        <img style="width: 200px; height: 100px" src="../../assets/header-logo.png" alt="Logo Khoa KH-KTTT">
+    </a>
     
     <!-- Thanh điều hướng -->
     <div class="rHeader">
         <ul class="navbar">
-            <li class="navigation"><a class="nav-name" href="#">Giới thiệu</a></li>
             <li class="navigation">
-                <a href="#" class="nav-name">Đào tạo</a>
+                <a class="nav-name" href="/gioi-thieu">Giới thiệu</a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item"><a href="#" class="dropdown-item">Bậc Đại học</a></li>
-                    <li class="nav-item"><a href="#" class="dropdown-item">Sau Đại học</a></li>
+                    <li class="nav-item"><a href="/gioi-thieu-chung" class="dropdown-item">Giới thiệu chung</a></li>
+                    <li class="nav-item"><a href="/doi-ngu-nhan-su" class="dropdown-item">Đội ngũ nhân sự</a></li>
+                </ul>
+            </li>
+            <li class="navigation">
+                <a href="/dao-tao" class="nav-name">Đào tạo</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="/dao-tao?tab=bachelor" class="dropdown-item">Bậc Đại học</a></li>
+                    <li class="nav-item"><a href="/dao-tao?tab=master" class="dropdown-item">Bậc Thạc sĩ</a></li>
+                    <li class="nav-item"><a href="/dao-tao?tab=phd" class="dropdown-item">Bậc Tiến sĩ</a></li>
                 </ul>
             </li>
             <li class="navigation">
@@ -23,18 +30,25 @@
                 </ul>
             </li>
             <li class="navigation">
-                <a href="#" class="nav-name">Tin tức</a>
+                <a href="/tin-tuc" class="nav-name">Tin tức</a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item"><a href="#" class="dropdown-item">Tin Học vụ</a></li>
-                    <li class="nav-item"><a href="#" class="dropdown-item">Tin Tốt nghiệp</a></li>
-                    <li class="nav-item"><a href="#" class="dropdown-item">Tin Tuyển dụng</a></li>
-                    <li class="nav-item"><a href="#" class="dropdown-item">Tin Khoa học - Công nghệ</a></li>
-                    <li class="nav-item"><a href="#" class="dropdown-item">Tin Cựu học viên</a></li>
-                    <li class="nav-item"><a href="#" class="dropdown-item">Tin khác</a></li>
+                    <li class="nav-item"><a href="/tin-tuc" class="dropdown-item">Tin Học vụ</a></li>
+                    <li class="nav-item"><a href="/tin-tuc" class="dropdown-item">Tin Tốt nghiệp</a></li>
+                    <li class="nav-item"><a href="/tin-tuc" class="dropdown-item">Tin Tuyển dụng</a></li>
+                    <li class="nav-item"><a href="/tin-tuc" class="dropdown-item">Tin Khoa học - Công nghệ</a></li>
+                    <li class="nav-item"><a href="/tin-tuc" class="dropdown-item">Tin Cựu học viên</a></li>
+                    <li class="nav-item"><a href="/tin-tuc" class="dropdown-item">Tin khác</a></li>
                 </ul>
             </li>
-            <li class="navigation"><a href="#" class="nav-name">Khoa học - Công nghệ</a></li>
-            <li class="navigation"><a href="#" class="nav-name">Liên hệ</a></li>
+            <li class="navigation">
+                <a href="/cac-nhom-nghien-cuu" class="nav-name">Khoa học - Công nghệ</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="/cac-nhom-nghien-cuu" class="dropdown-item">Các nhóm nghiên cứu</a></li>
+                    <li class="nav-item"><a href="/cong-bo-khoa-hoc" class="dropdown-item">Công bố khoa học</a></li>
+                    <li class="nav-item"><a href="/bai-bao-nckh-sinh-vien" class="dropdown-item">Bài báo NCKH SV</a></li>
+                </ul>
+            </li>
+            <li class="navigation"><a href="/lien-he" class="nav-name">Liên hệ</a></li>
         </ul>
     </div>
     
