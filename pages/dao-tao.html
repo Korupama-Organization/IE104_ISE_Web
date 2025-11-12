@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đào tạo - Khoa Khoa học và kỹ thuật thông tin</title>
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/daotao.css" />
+    <script src="../js/utils.js"></script>
+    <script src="../js/dao-tao.js" defer></script>
+</head>
+<body>
+    
+    <!-- Header sẽ được load vào đây -->
+    <div id="header-container"></div>
+
+    <div class="container">
+        <!-- Giới thiệu tab -->
+        <section class="hero-section">
+            <h1 class="hero-title">Chương trình Đào tạo</h1>
+            <p class="hero-description">
+                Khoa Khoa học Kỹ thuật Thông tin cung cấp các chương trình đào tạo chất lượng cao <br/>
+                từ bậc đại học đến sau đại học, đào tạo ra các chuyên gia CNTT <br/>
+                có tay nghề cao, có tư duy sáng tạo và khả năng nghiên cứu phát triển.
+            </p>
+        </section>
+
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <div class="tab" id="tab-bachelor" onclick="switchTab('bachelor')">
+                Bậc Đại học
+            </div>            
+            <div class="tab active" id="tab-master" onclick="switchTab('master')">
+                Bậc Thạc sĩ
+            </div>
+            <div class="tab" id="tab-phd" onclick="switchTab('phd')">
+                Bậc Tiến sĩ
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Program Navigation Cards -->
+            <aside class="program-cards">
+            <h3 class="program-title">Ngành đào tạo</h3>
+            
+            <!-- Bachelor's Programs -->
+            <div class="program-card bachelor-program hidden" onclick="selectProgram('cntt-bachelor')">
+                <div class="program-name">Công nghệ Thông tin</div>
+                <div class="program-info">Mã ngành: 7480201</div>
+            </div>
+
+            <div class="program-card bachelor-program hidden" onclick="selectProgram('cnnb-bachelor')">
+                <div class="program-name">Công nghệ Thông tin<br> - Việt Nhật</div>
+                <div class="program-info">Mã ngành: 7480201_VN</div>
+            </div>
+
+            <div class="program-card bachelor-program hidden" onclick="selectProgram('khdl-bachelor')">
+                <div class="program-name">Khoa học Dữ liệu</div>
+                <div class="program-info">Mã ngành: 7460108</div>
+            </div>
+
+            <!-- Master's Programs -->
+            <div class="program-card active master-program" onclick="selectProgram('cntt-master')">
+                <div class="program-name">Công nghệ Thông tin</div>
+                <div class="program-info">Mã ngành: 8480201</div>
+            </div>
+
+            <!-- PhD Programs -->
+            <div class="program-card phd-program hidden" onclick="selectProgram('cntt-phd')">
+                <div class="program-name">Công nghệ Thông tin</div>
+                <div class="program-info">Mã ngành: 9480201</div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="main-content">
+            <!-- Bachelor's Content -->
+            <div id="bachelor-content" class="program-content hidden">
+                <!-- CNTT Bachelor Content -->
+                <div id="cntt-bachelor" class="sub-program-content">
+                    <!-- Banner -->
+                    <div>
+                        <img class="banner-image" src="../assets/daotao_cntt_1.jpg" alt="Cử nhân Công nghệ Thông tin">
+                        <div class="banner-overlay">
+                            <h2 class="banner-title">Cử nhân<br>Công nghệ Thông tin</h2>
+                        </div>
+                    </div>
+
+                    <!-- Program Information -->
+                    <div class="content-section">
+                        <h3 class="section-title">Mục tiêu đào tạo</h3>
+                        <p class="section-content">
+                            Chương trình Cử nhân Công nghệ Thông tin đào tạo những cử nhân ngành Công nghệ thông tin 
+                            có phẩm chất chính trị tốt, có đạo đức nghề nghiệp, có ý thức trách nhiệm tổ chức, 
+                            và có sức khỏe tốt; nắm vững các kiến thức cơ bản 
+                            và chuyên môn sâu về công nghệ thông tin (CNTT); 
+                            đáp ứng các yêu cầu về nghiên cứu phát triển và ứng dụng công nghệ thông tin của xã hội;
+                            có năng lực tham mưu, tư vấn và có khả năng tổ chức thực hiện nhiệm vụ với tư cách của 
+                            một chuyên viên trong lĩnh vực CNTT. Bên cạnh đó, trên cơ sở các kiến thức được trang bị ở trình độ đại học, 
+                            người học có đủ năng lực từng bước hoàn thiện khả năng độc lập nghiên cứu,
+                            tự bồi dưỡng và tiếp tục lên học các trình độ cao hơn.
+                        </p>
+
+                        <h3 class="section-title">Vị trí và khả năng làm việc sau tốt nghiệp</h3>
+                        <div class="job-item">
+                            <p>Chuyên viên thiết kế, xây dựng và quản lý các dự án nghiên cứu và ứng dụng CNTT</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Chuyên viên quản lý, giám sát, đầu tư các dự án công nghệ thông tin.</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Chuyên viên khai thác dữ liệu và thông tin ứng dụng cho các doanh nghiệp</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Chuyên viên có kĩ năng phát triển các ứng dụng truyền thông xã hội và công nghệ Web.</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Cán bộ giảng dạy, nghiên cứu khoa học và ứng dụng CNTT ở các trường đại học và cao đẳng.</p>
+                        </div>
+
+                        <h3 class="section-title">Quan điểm xây dựng chương trình đào tạo</h3>
+                        <p class="section-content">
+                            Chương trình được thiết kế sao cho đảm bảo đủ độ phủ, độ sâu nhất định nhằm tạo điều kiện, cơ hội phát triển cho sinh viên làm việc, và có thể tiếp tục nghiên cứu chuyên sâu về các chuyên ngành CNTT, trong đó độ phủ được đặt trọng tâm.
+                            <br>                            
+                            Chương trình được thiết kế với mục tiêu phát triển nguồn nhân lực phục vụ cho công cuộc phát triển và hội nhập của đất nước:
+                            <ul>
+                                <li>Đào tạo nguồn nhân lực có khả năng để vận hành, quản lý, giám sát; phân tích và phát triển các ứng dụng công nghệ thông tin tại các doanh nghiệp, các đơn vị không chuyên về CNTT nhằm tạo ra các giá trị lợi ích gia tăng cho các doanh nghiệp;</li>
+                                <li>Đào tạo nguồn nhân lực có khả năng khai thác dữ liệu và thông tin ứng dụng cho các doanh nghiệp trong vấn đề phân tích định lượng;</li>
+                                <li>Đào tạo nguồn nhân lực có kĩ năng phát triển ứng dụng truyền thông xã hội và công nghệ Web;</li>
+                                <li>Đào tạo nguồn nhân lực kỹ thuật tham gia các quy trình thiết kế, xây dựng, quản lý các dự án nghiên cứu và ứng dụng CNTT, chủ yếu trong lĩnh vực: địa lý, môi trường, viễn thám.</li>
+                            </ul>
+                            <br>
+                        </p>
+                        <p class="section-content"> Chương trình được thiết kế, xây dựng dựa vào tầm nhìn và sứ mệnh nhà trường; phiếu góp ý của doanh nghiệp, sinh viên tốt nghiệp, giảng viên giảng dạy và tài liệu tham khảo chính là Chương trình đào tạo Đại học về Công nghệ Thông tin của ACM (Association for Computing Machinery) và IEEE Computer Society ấn hành.</p>
+
+                        <img src="../assets/mo_ta_cntt.png" alt="Mục tiêu đào tạo CNTT" class="content-image"/>
+                        <p class="image-caption" >Hình 1. Mô tả ngành Công nghệ Thông tin</p>
+
+                        <h3 class="section-title" >Hình thức và thời gian đào tạo</h3>
+                        <p class="section-content">
+                            <ul>
+                                <li><strong>Hình thức đào tạo:</strong> Chính quy.</li>
+                                <li><strong>Số tín chỉ đào tạo:</strong> Tối thiểu 125 tín chỉ (bao gồm cả ngoại ngữ).</li>
+                                <li><strong>Thời gian đào tạo:</strong> 04 năm (08 học kỳ chính).</li>
+                            </ul>
+                        </p>
+
+                        <h3 class="section-title">Chuẩn đầu ra</h3>
+                        <p class="section-content">
+                            Sinh viên tốt nghiệp chương trình cử nhân Công nghệ Thông tin phải đáp ứng các yêu cầu:
+                            <ol>
+                                <li>
+                                    Về kiến thức:<br>
+                                    <ul>
+                                        <li>PLO 1: Lorem ipsum dolor sit amet, có kiến thức nền tảng về toán học, khoa học máy tính và công nghệ thông tin</li>
+                                        <li>PLO 2: Consectetur adipiscing elit, nắm vững các nguyên lý lập trình và cấu trúc dữ liệu</li>
+                                        <li>PLO 3: Sed do eiusmod tempor, hiểu biết về kiến trúc máy tính và hệ điều hành</li>
+                                        <li>PLO 4: Ut labore et dolore magna, có kiến thức về mạng máy tính và bảo mật thông tin</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Về kỹ năng:<br>
+                                    <ul>
+                                        <li>PLO 5: Duis aute irure dolor, có kỹ năng phân tích và giải quyết vấn đề</li>
+                                        <li>PLO 6: Reprehenderit in voluptate, thành thạo ít nhất 2 ngôn ngữ lập trình</li>
+                                        <li>PLO 7: Excepteur sint occaecat, làm việc nhóm hiệu quả trong các dự án phần mềm</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Về phẩm chất, thái độ:<br>
+                                    <ul>
+                                        <li>PLO 8: Cupidatat non proident, có đạo đức nghề nghiệp và ý thức trách nhiệm</li>
+                                        <li>PLO 9: Sunt in culpa qui officia, tinh thần học hỏi và cập nhật công nghệ mới</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </p>
+                        <div class="curriculum-table">
+                            <table class="program-table">
+                            <thead>
+                                <tr>
+                                    <th>CĐR</th>
+                                    <th>MÔ TẢ CĐR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>(LO1) Kiến thức nền tảng về khoa học tự nhiên và khoa học xã hội</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>1.1</td>
+                                    <td>Kiến thức nền tảng về khoa học tự nhiên</td>
+                                </tr>
+                                <tr>
+                                    <td>1.2</td>
+                                    <td>Kiến thức nền tảng về khoa học xã hội</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2</strong></td>
+                                    <td><strong>(LO2) Kiến thức nền tảng và chuyên sâu ngành Công nghệ thông tin</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2.1</td>
+                                    <td>Kiến thức hệ điều hành</td>
+                                </tr>
+                                <tr>
+                                    <td>2.2</td>
+                                    <td>Kiến thức lập trình</td>
+                                </tr>
+                                <tr>
+                                    <td>2.3</td>
+                                    <td>Kiến thức giải thuật</td>
+                                </tr>
+                                <tr>
+                                    <td>2.4</td>
+                                    <td>Kiến thức quản lý thông tin</td>
+                                </tr>
+                                <tr>
+                                    <td>2.5</td>
+                                    <td>Kiến thức ngành</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3</strong></td>
+                                    <td><strong>(LO3) Khảo sát tài liệu, lập luận, phân tích và đề xuất giải pháp</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>3.1</td>
+                                    <td>Kỹ năng khảo sát</td>
+                                </tr>
+                                <tr>
+                                    <td>3.2</td>
+                                    <td>Kỹ năng lập luận, phân tích</td>
+                                </tr>
+                                <tr>
+                                    <td>3.3</td>
+                                    <td>Kỹ năng xây dựng ý tưởng, giải pháp</td>
+                                </tr>
+                                <tr>
+                                    <td>3.4</td>
+                                    <td>Kỹ năng học tập suốt đời</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4</strong></td>
+                                    <td><strong>(LO4) Thiết kế, hiện thực hóa hệ thống</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>4.1</td>
+                                    <td>Kỹ năng thiết kế, hiện thực hệ thống</td>
+                                </tr>
+                                <tr>
+                                    <td>4.2</td>
+                                    <td>Kỹ năng đánh giá hệ thống</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5</strong></td>
+                                    <td><strong>(LO5) Giao tiếp, hợp tác hiệu quả với các cá nhân và tập thể</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6</strong></td>
+                                    <td><strong>(LO6) Đọc hiểu, thuyết trình bằng ngoại ngữ</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>6.1</td>
+                                    <td>Kỹ năng giao tiếp nói, viết tổng quát</td>
+                                </tr>
+                                <tr>
+                                    <td>6.2</td>
+                                    <td>Đọc hiểu tài liệu chuyên môn bằng ngoại ngữ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>7</strong></td>
+                                    <td><strong>(LO7) Lãnh đạo và quản lý</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>8</strong></td>
+                                    <td><strong>(LO8) Trách nhiệm nghề nghiệp, pháp luật và các giá trị đạo đức</strong></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <h3 class="section-title">Khung chương trình đào tạo (Áp dụng từ Khoá 19 - 2024)</h3>
+                        <img src="../assets/khung_ctdt_cntt.png" alt="Khung chương trình đào tạo CNTT" class="content-image"/>
+                        <p class="image-caption" >Hình 2. Khung chương trình đào tạo ngành Công nghệ Thông tin</p>
+                    </div>
+                </div>
+
+                <!-- CNNB Bachelor Content (Việt-Nhật) -->
+                <div id="cnnb-bachelor" class="sub-program-content hidden">
+                    <!-- Banner -->
+                    <div>
+                        <img class="banner-image" src="../assets/bannerctvietnhat2.png" alt="Cử nhân CNTT Việt-Nhật">
+                    </div>
+
+                    <!-- Program Information -->
+                    <div class="content-section">
+                        <h3 class="section-title">Mục tiêu đào tạo</h3>
+                        <p class="section-content">
+                            Chương trình tiên tiến Việt-Nhật nhằm đào tạo kỹ sư CNTT có năng lực làm việc trong môi trường quốc tế, đặc biệt là thị trường Nhật Bản. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis.<br><br>
+                            Sinh viên được trang bị không chỉ kiến thức chuyên môn vững vàng mà còn kỹ năng tiếng Nhật chuyên ngành, hiểu biết văn hóa và phương pháp làm việc Nhật Bản. 
+                            Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. 
+                            Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum.
+                        </p>
+
+                        <h3 class="section-title">Vị trí và khả năng làm việc sau tốt nghiệp</h3>
+                        <div class="job-item">
+                            <p>Kỹ sư phần mềm tại các công ty Nhật Bản - Elementum integer enim neque volutpat</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Bridge System Engineer (BSE) - Nunc sed id semper risus in hendrerit gravida</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Offshore Developer tại các dự án Japan Outsourcing - Sapien pellentesque habitant morbi</p>
+                        </div>
+                        <div class="job-item">
+                            <p>IT Consultant cho doanh nghiệp Nhật - Egestas congue quisque egestas diam</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Cơ hội làm việc và định cư tại Nhật Bản - Tempor nec feugiat nisl pretium fusce</p>
+                        </div>
+
+                        <h3 class="section-title">Hình thức và thời gian đào tạo</h3>
+                        <p class="section-content">
+                            <strong>Loại hình đào tạo:</strong> Chính quy - Chương trình tiên tiến.<br><br>
+                            <strong>Hình thức đào tạo:</strong> Vitae turpis massa sed elementum tempus egestas sed sed risus. 
+                            Chương trình kết hợp giữa giảng viên Việt Nam và chuyên gia từ Nhật Bản. 
+                            Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. 
+                            Tài liệu học tập song ngữ Việt-Nhật, môi trường học tập theo phong cách Nhật Bản.<br><br>
+                            <strong>Đặc điểm nổi bật:</strong><br>
+                            <ul>
+                                <li>Học tiếng Nhật chuyên ngành IT từ năm thứ nhất - Nisl tincidunt eget nullam non nisi</li>
+                                <li>Thực tập tại các công ty Nhật Bản từ năm 3 - Purus sit amet volutpat consequat mauris</li>
+                                <li>Có cơ hội trao đổi, học tập ngắn hạn tại Nhật Bản - Sed blandit libero volutpat sed cras</li>
+                                <li>100% giảng dạy bằng tài liệu chuẩn Nhật Bản - Ornare arcu dui vivamus arcu felis bibendum</li>
+                            </ul>
+                            <strong>Thời gian đào tạo:</strong> 04 năm (08 học kỳ chính).
+                        </p>
+
+                        <h3 class="section-title">Chuẩn đầu ra</h3>
+                        <p class="section-content">
+                            Sinh viên tốt nghiệp chương trình Việt-Nhật phải đáp ứng:
+                            <ol>
+                                <li>
+                                    Về kiến thức:<br>
+                                    <ul>
+                                        <li>PLO 1: Ipsum dolor sit amet, tương đương chuẩn đầu ra chương trình chính quy CNTT</li>
+                                        <li>PLO 2: Consectetur adipiscing elit, bổ sung kiến thức về công nghệ và quy trình Nhật Bản</li>
+                                        <li>PLO 3: Sed do eiusmod tempor, nắm vững phương pháp phát triển phần mềm theo chuẩn Nhật</li>
+                                        <li>PLO 4: Incididunt ut labore, hiểu biết sâu về văn hóa doanh nghiệp Nhật Bản</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Về kỹ năng:<br>
+                                    <ul>
+                                        <li>PLO 5: Dolore magna aliqua, tiếng Nhật chuyên ngành đạt N3 trở lên (tối thiểu)</li>
+                                        <li>PLO 6: Ut enim ad minim, kỹ năng giao tiếp đa văn hóa trong môi trường quốc tế</li>
+                                        <li>PLO 7: Veniam quis nostrud, làm việc theo quy trình và chuẩn mực Nhật Bản</li>
+                                        <li>PLO 8: Exercitation ullamco, tư duy logic và kỹ năng giải quyết vấn đề theo phong cách Nhật</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Về phẩm chất, thái độ:<br>
+                                    <ul>
+                                        <li>PLO 9: Laboris nisi ut aliquip, tinh thần làm việc kỷ luật, chuyên nghiệp</li>
+                                        <li>PLO 10: Ex ea commodo consequat, thái độ tôn trọng và học hỏi văn hóa Nhật Bản</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </p>
+
+                        <h3 class="section-title">Chương trình đào tạo</h3>
+                        <p class="section-content">
+                            Tổng số tín chỉ: <strong>140 tín chỉ</strong><br>
+                            Duis aute irure dolor, bao gồm:<br>
+                            - Kiến thức giáo dục đại cương: 36 tín chỉ<br>
+                            - Tiếng Nhật chuyên ngành: 24 tín chỉ<br>
+                            - Kiến thức chuyên ngành CNTT: 64 tín chỉ<br>
+                            - Thực tập & Đồ án tốt nghiệp: 16 tín chỉ
+                        </p>
+                    </div>
+                </div>
+
+                <!-- KHDL Bachelor Content (Data Science) -->
+                <div id="khdl-bachelor" class="sub-program-content hidden">
+                    <!-- Banner -->
+                    <div>
+                        <img class="banner-image" src="../assets/daotao_khdl_1.jpg" alt="Cử nhân Khoa học Dữ liệu">
+                        <div class="banner-overlay">
+                            <h2 class="banner-title">Cử nhân<br>Khoa học Dữ liệu</h2>
+                        </div>
+                    </div>
+
+                    <!-- Program Information -->
+                    <div class="content-section">
+                        <h3 class="section-title">Mục tiêu đào tạo</h3>
+                        <p class="section-content">
+                            Chương trình Khoa học Dữ liệu đào tạo thế hệ chuyên gia phân tích dữ liệu, data scientist trong kỷ nguyên số. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Mi bibendum neque egestas congue quisque egestas diam in arcu cursus euismod quis viverra nibh cras.<br><br>
+                            Sinh viên được trang bị kiến thức toán học, thống kê, machine learning, big data và kỹ năng xử lý, phân tích dữ liệu quy mô lớn. 
+                            Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis bibendum ut tristique et egestas. 
+                            Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit.
+                        </p>
+
+                        <h3 class="section-title">Vị trí và khả năng làm việc sau tốt nghiệp</h3>
+                        <div class="job-item">
+                            <p>Data Scientist tại các tập đoàn công nghệ - Scelerisque eleifend donec pretium vulputate</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Data Analyst/Business Intelligence Analyst - Sapien faucibus et molestie ac feugiat sed</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Machine Learning Engineer - Lectus vestibulum mattis ullamcorper velit sed ullamcorper</p>
+                        </div>
+                        <div class="job-item">
+                            <p>AI Research Engineer - Morbi non arcu risus quis varius quam quisque</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Big Data Engineer - Augue lacus viverra vitae congue eu consequat ac</p>
+                        </div>
+                        <div class="job-item">
+                            <p>Data Engineer/Data Architect - Felis imperdiet proin fermentum leo vel orci</p>
+                        </div>
+
+                        <h3 class="section-title">Hình thức và thời gian đào tạo</h3>
+                        <p class="section-content">
+                            <strong>Loại hình đào tạo:</strong> Chính quy - Chương trình định hướng nghiên cứu.<br><br>
+                            <strong>Hình thức đào tạo:</strong> Turpis in eu mi bibendum neque egestas congue quisque egestas. 
+                            Chương trình chú trọng thực hành với các dataset thực tế từ doanh nghiệp, tham gia các cuộc thi Data Science. 
+                            Aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant.<br><br>
+                            <strong>Đặc điểm nổi bật:</strong><br>
+                            <ul>
+                                <li>Học Python, R, SQL từ năm 1 - Morbi tristique senectus et netus et malesuada</li>
+                                <li>Thực hành trên các nền tảng cloud (AWS, Google Cloud) - Fames ac turpis egestas sed tempus</li>
+                                <li>Làm việc với big data frameworks (Hadoop, Spark) - Urna porttitor rhoncus dolor purus non</li>
+                                <li>Dự án capstone với dữ liệu thực từ doanh nghiệp - Enim ut tellus elementum sagittis vitae et</li>
+                                <li>Tham gia research lab về AI & Data Science - Leo vel orci porta non pulvinar neque</li>
+                            </ul>
+                            <strong>Thời gian đào tạo:</strong> 04 năm (08 học kỳ chính + học kỳ hè).
+                        </p>
+
+                        <h3 class="section-title">Chuẩn đầu ra</h3>
+                        <p class="section-content">
+                            Sinh viên tốt nghiệp chương trình Khoa học Dữ liệu phải đáp ứng:
+                            <ol>
+                                <li>
+                                    Về kiến thức:<br>
+                                    <ul>
+                                        <li>PLO 1: Amet volutpat consequat mauris, nền tảng toán học vững chắc (xác suất thống kê, đại số tuyến tính, giải tích)</li>
+                                        <li>PLO 2: Nunc pulvinar sapien et, kiến thức sâu về machine learning và deep learning</li>
+                                        <li>PLO 3: Ligula ullamcorper malesuada, hiểu biết về big data technologies và distributed computing</li>
+                                        <li>PLO 4: Proin nibh nisl condimentum, nắm vững các kỹ thuật data mining và visualization</li>
+                                        <li>PLO 5: Id venenatis a condimentum, kiến thức về database systems và data warehousing</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Về kỹ năng:<br>
+                                    <ul>
+                                        <li>PLO 6: Vitae sapien pellentesque, thành thạo Python, R và các thư viện data science</li>
+                                        <li>PLO 7: Habitant morbi tristique, kỹ năng xử lý và làm sạch dữ liệu (data wrangling)</li>
+                                        <li>PLO 8: Senectus et netus et, xây dựng và deploy các mô hình machine learning</li>
+                                        <li>PLO 9: Malesuada fames ac turpis, phân tích và visualize dữ liệu hiệu quả</li>
+                                        <li>PLO 10: Egestas sed tempus urna, làm việc với big data platforms và cloud services</li>
+                                        <li>PLO 11: Et netus et malesuada, kỹ năng storytelling với dữ liệu và báo cáo insight</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Về phẩm chất, thái độ:<br>
+                                    <ul>
+                                        <li>PLO 12: Fames ac turpis egestas, tư duy phản biện và tư duy giải quyết vấn đề</li>
+                                        <li>PLO 13: Integer enim neque volutpat, đạo đức trong xử lý và bảo mật dữ liệu</li>
+                                        <li>PLO 14: Ac felis donec et odio, tinh thần học hỏi liên tục trong lĩnh vực phát triển nhanh</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Về năng lực:<br>
+                                    <ul>
+                                        <li>PLO 15: Pellentesque id nibh tortor, làm việc độc lập với các dự án phân tích dữ liệu</li>
+                                        <li>PLO 16: Id interdum velit laoreet, hợp tác đa chức năng với business teams</li>
+                                        <li>PLO 17: Id eu nisl nunc mi ipsum, nghiên cứu và áp dụng các thuật toán mới</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </p>
+
+                        <h3 class="section-title">Chương trình đào tạo</h3>
+                        <p class="section-content">
+                            Tổng số tín chỉ: <strong>135 tín chỉ</strong><br>
+                            Faucibus interdum posuere lorem ipsum, bao gồm:<br>
+                            - Kiến thức giáo dục đại cương: 38 tín chỉ (bao gồm toán nâng cao)<br>
+                            - Kiến thức cơ sở ngành: 32 tín chỉ (Lập trình, Cấu trúc dữ liệu, Database, Statistics)<br>
+                            - Kiến thức chuyên ngành: 49 tín chỉ (Machine Learning, Deep Learning, Big Data, Data Mining, etc.)<br>
+                            - Thực tập & Đồ án tốt nghiệp: 16 tín chỉ
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Master's Content -->
+            <div id="master-content" class="program-content">
+                <!-- Banner -->
+                <div>
+                    <img  class="banner-image" src="../assets/master-banner.jpg" alt="Chương trình Thạc sĩ">
+                    <div class="banner-overlay">
+                        <h2 class="banner-title" id="master-banner-title">Thạc sĩ<br>Công nghệ Thông tin</h2>
+                    </div>
+                </div>
+
+                <!-- Program Information -->
+                <div class="content-section" id="master-program-content">
+                    <h3 class="section-title">Mục tiêu đào tạo</h3>
+                    <p class="section-content">
+                        Đào tạo trình độ thạc sĩ ngành CNTT nhằm giúp cho học viên bổ sung, 
+                        cập nhật và nâng cao kiến thức ngành CNTT;
+                        tăng cường kiến thức liên ngành giữa ngành CNTT và các ngành khác; 
+                        có kiến thức chuyên sâu trong một lĩnh vực khoa học nhất định về ngành CNTT và kỹ năng vận dụng kiến thức để nghiên cứu, ứng dụng vào hoạt động thực tiễn nghề nghiệp; 
+                        có khả năng làm việc độc lập, tư duy sáng tạo và có năng lực phát hiện, giải quyết những vấn đề thuộc ngành CNTT.<br>
+                        Để đáp ứng nhu cầu xã hội về nguồn nhân lực có khả năng chuyên môn cao trong lĩnh vực CNTT, 
+                        mục tiêu của chương trình đào tạo cao học ngành CNTT là đào tạo các thạc sĩ có <em>phẩm chất chính trị, đạo đức; có kiến thức tổng quan và phương pháp nghiên cứu về CNTT; có năng lực làm việc độc lập, sáng tạo; có khả năng phát hiện, và nghiên cứu giải quyết các vấn đề thực tiễn mang tính phổ biến hoặc chuyên sâu; có khả năng truyền thụ kiến thức CNTT.</em>
+                    </p>
+
+                    <h3 class="section-title">Vị trí và khả năng làm việc sau tốt nghiệp</h3>
+                    <div class="job-item">
+                        <p>Nghiên cứu tại các bộ phận nghiên cứu và phát triển</p>
+                    </div>
+                    <div class="job-item">
+                        <p>Làm việc tại doanh nghiệp (CTO, Senior Engineer,...): xây dựng, tổ chức, quản lí các dự án CNTT</p>
+                    </div>
+                    <div class="job-item">
+                        <p>Giảng dạy tại các trường đại học chuyên ngành CNTT</p>
+                    </div>
+                    <div class="job-item">
+                        <p>Có khả năng phát triển nghiên cứu ở trình độ Tiến sĩ</p>
+                    </div>
+
+                    <h3 class="section-title">Hình thức và thời gian đào tạo</h3>
+                    <p class="section-content">
+                        <strong>Loại hình đào tạo:</strong> Chính quy.<br>
+                        <br>    
+                        <strong>Hình thức đào tạo:</strong> Đào tạo tập trung kết hợp sử dụng công nghệ đào tạo trực tuyến gồm các
+                        phần kiến thức chung, kiến thức cơ sở ngành và chuyên ngành. Chương trình đào tạo trình độ thạc sĩ CNTT được xây dựng theo chương trình nghiên cứu và chương trình ứng dụng, cụ thể:<br>
+                        <ul>
+                            <li>
+                                <strong>Chương trình nghiên cứu theo phương thức 1</strong>: Cung cấp cho người học kiến thức chuyên sâu của ngành
+                                và phương pháp nghiên cứu khoa học chuyên sâu, người học có đầy đủ các kỹ năng về tư duy phản biện,
+                                tư duy sáng tạo và nghiên cứu độc lập để chủ động khám phá, phát triển các quan điểm, ý tưởng, 
+                                luận thuyết khoa học mới về vấn đề khoa học hoặc thực nghiệm khoa học, 
+                                có khả năng thực hiện công việc ở các vị trí nghiên cứu, giảng dạy, tư vấn và hoạch định chính sách
+                                hoặc các vị trí khác thuộc lĩnh vực ngành đào tạo; có thể tiếp tục tham gia chương trình đào tạo trình độ tiến sĩ.
+                                Thời lượng phân bổ tập trung nhiều vào thời gian nghiên cứu và thực hiện luận văn.
+                                Kết quả nghiên cứu được trình bày trong bài báo khoa học về kết quả luận văn thạc sĩ do học viên là tác giả chính.
+                            </li>
+                            <li>
+                                <strong>Chương trình nghiên cứu theo phương thức 2</strong>: Cung cấp cho người học kiến thức chuyên sâu của ngành và 
+                                phương pháp nghiên cứu khoa học phù hợp để có thể độc lập nghiên cứu, phát triển các quan điểm, luận thuyết khoa học, 
+                                bước đầu có thể hình thành ý tưởng khoa học, phát hiện, khám phá và thử nghiệm kiến thức mới;
+                                có khả năng thực hiện công việc ở các vị trí nghiên cứu, giảng dạy, tư vấn và hoạch định chính sách 
+                                hoặc các vị trí khác thuộc lĩnh vực ngành đào tạo; có thể tiếp tục tham gia chương trình đào tạo trình độ tiến sĩ; 
+                                Kết quả nghiên cứu được trình bày trong bài báo khoa học về kết quả luận văn thạc sĩ do học viên là tác giả chính.
+                            </li>
+                            <li>
+                                <strong>Định hướng ứng dụng</strong>:Giúp cho người học nâng cao kiến thức chuyên môn và kỹ năng hoạt động nghề nghiệp; 
+                                có năng lực làm việc độc lập, sáng tạo; 
+                                có khả năng thiết kế sản phẩm, 
+                                ứng dụng kết quả nghiên cứu, phát hiện và tổ chức thực hiện các công việc phức tạp trong hoạt động chuyên môn nghề nghiệp, 
+                                phát huy và sử dụng hiệu quả kiến thức chuyên ngành vào việc thực hiện các công việc cụ thể, 
+                                phù hợp với điều kiện thực tế tại cơ quan, tổ chức, đơn vị kinh tế; 
+                                có thể học bổ sung một số kiến thức cơ sở ngành và phương pháp nghiên cứu theo yêu cầu của 
+                                ngành đào tạo trình độ tiến sĩ để tiếp tục tham gia chương trình đào tạo trình độ tiến sĩ.
+                            </li>
+                        </ul>
+                    </p>
+                    <p class="section-content"><strong>Thời gian đào tạo:</strong> 02 năm.</p>
+
+                    <h3 class="section-title">Chuẩn đầu ra</h3>
+                    <p class="section-content">
+                        Học viên tốt nghiệp chương trình đào tạo sau đại học thạc sĩ ngành CNTT phải đáp ứng các yêu cầu về tiêu chuẩn đầu ra (ký hiệu LO – Learning Outcomes) sau:
+                        <ol>
+                            <li>
+                                Về kiến thức: <br>
+                                <ul>
+                                    <li>LO 1: Có kiến thức nâng cao về chuyên ngành so với chương trình đào tạo bậc đại học ngành CNTT theo hướng ứng dụng và tiếp cận công nghệ mới.</li>
+                                    <li>LO 2: Có khả năng tư duy hệ thống, khả năng tự nghiên cứu về các vấn đề thuộc các lĩnh vực chuyên ngành liên quan như nghiên cứu, phát triển, mô phỏng, thiết kế và hiện thực các ứng dụng cũng như hệ thống trong lĩnh vực CNTT.</li>
+                                    <li>LO 3: Có khả năng đảm trách tốt nhiệm vụ của một chuyên gia ngành Công nghệ thông tin như CTO (Chief Technical Officer), CIO (Chief Information Officer), CEO (Chief Executive Officer), Senior Engineer; có khả năng đảm nhiệm tốt công tác nghiên cứu tại các bộ phận nghiên cứu và phát triển, vị trí giảng dạy tại các trường kỹ thuật chuyên ngành, và có khả năng phát triển nghiên cứu sâu ở bậc Tiến sĩ.</li>
+                                    <li>LO 4: Có khả năng xây dựng kế hoạch, lập dự án, tổ chức, điều hành và quản lý các công trình CNTT. Có khả năng khảo sát, phân tích, đánh giá và giải quyết các vần đề về CNTT trong các cơ quan, công ty.</li>                                
+                                </ul>
+                            </li>    
+                            <li>
+                                Về kỹ năng: <br>
+                                <ul>
+                                    <li>LO 5: Có kỹ thuật, kỹ năng trình bày vấn đề rõ ràng. Có kỹ năng hoàn thành công việc phức tạp, không thường xuyên xảy ra, không có tính qui luật.</li>
+                                    <li>LO 6: Có khả năng ứng dụng các công nghệ mới vào trong các dự án, công trình CNTT. Có kỹ năng nghiên cứu độc lập để phát triển và thí nghiệm những giải pháp mới.</li>
+                                    <li>LO 7: Có phương pháp làm việc khoa học, có tầm nhìn chiến lược và đề xuất hướng giải quyết các vấn đề về CNTT.</li>                                
+                                </ul>
+                            </li> 
+                            <li>
+                                Về phẩm chất, thái độ: <br>
+                                <ul>
+                                    <li>LO 8: Có ý thức trách nhiệm công dân, có thái độ và đạo đức nghề nghiệp đúng đắn. Có thể làm việc độc lập hoặc làm việc nhóm.</li>
+                                    <li>LO 9: Có ý thức học tập suốt đời, làm việc khoa học.</li>
+                                </ul>
+                            </li>   
+                            <li>
+                                Về năng lực: <br>
+                                <ul>
+                                    <li>LO 10: Có năng lực cập nhật các kiến thức chuyên sâu, nắm bắt các công nghệ mới về CNTT, học tập suốt đời.</li>
+                                    <li>LO 11: Có năng lực nghiên cứu và vận dụng được các kiến thức công nghệ mới, đa lĩnh vực vào phát triển các sản phẩm và ứng dụng CNTT.</li>
+                                    <li>LO 12: Đảm nhiệm tốt công tác nghiên cứu tại các bộ phận nghiên cứu và phát triển, vị trí giảng dạy tại các trường có ngành CNTT, và có khả năng phát triển nghiên cứu ở bậc Tiến sĩ.</li>                                
+                                    <li>LO 13: Có năng lực phát hiện và giải quyết các vấn đề thuộc chuyên môn được đào tạo, đề xuất những sáng kiến có giá trị.</li>
+                                    <li>LO 14: Có năng lực thích nghi với môi trường cạnh tranh cao.</li>
+                                    <li>LO 15: Có năng lực dẫn dắt chuyên môn để xử lý các vấn đề lớn, bảo vệ và chịu trách nhiệm về những kết luận chuyên môn. Có khả năng xây dựng, thẩm định kế hoạch.</li>  
+                                    <li>LO 16: Có năng lực phát huy trí tuệ tập thể trong quản lý và hoạt động chuyên môn.</li>                                
+                                </ul>
+                            </li>                  
+                        </ol>
+                    </p>
+
+                    <h3 class="section-title">Chương trình đào tạo</h3>
+                    <p class="section-content">Bảng tóm tắt khái quát các khối kiến thức chương trình đào tạo:</p>
+
+                    <div class="curriculum-table">
+                        <table class="program-table">
+                            <thead>
+                                <tr>
+                                    <th rowspan="3" colspan="2" >KHỐI KIẾN THỨC</th>
+                                    <th colspan="3">SỐ TÍN CHỈ</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Chương trình nghiên cứu</th>
+                                    <th rowspan="2">Chương trình ứng dụng</th>
+                                </tr>
+                                <tr>
+                                    <th>PT1</th>
+                                    <th>PT2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="1">Kiến thức chung</td>
+                                    <td>Triết học</td>
+                                    <td style=>3 TC</td>
+                                    <td style=>3 TC</td>
+                                    <td style=>3 TC</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Kiến thức cơ sở và chuyên ngành</td>
+                                    <td>Kiến thức cơ sở</td>
+                                    <td style=>- PPNCKH<br>- PPNCKH nâng cao</td>
+                                    <td style=>PPNCKH</td>
+                                    <td style=>PPNCKH</td>
+                                </tr>
+                                <tr>
+                                    <td>Kiến thức chuyên ngành</td>
+                                    <td style=>&ge; 28 TC</td>
+                                    <td style=></td>
+                                    <td style=>&ge; 43 TC</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Luận văn tốt nghiệp</td>
+                                    <td style=>&ge; 53 TC</td>
+                                    <td style=>&ge; 15 TC</td>
+                                    <td style=>&ge; 12 TC</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Nghiên cứu khoa học<br>(Các chuyên đề nghiên cứu)</td>
+                                    <td style=></td>
+                                    <td style=>&ge; 12 TC</td>
+                                    <td style=></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Tổng cộng</td>
+                                    <td style=>&ge; 60 TC</td>
+                                    <td style=>&ge; 60 TC</td>
+                                    <td style=>&ge; 60 TC</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="section-title">Danh mục môn học</h3>
+                    <p class="section-title">Chương trình nghiên cứu - Phương thức 1:</p>
+
+                    <div class="curriculum-table">
+                        <table class="program-table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã môn học</th>
+                                    <th>Học phần</th>
+                                    <th>Số tín chỉ</th>
+                                    <th>LT</th>
+                                    <th>TH</th>
+                                    <th>HK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Kiến thức chung (≥ 3 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="font-style: italic;text-align: left;">Môn học bắt buộc</td>
+                                </tr>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>PH2001</td>
+                                    <td>Triết học</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>                                
+                                <tr>
+                                    <td colspan="7" style="font-style: italic;text-align: left;">Môn học tự chọn</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>MA2001</td>
+                                    <td>Toán học</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Kiến thức cơ sở (4 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>CS2205</td>
+                                    <td>Phương pháp nghiên cứu khoa học</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>                           
+                                <tr>
+                                    <td>4.</td>
+                                    <td>CS2206</td>
+                                    <td>Phương pháp nghiên cứu khoa học nâng cao</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>     
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Luận văn tốt nghiệp (53 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td>IT4001</td>
+                                    <td>Luận văn theo chương trình nghiên cứu phương thức 1</td>
+                                    <td>53</td>
+                                    <td>53</td>
+                                    <td>0</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="section-title">Chương trình nghiên cứu - Phương thức 2:</p>
+
+                    <div class="curriculum-table">
+                        <table class="program-table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã môn học</th>
+                                    <th>Học phần</th>
+                                    <th>Số tín chỉ</th>
+                                    <th>LT</th>
+                                    <th>TH</th>
+                                    <th>HK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Kiến thức chung (≥ 3 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="font-style: italic;text-align: left;">Môn học bắt buộc</td>
+                                </tr>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>PH2001</td>
+                                    <td>Triết học</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>                                
+                                <tr>
+                                    <td colspan="7" style="font-style: italic;text-align: left;">Môn học tự chọn</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>MA2001</td>
+                                    <td>Toán học</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Kiến thức cơ sở (2 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>CS2205</td>
+                                    <td>Phương pháp nghiên cứu khoa học</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>                                
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">
+                                        Kiến thức chuyên ngành (≥ 28 TC): HV chọn học và tích lũy tối thiểu 28 TC
+                                    </td>                                    
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>IT2002</td>
+                                    <td>Công nghệ phần mềm tiên tiến</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td>IT2003</td>
+                                    <td>Công nghệ mạng và truyền thông hiện đại</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>6.</td>
+                                    <td>IT2004</td>
+                                    <td>Công nghệ máy tính hiện đại</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>7.</td>
+                                    <td>IT2005</td>
+                                    <td>Quản lý hệ thống công nghệ thông tin</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>8.</td>
+                                    <td>IT2011</td>
+                                    <td>Cơ sở dữ liệu nâng cao</td>
+                                    <td>4</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>9.</td>
+                                    <td>NT2102</td>
+                                    <td>An toàn và bảo mật hệ thống thông tin</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>10.</td>
+                                    <td>IT2007</td>
+                                    <td>Các chủ đề nâng cao trong an ninh máy tính</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>11.</td>
+                                    <td>IT2028</td>
+                                    <td>An toàn mạng không dây di động</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>12.</td>
+                                    <td>IT2009</td>
+                                    <td>Phân tích an ninh cho các giao thức mạng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>13.</td>
+                                    <td>IT2010</td>
+                                    <td>Pháp chứng số trên máy tính và mạng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>14.</td>
+                                    <td>IT2008</td>
+                                    <td>Bảo mật hệ thống di động nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>15.</td>
+                                    <td>IT2029</td>
+                                    <td>Các kỹ thuật phân tích mã độc nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>16.</td>
+                                    <td>IT2030</td>
+                                    <td>Hệ thống thông tin địa lý nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>17.</td>
+                                    <td>CS2208</td>
+                                    <td>Hệ hỗ trợ quyết định</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>18.</td>
+                                    <td>IT2015</td>
+                                    <td>Hoạch định nguồn lực doanh nghiệp</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>19.</td>
+                                    <td>IT2034</td>
+                                    <td>Xử lý dữ liệu lớn</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>20.</td>
+                                    <td>IT2035</td>
+                                    <td>Khai thác dữ liệu và ứng dụng</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>21.</td>
+                                    <td>IT2036</td>
+                                    <td>Phân tích dữ liệu lớn</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>22.</td>
+                                    <td>IT2037</td>
+                                    <td>Phân tích dữ liệu nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>23.</td>
+                                    <td>IT2038</td>
+                                    <td>Khoa học dữ liệu ảnh: Nền tảng và Ứng dụng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>24.</td>
+                                    <td>IT2018</td>
+                                    <td>Lập trình hệ thống với Java</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>25.</td>
+                                    <td>IT2019</td>
+                                    <td>Tương tác người - máy</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>26.</td>
+                                    <td>IT2020</td>
+                                    <td>Các hệ thống nhúng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>27.</td>
+                                    <td>IT2021</td>
+                                    <td>Xử lý tín hiệu số nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>28.</td>
+                                    <td>IT2032</td>
+                                    <td>Công nghệ Internet of things hiện đại</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>29.</td>
+                                    <td>IT2033</td>
+                                    <td>Ẩn thông tin trên dữ liệu số và ứng dụng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">
+                                        Các chuyên đề nghiên cứu (≥ 12 TC): HV chọn học và tích lũy tối thiểu 12 TC
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>30.</td>
+                                    <td>IT3001</td>
+                                    <td>Chuyên đề nghiên cứu về Tính toán song song và phân tán</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3, 4</td>
+                                </tr>
+                                <tr>
+                                    <td>31.</td>
+                                    <td>IT3002</td>
+                                    <td>Chuyên đề nghiên cứu về Phân tích và dự báo dữ liệu sử dụng học sâu</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3, 4</td>
+                                </tr>
+                                <tr>
+                                    <td>32.</td>
+                                    <td>IT3003</td>
+                                    <td>Chuyên đề nghiên cứu về Phân loại mã độc</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3, 4</td>
+                                </tr>
+                                <tr>
+                                    <td>33.</td>
+                                    <td>IT3004</td>
+                                    <td>Chuyên đề nghiên cứu về Hệ thống phát hiện xâm nhập</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3, 4</td>
+                                </tr>
+                                <tr>
+                                    <td>34.</td>
+                                    <td>IT3005</td>
+                                    <td>Chuyên đề nghiên cứu về Các cơ sở dữ liệu hiện đại</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3, 4</td>
+                                </tr>
+                                <tr>
+                                    <td>35.</td>
+                                    <td>CS2308</td>
+                                    <td>Chuyên đề nghiên cứu về Xử lý ngôn ngữ tự nhiên</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3, 4</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Luận văn tốt nghiệp (15 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td>36.</td>
+                                    <td>IT4002</td>
+                                    <td>Luận văn theo chương trình nghiên cứu phương thức 2</td>
+                                    <td>15</td>
+                                    <td>15</td>
+                                    <td>0</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="section-title">Chương trình ứng dụng:</p>
+
+                    <div class="curriculum-table">
+                        <table class="program-table">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã môn học</th>
+                                    <th>Học phần</th>
+                                    <th>Số tín chỉ</th>
+                                    <th>LT</th>
+                                    <th>TH</th>
+                                    <th>HK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Kiến thức chung (≥ 3 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="font-style: italic;text-align: left;">Môn học bắt buộc</td>
+                                </tr>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>PH2001</td>
+                                    <td>Triết học</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>                                
+                                <tr>
+                                    <td colspan="7" style="font-style: italic;text-align: left;">Môn học tự chọn</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>MA2001</td>
+                                    <td>Toán học</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Kiến thức cơ sở (2 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>CS2205</td>
+                                    <td>Phương pháp nghiên cứu khoa học</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>                                
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">
+                                        Kiến thức chuyên ngành (≥ 43 TC): HV chọn học và tích lũy tối thiểu 43 TC
+                                    </td>                                    
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>IT2002</td>
+                                    <td>Công nghệ phần mềm tiên tiến</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td>IT2003</td>
+                                    <td>Công nghệ mạng và truyền thông hiện đại</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>6.</td>
+                                    <td>IT2004</td>
+                                    <td>Công nghệ máy tính hiện đại</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>7.</td>
+                                    <td>IT2005</td>
+                                    <td>Quản lý hệ thống công nghệ thông tin</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>8.</td>
+                                    <td>IT2011</td>
+                                    <td>Cơ sở dữ liệu nâng cao</td>
+                                    <td>4</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>9.</td>
+                                    <td>NT2102</td>
+                                    <td>An toàn và bảo mật hệ thống thông tin</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>10.</td>
+                                    <td>IT2007</td>
+                                    <td>Các chủ đề nâng cao trong an ninh máy tính</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>11.</td>
+                                    <td>IT2028</td>
+                                    <td>An toàn mạng không dây di động</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>12.</td>
+                                    <td>IT2009</td>
+                                    <td>Phân tích an ninh cho các giao thức mạng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>13.</td>
+                                    <td>IT2010</td>
+                                    <td>Pháp chứng số trên máy tính và mạng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>14.</td>
+                                    <td>IT2008</td>
+                                    <td>Bảo mật hệ thống di động nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>15.</td>
+                                    <td>IT2029</td>
+                                    <td>Các kỹ thuật phân tích mã độc nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>16.</td>
+                                    <td>IT2030</td>
+                                    <td>Hệ thống thông tin địa lý nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>17.</td>
+                                    <td>CS2208</td>
+                                    <td>Hệ hỗ trợ quyết định</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>18.</td>
+                                    <td>IT2015</td>
+                                    <td>Hoạch định nguồn lực doanh nghiệp</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>19.</td>
+                                    <td>IT2034</td>
+                                    <td>Xử lý dữ liệu lớn</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>20.</td>
+                                    <td>IT2035</td>
+                                    <td>Khai thác dữ liệu và ứng dụng</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>21.</td>
+                                    <td>IT2036</td>
+                                    <td>Phân tích dữ liệu lớn</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>22.</td>
+                                    <td>IT2037</td>
+                                    <td>Phân tích dữ liệu nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>23.</td>
+                                    <td>IT2038</td>
+                                    <td>Khoa học dữ liệu ảnh: Nền tảng và Ứng dụng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>24.</td>
+                                    <td>IT2018</td>
+                                    <td>Lập trình hệ thống với Java</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>25.</td>
+                                    <td>IT2019</td>
+                                    <td>Tương tác người - máy</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>26.</td>
+                                    <td>IT2020</td>
+                                    <td>Các hệ thống nhúng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>27.</td>
+                                    <td>IT2021</td>
+                                    <td>Xử lý tín hiệu số nâng cao</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>28.</td>
+                                    <td>IT2032</td>
+                                    <td>Công nghệ Internet of things hiện đại</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td>29.</td>
+                                    <td>IT2033</td>
+                                    <td>Ẩn thông tin trên dữ liệu số và ứng dụng</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>2, 3</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" style="text-align: left;">Luận văn tốt nghiệp (12 TC)</td>
+                                </tr>
+                                <tr>
+                                    <td>30.</td>
+                                    <td>IT4002</td>
+                                    <td>Luận văn theo chương trình ứng dụng</td>
+                                    <td>12</td>
+                                    <td>12</td>
+                                    <td>0</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="section-content"><strong>Chú ý:</strong> Các môn chuyên ngành có thể chọn trong CTĐT Thạc sĩ các ngành đào tạo Thạc sĩ khác tại Trường ĐH CNTT tối đa là 12 tín chỉ. </p>
+                    <h3 class="section-title">Chương trình đào tạo Thạc sĩ Ngành Công nghệ Thông tin qua các năm</h3>
+                    
+                    <div class="job-item" >
+                        <a href="https://sdh.uit.edu.vn/sites/default/files/uploads/files/202504/qd_1010_qd_dhcntt_28_11_2022_ctdt_nganh_cntt_2022.pdf">Chương trình đào tạo Thạc sĩ Ngành Công nghệ Thông tin (Áp dụng từ năm 2024)</a>
+                    </div>
+                    <div class="job-item" >
+                        <a href="https://sdh.uit.edu.vn/sites/default/files/uploads/files/202504/qd_1010_qd_dhcntt_28_11_2022_ctdt_nganh_cntt_2022.pdf">Chương trình đào tạo Thạc sĩ Ngành Công nghệ Thông tin (Áp dụng từ năm 2023)</a>
+                    </div>
+                    <div class="job-item" >
+                        <a href="https://sdh.uit.edu.vn/sites/default/files/uploads/files/202504/qd_1010_qd_dhcntt_28_11_2022_ctdt_nganh_cntt_2022.pdf">Chương trình đào tạo Thạc sĩ Ngành Công nghệ Thông tin (Áp dụng từ năm 2022)</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- PhD Content -->
+            <div id="phd-content" class="program-content hidden">
+                <!-- Banner -->
+                <div>
+                    <img class="banner-image" src="../assets/phd-banner.png" alt="Chương trình Tiến sĩ">
+                    <div class="banner-overlay">
+                        <h2 class="banner-title" id="phd-banner-title">Tiến sĩ<br>Công nghệ Thông tin</h2>
+                    </div>
+                </div>
+
+                <!-- Program Information -->
+                <div class="content-section" id="phd-program-content">
+                    <h3 class="section-title">Mục tiêu đào tạo</h3>
+                    <p class="section-content">
+                        Chương trình đào tạo Tiến sĩ Công nghệ Thông tin nhằm đào tạo các nhà khoa học có năng lực nghiên cứu độc lập, 
+                        có thể đóng góp những kiến thức mới cho lĩnh vực CNTT thông qua các công trình nghiên cứu có chất lượng cao. 
+                        Người tốt nghiệp có khả năng dẫn dắt các nhóm nghiên cứu, giảng dạy ở bậc đại học và sau đại học, 
+                        hoặc đảm nhận các vị trí lãnh đạo cao trong các tổ chức nghiên cứu và phát triển.
+                    </p>
+
+                    <h3 class="section-title">Vị trí có thể đảm nhiệm sau khi tốt nghiệp</h3>
+                    <div class="job-item">
+                        <p>Trưởng nhóm nghiên cứu, phát triển các sản phẩm và ứng dụng CNTT trong các doanh nghiệp</p>
+                    </div>
+                    <div class="job-item">
+                        <p>Cố vấn, chuyên gia cao cấp về CNTT trong các tổ chức</p>
+                    </div>
+                    <div class="job-item">
+                        <p>Chuyên viên có khả năng phát hiện và giải quyết vấn đề trong các bài toán phân tích dữ liệu lớn</p>
+                    </div>
+                    <div class="job-item">
+                        <p>Cán bộ giảng dạy hệ Đại học, Sau Đại học; nghiên cứu về Công nghệ thông tin tại các trường Đại học</p>
+                    </div>
+
+
+                    <h3 class="section-title">Quan điểm xây dựng chương trình đào tạo</h3>
+                    <p class="section-content">
+                        Chương trình đào tạo tiến sĩ CNTT được xây dựng theo định hướng tự nghiên cứu 
+                        với sự hướng dẫn của người hướng dẫn khoa học (NHD) và đơn vị chuyên môn (ĐVCM) 
+                        phụ trách; coi trọng rèn luyện phương pháp, thói quen nghiên cứu khoa học, 
+                        phát triển tư duy sáng tạo trong phát hiện, giải quyết những vấn đề chuyên môn.<br>                        
+                        <br>Chương trình được thiết kế và xây dựng dựa trên:
+                        <ul>
+                            <li>Tham khảo các chương trình đào tạo tiến sĩ thuộc lĩnh vực công nghệ thông tin và truyền thông của các trường thành viên Đại học Quốc gia TP. Hồ Chí Minh và Đại học Quốc gia Hà Nội.</li>
+                            <li>Chương trình đào tạo tiến sĩ liên kết giữa ĐH Bách Khoa Hà Nội và ĐH Công nghệ Sydney.</li>
+                            <li>Tham khảo chương trình đào tạo sau đại học ngành CNTT của các trường Đại học trên thế giới như: Virginia Tech University, USA; University of Technology, Sydney; Queensland University of Technology, Australia</li>
+                        </ul>
+                    </p>
+
+                    <h3 class="section-title">Hình thức và thời gian đào tạo</h3>
+                    <p class="section-content">
+                        Thời gian đào tạo trình độ tiến sĩ đối với người có bằng thạc sĩ là 3 năm tập trung liên tục;
+                        đối với người có bằng tốt nghiệp đại học nhưng chưa có bằng thạc sĩ chuyên ngành phù hợp
+                        là 5 năm tập trung liên tục.<br>
+                        <br>
+                        Trường hợp NCS không theo học tập trung liên tục được và được Trường chấp nhận 
+                        thì chương trình đào tạo và nghiên cứu của NCS phải có tổng thời gian học và nghiên cứu
+                        như quy định trên, trong đó có ít nhất 12 tháng tập trung liên tục tại cơ sở đào tạo 
+                        để thực hiện đề tài nghiên cứu. Trong trường hợp này thời gian đào tạo được cộng thêm 
+                        1 năm tương ứng với từng đối tượng. 
+                    </p>
+                    <h3 class="section-title">Chuẩn đầu ra</h3>
+                    <p class="section-content">
+                        Nghiên cứu sinh tốt nghiệp chương trình đào tạo trình độ tiến sĩ ngành CNTT phải đáp ứng
+                        các yêu cầu về tiêu chuẩn đầu ra (ký hiệu LO – Learning Outcomes) sau:
+                    </p>
+                    <div class = "curriculum-table">
+                        <table class = "program-table">
+                            <thead>
+                                <tr>
+                                    <th> LO </th>
+                                    <th> Chuẩn đầu ra </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td><strong>Kiến thức và lập luận ngành công nghệ thông tin</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>1.1</td>
+                                    <td>Có kiến thức cốt lõi, nền tảng thuộc lĩnh vực công nghệ thông tin và các vấn đề kinh tế xã hội liên quan.</td>
+                                </tr>
+                                <tr>
+                                    <td>1.2</td>
+                                    <td>Có kiến thức chuyên sâu và phương pháp luận hiện đại. Có khả năng tích hợp các công nghệ mới, tiên tiến.</td>
+                                </tr>
+                                <tr>
+                                    <td>1.3</td>
+                                    <td>Có khả năng tiếp cận các xu hướng mới, thời sự và đề xuất, định hướng nghiên cứu</td>
+                                </tr>
+                                <tr>
+                                    <td>1.4</td>
+                                    <td>Sáng tạo trong nghiên cứu khoa học, phát triển tri thức,công nghệ mới. Có khả năng nghiên cứu liên ngành.</td>                                    
+                                </tr>
+                                <tr>
+                                    <td><strong>2</strong></td>
+                                    <td><strong>Kỹ năng, phẩm chất cá nhân và nghề nghiệp trong lĩnh vực công nghệ thông tin</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>2.1</td>
+                                    <td>Có khả năng làm chủ các công cụ phục vụ cho nghiên cứu.</td>                                                                        
+                                </tr>
+                                <tr>
+                                    <td>2.2</td>
+                                    <td>Có khả năng suy luận, phân tích các vấn đề khoa học phức tạp và đưa ra những hướng xử lý một cách sáng tạo, độc đáo và hiệu quả.</td>                                                                        
+                                </tr>    
+                                <tr>
+                                    <td>2.3</td>
+                                    <td>Có khả năng thiết lập nhóm nghiên cứu, tổ chức, quản lý, điều hành chuyên môn trong nghiên cứu.</td>                                                                        
+                                </tr>                                
+                                <tr>
+                                    <td>2.4</td>
+                                    <td>Có khả năng trình bày, thảo luận và công bố kết quả nghiên cứu.</td>                                                                        
+                                </tr>                                
+                                <tr>
+                                    <td><strong>3</strong></td>
+                                    <td>Mức độ tự chủ và trách nhiệm</td>                                                                        
+                                </tr>                                
+                                <tr>
+                                    <td>3.1</td>
+                                    <td>Có trách nhiệm công dân; có thái độ và đạo đức nghề nghiệp đúng đắn.</td>                                                                        
+                                </tr>                                
+                                <tr>
+                                    <td>3.2</td>
+                                    <td>Tích cực, tự chủ, tư duy độc lập trong nghiên cứu và sáng tạo tri thức mới. Tự định hướng và hướng dẫn những người khác tham gia nghiên cứu.</td>                                                                        
+                                </tr>                                
+                                <tr>
+                                    <td>3.3</td>
+                                    <td>Có đạo đức và trách nhiệm cao trong việc học tập để phát triển tri thức chuyên nghiệp, kinh nghiệm và sáng tạo ra ý tưởng mới và quá trình mới.</td>                                                                        
+                                </tr>                                                                   
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class = "section-title">Chương trình đào tạo (Áp dụng từ 2021)</h3>
+                    <p class = "section-content">
+                            Căn cứ vào Quy chế đào tạo tiến sĩ của trường ĐH. CNTT, NCS phải thực hiện 3 phần nội dung của chương trình đào tạo sau đây:
+                            <ul>    
+                                <li>Phần 1 - Các học phần bổ sung: Phụ thuộc vào CTĐT Thạc sĩ hiện hành</li>
+                                <li>Phần 2: 
+                                    <ul>
+                                        <li>Các học phần trình độ tiến sĩ: <strong>6 tín chỉ</strong></li>
+                                        <li>Các chuyên đề tiến sĩ: <strong>6 tín chỉ</strong></li>
+                                        <li>Tiểu luận tổng quan: <strong>2 tín chỉ</strong></li>
+                                    </ul>
+                                </li>
+                                <li>Phần 3 - Luận án tiến sĩ: <strong>78 tín chỉ</strong></li>
+                            </ul>
+                    </p>
+                    <p class="section-content">
+                            Để đủ điều kiện tốt nghiệp, NCS cần đạt những yêu cầu sau:
+                            <ul>
+                                <li>Hoàn thành các học phần bổ sung nếu NCS chưa có bằng thạc sĩ hoặc có bằng thạc sĩ các ngành gần – phù hợp.</li>
+                                <li>Hoàn thành các học phần trình độ tiến sĩ, các chuyên đề tiến sĩ và tiểu luận tổng quan.</li>
+                                <li>Hoàn thành Luận án tiến sĩ.</li> 
+                                <li>Có các công bố khoa học đáp ứng theo quy chế đào tạo Tiến sĩ của Trường Đại học Công nghệ Thông tin, ĐHQG-HCM, phản ánh các kết quả nghiên cứu của luận án</li>                           
+                            </ul>
+                    </p>
+                    <p class = "section-content">
+                        <strong>Phần 1. Các học phần bổ sung</strong><br>
+                        Các học phần bổ sung dành cho các NCS chưa có bằng thạc sĩ hoặc có bằng thạc sĩ các ngành gần – phù hợp, các học phần này giúp NCS có đủ kiến thức và trình độ chuyên môn để thực hiện nhiệm vụ của NCS.
+                        <ul>
+                            <li>NCS chưa có bằng thạc sĩ phải học bổ sung học phần cơ sở và chuyên ngành trong CTĐT Thạc sĩ hiện hành ngành CNTT chưa kể các môn Triết học để hoàn thành các học phần trình độ thạc sĩ CNTT.</li>
+                            <li>NCS có bằng thạc sĩ các ngành gần – phù hợp, sau khi đối chiếu với bảng điểm thạc sĩ đã có, NCS phải học các học phần còn thiếu của các học phần cơ sở và chuyên ngành trong CTĐT Thạc sĩ ngành CNTT. Danh sách học phần bổ sung sẽ dựa vào chương trình đào tạo thạc sĩ ngành CNTT hiện hành.</li>
+                            <li>Điểm hoàn thành các học phần bổ sung là 5.0 trở lên.</li>
+                        </ul>
+                    </p>
+                    <p class = "section-content">
+                        <strong>Phần 2. Các học phần, chuyên đề trình độ tiến sĩ, tiểu luận tổng quan, luận án tiến sĩ</strong><br>
+                        Mục đích của các học phần trình độ tiến sĩ là giúp NCS cập nhật kiến thức mới trong lĩnh vực chuyên môn; nâng cao trình độ lý thuyết, phương pháp luận nghiên cứu và khả năng ứng dụng các phương pháp NCKH quan trọng, thiết yếu của lĩnh vực nghiên cứu. Gồm 12 tín chỉ trong đó 6 tín chỉ học phần, 6 tín chỉ chuyên đề và 2 tín chỉ tiểu luận tổng quan.
+                        <br>
+                        Điểm hoàn thành các học phần trình độ tiến sĩ là từ 7.0 trở lên.
+                        <br>
+                        Danh mục các học phần, chuyên đề trình độ tiến sĩ, tiểu luận tổng quan, luận án tiến sĩ được liệt kê trong bảng sau:
+                    </p>
+                    <div class="curriculum-table">
+                        <table class="program-table">
+                            <thead>
+                                <tr>
+                                    <th colspan= "1">STT</th>
+                                    <th colspan= "1">Mã MH</th>
+                                    <th colspan= "7">Tên học phần</th>
+                                    <th colspan= "1">Tín chỉ</th>                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan= "9" style="text-align:left;">Các học phần trình độ tiến sĩ</th>
+                                    <td colspan= "1">6</th>                                                                        
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">1</td>
+                                    <td colspan= "1">IT3001</td>
+                                    <td colspan= "7">Phương pháp nghiên cứu khoa học</td>
+                                    <td colspan= "1">3</td>                                    
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">2</td>
+                                    <td colspan= "1">IT3005</td>
+                                    <td colspan= "7">Các chủ đề về Cơ sở dữ liệu hiện đại</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">3</td>
+                                    <td colspan= "1">IT3006</td>
+                                    <td colspan= "7">An toàn và bảo mật thông tin</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">4</td>
+                                    <td colspan= "1">IT3010</td>
+                                    <td colspan= "7">Nhận dạng giọng nói</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">5</td>
+                                    <td colspan= "1">IT3012</td>
+                                    <td colspan= "7">Chủ đề nâng cao trong mã hóa</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">6</td>
+                                    <td colspan= "1">IT3013</td>
+                                    <td colspan= "7">Kỹ thuật phân tích dữ liệu chuyên sâu</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">7</td>
+                                    <td colspan= "1">IT3014</td>
+                                    <td colspan= "7">Các hệ thống thị giác thông minh</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">8</td>
+                                    <td colspan= "1">CS3001</td>
+                                    <td colspan= "7">Trí tuệ nhân tạo nâng cao</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">9</td>
+                                    <td colspan= "1">CS3002</td>
+                                    <td colspan= "7">Hệ giải quyết vấn đề thông minh và ứng dụng</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">10</td>
+                                    <td colspan= "1">IT3014</td>
+                                    <td colspan= "7">Xử lý và khai thác thông tin</td>
+                                    <td colspan= "1">3</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "9" style = "text-align:left">Các chuyên đề tiến sĩ</td>
+                                    <td colspan= "1">6</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">1</td>
+                                    <td colspan= "1">IT3013</td>
+                                    <td colspan= "7">Xử lý ảnh và thị giác máy tính</td>
+                                    <td colspan= "1">2</td>                                    
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">2</td>
+                                    <td colspan= "1">IT3107</td>
+                                    <td colspan= "7">Kiểm định phần mềm chuyên sâu</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">3</td>
+                                    <td colspan= "1">IT3108</td>
+                                    <td colspan= "7">Khai phá dữ liệu trong hệ thống thông tin dựa trên tập thô</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">4</td>
+                                    <td colspan= "1">IT3109</td>
+                                    <td colspan= "7">Bảo mật hệ thống thông tin hiện đại</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">5</td>
+                                    <td colspan= "1">IT3112</td>
+                                    <td colspan= "7">Xử lý dữ liệu video</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">6</td>
+                                    <td colspan= "1">IT3113</td>
+                                    <td colspan= "7">Khai phá dữ liệu thương mại điện tử</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">7</td>
+                                    <td colspan= "1">IT3115</td>
+                                    <td colspan= "7">Mạng cảm biến không dây</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">8</td>
+                                    <td colspan= "1">IT3117</td>
+                                    <td colspan= "7">An ninh thông tin trên thiết bị di động</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">9</td>
+                                    <td colspan= "1">IT3118</td>
+                                    <td colspan= "7">Hệ thống phân tích và xử lý thông tin</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">10</td>
+                                    <td colspan= "1">IT3125</td>
+                                    <td colspan= "7">Phân tích trên dữ liệu lớn</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "1">11</td>
+                                    <td colspan= "1">IT3126</td>
+                                    <td colspan= "7">Xử lý song song và phân tán trên dữ liệu lớn</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>                            
+                                <tr>
+                                    <td colspan= "9" style = "text-align:left">Tiểu luận tổng quan</td>
+                                    <td colspan= "1">2</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "9" style = "text-align:left">Luận án tiến sĩ</td>
+                                    <td colspan= "1">78</td>     
+                                </tr>
+                                <tr>
+                                    <td colspan= "9" style = "text-align:left">Tổng cộng</td>
+                                    <td colspan= "1">92</td>     
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="section-content"> Để biết thêm thông tin chi tiết về chương trình đào tạo Tiến sĩ ngành Công nghệ thông tin, vui lòng tham khảo dưới đây:</p>
+                    <h3 class="section-title">Chương trình đào tạo Tiến sĩ Ngành Công nghệ Thông tin<br> qua các năm</h3>
+
+                    <div class="job-item" >
+                        <a href="https://sdh.uit.edu.vn/sites/default/files/202308/chuongtrinhdaotao_ts_cntt.pdf">Chương trình đào tạo Tiến sĩ Ngành Công nghệ Thông tin (Áp dụng từ năm 2021)</a>
+                    </div>
+
+                    <div class="job-item" >
+                        <a href="https://sdh.uit.edu.vn/sites/default/files/201801/khung_chuong_trinh_cntt_2017.docx">Chương trình đào tạo Tiến sĩ Ngành Công nghệ Thông tin (Áp dụng từ năm 2017)</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+
+    </div>
+    <div id="footer-container"></div>
+
+</body>
+</html>
