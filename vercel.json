@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/", "destination": "/pages/home.html" },
+    { "source": "/home", "destination": "/pages/home.html" },
+    { "source": "/dao-tao", "destination": "/pages/dao-tao.html" },
+    { "source": "/lien-he", "destination": "/pages/lien-he.html" },
+    { "source": "/cac-nhom-nghien-cuu", "destination": "/pages/cac-nhom-nghien-cuu.html" },
+    { "source": "/cong-bo-khoa-hoc", "destination": "/pages/cong-bo-khoa-hoc.html" },
+    { "source": "/bai-bao-nckh-sinh-vien", "destination": "/pages/bai-bao-nckh-sinh-vien.html" },
+    
+    { "source": "/tin-tuc/tin-hoc-vu", "destination": "/pages/tin-tuc/tin-hoc-vu.html" },
+    { "source": "/tin-tuc/tin-tot-nghiep", "destination": "/pages/tin-tuc/tin-tot-nghiep.html" },
+    { "source": "/tin-tuc/tin-tuyen-dung", "destination": "/pages/tin-tuc/tin-tuyen-dung.html" },
+    { "source": "/tin-tuc/tin-khoa-hoc-cong-nghe", "destination": "/pages/tin-tuc/tin-khoa-hoc-cong-nghe.html" },
+    
+    { "source": "/gioi-thieu", "destination": "/pages/gioi-thieu/gioi-thieu-chung.html" },
+    { "source": "/gioi-thieu-chung", "destination": "/pages/gioi-thieu/gioi-thieu-chung.html" },
+    { "source": "/doi-ngu-nhan-su", "destination": "/pages/gioi-thieu/doi-ngu-nhan-su.html" },
+    
+    { "source": "/nhom-nghien-cuu/bao-mat-blockchain-iot", "destination": "/pages/nhom-nghien-cuu/bao-mat-blockchain-iot.html" },
+    { "source": "/nhom-nghien-cuu/khoa-hoc-du-lieu", "destination": "/pages/nhom-nghien-cuu/khoa-hoc-du-lieu.html" },
+    { "source": "/nhom-nghien-cuu/khoa-hoc-thong-tin-dia-ly", "destination": "/pages/nhom-nghien-cuu/khoa-hoc-thong-tin-dia-ly.html" },
+    { "source": "/nhom-nghien-cuu/phat-trien-he-thong", "destination": "/pages/nhom-nghien-cuu/phat-trien-he-thong.html" },
+    { "source": "/nhom-nghien-cuu/tinh-toan-ky-thuat-nang-cao", "destination": "/pages/nhom-nghien-cuu/tinh-toan-ky-thuat-nang-cao.html" },
+    { "source": "/nhom-nghien-cuu/xu-ly-du-lieu", "destination": "/pages/nhom-nghien-cuu/xu-ly-du-lieu.html" },
+    { "source": "/nhom-nghien-cuu/xu-ly-ngon-ngu", "destination": "/pages/nhom-nghien-cuu/xu-ly-ngon-ngu.html" },
+    
+    { "source": "/giang-vien/camnt", "destination": "/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_camnt.html" },
+    { "source": "/giang-vien/khoavt", "destination": "/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_khoavt.html" },
+    { "source": "/giang-vien/kietnv", "destination": "/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_kietnv.html" },
+    { "source": "/giang-vien/thunta", "destination": "/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_thunta.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}
