@@ -1,49 +1,35 @@
+// Vô hiệu hóa tất cả các tab (bỏ class active)
 function disableAllTabs() {
     document.getElementById("tab-data-science").classList.remove("active");
     document.getElementById("tab-mobile-web").classList.remove("active");
 }
+
+// Hiển thị tab Bộ môn Khoa học Dữ liệu
 function showDataScience() {
     disableAllTabs();
-    document.getElementById("mobileWeb").classList.add("hidden");
-    document.getElementById("dataScience").classList.remove("hidden");
-
-    document.getElementById("tab-data-science").classList.add("active");
-    // document.getElementById("tab-data-science").style.backgroundColor =
-    //   "#083344";
-    // document.getElementById("tab-data-science").style.color = "white";
-    // document.getElementById("tab-mobile-web").style.backgroundColor =
-    //   "#e5e7eb";
-    // document.getElementById("tab-mobile-web").style.color = "#1f2937";
+    document.getElementById("mobileWeb").classList.add("hidden"); // Ẩn nội dung tab Mobile Web
+    document.getElementById("dataScience").classList.remove("hidden"); // Hiện nội dung tab Data Science
+    document.getElementById("tab-data-science").classList.add("active"); // Đánh dấu tab active
 }
 
+// Hiển thị tab Bộ môn Thiết bị Di động và Công nghệ Web
 function showMobileWeb() {
     disableAllTabs();
-    document.getElementById("dataScience").classList.add("hidden");
-    document.getElementById("mobileWeb").classList.remove("hidden");
-    document.getElementById("tab-mobile-web").classList.add("active");
-
-    // document.getElementById("tab-data-science").style.backgroundColor =
-    //   "#e5e7eb";
-    // document.getElementById("tab-data-science").style.color = "#1f2937";
-    // document.getElementById("tab-mobile-web").style.backgroundColor =
-    //   "#083344";
-    // document.getElementById("tab-mobile-web").style.color = "white";
+    document.getElementById("dataScience").classList.add("hidden"); // Ẩn nội dung tab Data Science
+    document.getElementById("mobileWeb").classList.remove("hidden"); // Hiện nội dung tab Mobile Web
+    document.getElementById("tab-mobile-web").classList.add("active"); // Đánh dấu tab active
 }
 
-// Event listeners
-document
-    .getElementById("tab-data-science")
-    .addEventListener("click", showDataScience);
-document
-    .getElementById("tab-mobile-web")
-    .addEventListener("click", showMobileWeb);
+// Gắn sự kiện click cho các tab
+document.getElementById("tab-data-science").addEventListener("click", showDataScience);
+document.getElementById("tab-mobile-web").addEventListener("click", showMobileWeb);
 
-// Default tab based on URL parameter
+// Xác định tab mặc định dựa trên URL parameter
 const params = new URLSearchParams(window.location.search);
 const selectedTab = params.get("tab");
 
-if (selectedTab === "dataScience") {
-    showDataScience();
+if (selectedTab === "mobileWeb") {
+    showMobileWeb();
 } else {
-    showMobileWeb(); // fallback
+    showDataScience(); // Mặc định
 }

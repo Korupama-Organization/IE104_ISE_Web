@@ -1,44 +1,55 @@
-﻿:root {
-    --primary: #083344;
-    --text-dark: var(--primary);
-    --text-light: #ffffff;
-    --text-muted: var(--primary);
-    --bg-main: #e8e8ee;
-    --bg-card: #ffffff;
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+﻿/* ===== STYLES RIÊNG CHO TRANG HỒ SƠ GIẢNG VIÊN ===== */
+
+/* ===== CSS VARIABLES ===== */
+:root {
+    --primary: #083344; /* Màu chủ đạo */
+    --text-dark: var(--primary); /* Màu chữ tối */
+    --text-light: #ffffff; /* Màu chữ sáng */
+    --text-muted: var(--primary); /* Màu chữ mờ */
+    --bg-main: #e8e8ee; /* Màu nền chính */
+    --bg-card: #ffffff; /* Màu nền card */
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ */
 }
 
-/* Reset */
+/* ===== RESET & GLOBALS ===== */
+
+/* Reset margin, padding và box-sizing cho tất cả elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body style cơ bản */
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-dark);
     font-size: 16px;
     line-height: 1.6;
-    padding: 1rem;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Cuộn mượt */
 }
 
+/* Đảm bảo tất cả text có màu consistent */
 body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
     color: var(--text-dark);
 }
 
-/* Layout */
+/* ===== LAYOUT ===== */
+
+/* Container chính chứa toàn bộ profile */
 .profile-container {
     max-width: 960px;
     margin: 0 auto;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-/* Giới thiệu giảng viên */
+/* ===== PHẦN GIỚI THIỆU GIẢNG VIÊN ===== */
+
+/* Section giới thiệu với ảnh và thông tin cơ bản */
 .profile-intro {
     background-color: var(--bg-card);
     border-radius: 1rem;
@@ -47,6 +58,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
     box-shadow: var(--shadow-md);
 }
 
+/* Ảnh đại diện giảng viên */
 .profile-image {
     width: 200px;
     height: 240px;
@@ -57,6 +69,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
     margin-bottom: 1rem;
 }
 
+/* Tên giảng viên */
 .profile-name {
     font-size: 1.75rem;
     font-weight: 700;
