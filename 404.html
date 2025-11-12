@@ -8,6 +8,7 @@
         // GitHub Pages SPA routing handler
         (function() {
             const path = window.location.pathname;
+            const search = window.location.search; // Lưu query parameters
             const repo = '/ISE_Web'; // Repository name
             
             // Route mapping
@@ -51,7 +52,8 @@
             
             // Find matching route
             if (routes[cleanPath]) {
-                window.location.replace(repo + routes[cleanPath]);
+                // Preserve query parameters khi redirect
+                window.location.replace(repo + routes[cleanPath] + search);
             } else {
                 // Default to home
                 window.location.replace(repo + '/pages/home.html');
