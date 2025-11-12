@@ -1,36 +1,45 @@
+/* ===== STYLES CHUNG CHO TOÀN BỘ TRANG ===== */
 
-.header {
-    display: flex;
-    width: 1440px;
-    height: auto; 
-    min-height: 100px; 
-    padding: 12px 64px; 
-    align-items: center;
-    gap: 52px;
-    background: var(--Neutral-50, #FAFAFA);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+/* Ngăn cuộn ngang và đảm bảo full width */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
+/* Ẩn body cho đến khi trang load xong - ngăn flash content */
+body:not(.loaded) {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+/* Hiển thị body khi đã load xong */
+body.loaded {
+    opacity: 1;
+}
+
+/* ===== HEADER STYLES ===== */
+
+/* Styles cho header - áp dụng cho cả .header class và #header id */
+.header,
 #header {
     display: flex;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: auto;
     min-height: 100px;
     padding: 12px 64px;
     align-items: center;
     gap: 52px;
     background: var(--Neutral-50, #FAFAFA);
-    position: sticky;
+    position: sticky; /* Header dính ở top khi scroll */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Luôn hiển thị trên cùng */
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
+/* Thanh điều hướng navbar */
 .rHeader .navbar{
     display: flex;
     flex-direction: row;
@@ -44,27 +53,33 @@
     justify-content: space-between;
 }
 
+/* Mỗi item trong navigation */
 .navigation{
     list-style-type: none;
     padding: 12px;
     justify-content: center;
     align-items: center;
-    transition:font-weight 0.3s ease
+    transition:font-weight 0.3s ease;
+    position: relative; /* Để định vị dropdown menu */
 }
 
+/* Hiệu ứng hover cho tên menu */
 .navigation .nav-name:hover{
     color:var(--Cyan-600,#0891B2);
 }
 
+/* Style cho tên menu */
 .navigation .nav-name{
     padding: 16px;
     text-decoration: none;
     color: var(--Cyan-950, #083344)
 }
 
+/* Menu dropdown xuất hiện khi hover */
 .dropdown-menu{
     position:absolute;
-    top: 64px;
+    top: 100%; /* Hiển thị ngay dưới item cha */
+    left: 0; /* Canh trái với item cha */
     display:block;
     padding: 24px;
     background-color: var(--Cyan-950, #083344);
@@ -72,8 +87,11 @@
     gap: 20px;
     border-radius: 8px;
     line-height: 40px;
+    min-width: 200px; /* Chiều rộng tối thiểu */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng đổ nhẹ */
 }
 
+/* Style cho item trong dropdown */
 .dropdown-item{
     word-wrap: break-word;
     justify-content: space-between;
@@ -86,18 +104,22 @@
     line-height: inherit;
 }
 
+/* Xóa bullet points cho nav item */
 .nav-item{
     list-style-type: none;
 }
 
+/* Hiệu ứng hover cho dropdown item */
 .dropdown-item:hover{
     color: var(--Cyan-300, #67E8F9);
 }
 
+/* Ẩn dropdown mặc định */
 .dropdown-menu{
     display: none;
 }
 
+/* Hiện dropdown khi hover vào navigation */
 .navigation:hover .dropdown-menu{display:block}
 
 .footer {
@@ -113,21 +135,24 @@
 
 .footer .class {
   display: flex;
-  width: 1440px;
-  max-width: 100%; 
+  width: 100%;
+  max-width: 1440px; 
   align-items: center;
   gap: 64px;
   padding: 32px 64px 64px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .footer .frame {
   display: flex;
   flex-direction: column;
-  width: 528px;
+  width: 100%;
+  max-width: 528px;
   align-items: flex-start;
   gap: 40px;
   position: relative;
+  flex: 1;
 }
 
 .footer .div {
@@ -218,16 +243,19 @@
 .footer .frame-4 {
   display: flex;
   flex-direction: column;
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   align-items: flex-start;
   gap: 12px;
   position: relative;
+  flex: 1;
 }
 
 .footer .frame-5 {
   display: flex;
   flex-direction: column;
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   align-items: center;
   position: relative;
   flex: 0 0 auto;
@@ -292,7 +320,8 @@
 
 .footer .p {
   position: relative;
-  width: 693px;
+  width: 100%;
+  max-width: 693px;
   margin-top: -1.00px;
   font-family: "Inter", Helvetica;
   font-weight: 300;
@@ -304,7 +333,8 @@
 
 .footer .frame-9 {
   display: flex;
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   align-items: center;
   gap: 56px;
   position: relative;

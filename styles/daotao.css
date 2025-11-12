@@ -1,27 +1,34 @@
-/* *:Đặt lại margin/padding mặc định của trình duyệt cho tất cả phần tử,
-    đảm bảo các khoảng cách bắt đầu từ 0 và tránh sự khác nhau giữa các trình duyệt. */
-* {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-}
+/* ===== STYLES RIÊNG CHO TRANG ĐÀO TẠO ===== */
+/* Lưu ý: KHÔNG dùng * selector vì sẽ override header styles từ components.css */
 
+/* Body style cơ bản */
 body {
     font-family: 'Inter', sans-serif;
     background: #e8e8ee;
-    width: 1440px;
-    margin: 0 auto;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Ngăn cuộn ngang */
 }
 
+/* Wrapper bên trong body để center nội dung và duy trì flexbox layout */
+body > #header-container,
+body > .container,
+body > #footer-container {
+    width: 100%;
+}
+
+/* Container chính chứa nội dung */
 .container {
     position: relative;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     padding-top: 40px; 
-    padding-bottom: 40px; 
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
+/* ===== HERO SECTION ===== */
 
+/* Section giới thiệu chung ở đầu trang */
 .hero-section {
     position: relative; 
     margin: 0 auto 40px;
@@ -34,6 +41,7 @@ body {
     padding: 32px;
 }
 
+/* Tiêu đề chính của hero section */
 .hero-title {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -44,6 +52,7 @@ body {
     margin-bottom: 16px;
 }
 
+/* Mô tả trong hero section */
 .hero-description {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -55,6 +64,9 @@ body {
     margin: 0 auto;
 }
 
+/* ===== TAB CONTAINER ===== */
+
+/* Container chứa 2 tab: Đại học và Sau đại học */
 .tab-container {
     position: relative;
     margin: 0 auto 40px; 
@@ -70,6 +82,7 @@ body {
     gap: 8px;
 }
 
+/* Mỗi tab riêng lẻ */
 .tab {
     flex: 1;
     display: flex;
@@ -84,6 +97,7 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Tab đang được chọn */
 .tab.active {
     background: #083344;
     color: #fafafa;
@@ -91,14 +105,19 @@ body {
     transform: translateY(-1px);
 }
 
+/* Tab chưa được chọn */
 .tab:not(.active) {
     color: #0a0a0a;
 }
 
+/* Hiệu ứng hover cho tab chưa active */
 .tab:not(.active):hover {
     background: rgba(8,51,68,0.1);
 }
 
+/* ===== CONTENT WRAPPER ===== */
+
+/* Wrapper chứa sidebar chương trình và nội dung chính */
 .content-wrapper {
     display: flex;
     gap: 32px;
@@ -107,7 +126,9 @@ body {
     padding: 0 20px;
 }
 
-/* Program Cards */
+/* ===== SIDEBAR CHƯƠNG TRÌNH ĐÀO TẠO ===== */
+
+/* Sidebar hiển thị danh sách chương trình (HTTT, KHMT, HTTT-HCIC, KHDL) */
 .program-cards {
     position: relative; 
     flex: 0 0 274px; 
@@ -118,8 +139,10 @@ body {
     padding: 20px;
     height: fit-content; 
     position: sticky; 
+    top: 120px; /* Dính khi scroll, cách top để tránh header */
 }
 
+/* Tiêu đề "Chương trình đào tạo" */
 .program-title {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -129,6 +152,7 @@ body {
     margin-bottom: 24px;
 }
 
+/* Mỗi card chương trình trong sidebar */
 .program-card {
     padding: 14px;
     margin-bottom: 12px;
@@ -137,21 +161,25 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Card chương trình đang được chọn */
 .program-card.active {
     background: #083344;
     box-shadow: 0px 4px 12px 0px rgba(8,51,68,0.3);
     transform: translateY(-1px);
 }
 
+/* Text của card đang active */
 .program-card.active .program-name,
 .program-card.active .program-info {
     color: #fafafa;
 }
 
+/* Hiệu ứng hover cho card chưa active */
 .program-card:not(.active):hover {
     background: rgba(8,51,68,0.1);
 }
 
+/* Tên chương trình (VD: HTTT, KHMT) */
 .program-name {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -161,6 +189,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Thông tin thêm (VD: 4 năm) */
 .program-info {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -169,6 +198,9 @@ body {
     color: #0a0a0a;
 }
 
+/* ===== NỘI DUNG CHÍNH ===== */
+
+/* Container chính chứa nội dung chi tiết chương trình */
 .main-content {
     position: relative; 
     flex: 1; 
@@ -180,12 +212,15 @@ body {
     overflow: hidden;
 }
 
+/* Wrapper cho nội dung chương trình */
 .program-content {
     width: 100%;
 }
 
+/* Hình banner ở đầu nội dung */
 .banner-image {
-    width: 887px;
+    width: 100%;
+    /* max-width: 887px; */ /* Đã xóa fixed width */
     height: 326px;
     border-radius: 16px 16px 0 0;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
@@ -269,6 +304,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: white;
+    margin: 0; /* Added to fix potential margin issues */
 }
 
 .job-item a {
@@ -280,7 +316,10 @@ body {
     text-decoration: none;
 }
 
-ul {
+/* FIX: Scoped list styles to .main-content 
+  This prevents these styles from breaking the header navigation.
+*/
+.main-content ul {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -290,7 +329,7 @@ ul {
     padding-left: 20px;
     list-style: disc;
 }
-ol {
+.main-content ol {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -301,12 +340,12 @@ ol {
     list-style: decimal;
 }
 
-ul li {
+.main-content ul li {
     margin-bottom: 8px;
 }
 
 
-ul ul {
+.main-content ul ul {
     margin: 8px 0 8px 20px;
     list-style: circle;
 }
@@ -401,6 +440,7 @@ ul ul {
     border-top: 2px solid #065285;
 }
 
+/* This class seems unused in the HTML structure, but kept it just in case */
 .program-list-section {
     position: absolute;
     top: 2000px; 
@@ -458,11 +498,24 @@ ul ul {
         width: 100%;
         max-width: 1440px;
     }
-    
-    .header {
+}
+
+@media (max-width: 1024px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .program-cards {
+        position: static; /* Unset sticky position on mobile */
         width: 100%;
+        flex: 0 0 auto; /* Reset flex property */
+        box-sizing: border-box; /* Ensure padding is included */
+    }
+    .main-content {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
+
 
 .program-content {
     animation: fadeIn 0.5s ease-in-out;
@@ -505,8 +558,11 @@ ul ul {
     }
 }
 
+/* Layout structure for sticky footer */
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -522,7 +578,9 @@ body {
 
 .container {
     flex: 1 0 auto;
-    min-height: auto; 
+    min-height: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #footer-container {

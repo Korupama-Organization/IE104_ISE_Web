@@ -1,32 +1,41 @@
-/* Reset và Cài đặt chung */
+/* ===== STYLES RIÊNG CHO TRANG LIÊN HỆ ===== */
+
+/* ===== RESET & CÀI ĐẶT CHUNG ===== */
+
+/* Reset cơ bản cho tất cả elements */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body style */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #F9FAFB; /* A very light grey background */
-  color: #374151; /* Gray 700 */
+  background-color: #F9FAFB; /* Nền xám rất nhạt */
+  color: #374151; /* Màu chữ xám đậm */
   line-height: 1.6;
 }
 
-/* Container chung */
+/* ===== LAYOUT ===== */
+
+/* Container chung chứa nội dung */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 3rem 1rem; /* 48px top/bottom, 16px left/right */
+  padding: 3rem 1rem; /* 48px trên/dưới, 16px trái/phải */
 }
 
-/* Bố cục lưới */
+/* Grid layout cho các contact card */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr; /* Mặc định 1 cột cho mobile */
-  gap: 2rem; /* 32px */
+  gap: 2rem; /* 32px khoảng cách giữa các card */
 }
 
-/* Thẻ liên hệ */
+/* ===== CONTACT CARD ===== */
+
+/* Card chứa thông tin liên hệ */
 .contact-card {
   position: relative;
   background-color: white;
@@ -35,10 +44,10 @@ body {
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
   overflow: hidden;
-  border: 1px solid #E5E7EB; /* Gray 200 border */
+  border: 1px solid #E5E7EB; /* Viền xám nhạt */
 }
 
-/* Hình tròn trang trí */
+/* Hình tròn trang trí ở góc phải trên */
 .contact-card::after {
   content: '';
   position: absolute;
@@ -46,18 +55,18 @@ body {
   right: -40px;
   width: 100px;
   height: 100px;
-  background-color: rgba(8, 145, 178, 0.6); /* Màu theo yêu cầu */
+  background-color: rgba(8, 145, 178, 0.6); /* Màu cyan với độ trong suốt */
   border-radius: 50%;
   z-index: 0;
 }
 
-/* Nội dung thẻ (để đè lên hình tròn) */
+/* Nội dung card (hiển thị trên hình tròn trang trí) */
 .contact-card-content {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Đảm bảo hiển thị trên hình tròn */
   display: flex;
   align-items: center;
-  gap: 1rem; /* 16px */
+  gap: 1rem; /* 16px khoảng cách */
 }
 
 .contact-card-icon {

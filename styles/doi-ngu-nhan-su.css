@@ -1,10 +1,11 @@
-﻿* {
-    margin: 0;
-    padding: 0;
+﻿/* ===== STYLES RIÊNG CHO TRANG ĐỘI NGŨ NHÂN SỰ ===== */
+
+/* Reset chỉ cho nội dung trang - KHÔNG dùng * universal selector */
+.main-content * {
     box-sizing: border-box;
-    color: #083344 !important;
 }
 
+/* Body style cơ bản */
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +19,9 @@ body {
     flex-direction: column;
 }
 
-/* Header Styles */
+/* ===== HEADER STYLES ===== */
+
+/* Header chính của trang */
 .main-header {
     border-radius: 2.5rem;
     background: #FAFAFA;
@@ -26,6 +29,7 @@ body {
     backdrop-filter: blur(4px);
 }
 
+/* Container chứa nội dung header */
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -36,18 +40,22 @@ body {
     gap: 2rem;
 }
 
-/* Navigation */
+/* ===== NAVIGATION ===== */
+
+/* Menu điều hướng - ẩn trên mobile, hiện trên desktop */
 .main-navigation {
     display: none;
     gap: 1.5rem;
 }
 
+/* Hiển thị navigation trên màn hình lớn */
 @media (min-width: 1024px) {
     .main-navigation {
         display: flex;
     }
 }
 
+/* Link trong navigation */
 .nav-link {
     font-size: 1.125rem;
     font-weight: 600;
@@ -56,11 +64,14 @@ body {
     color: #083344;
 }
 
-    .nav-link:hover {
-        color: #083344;
-    }
+/* Hover effect cho navigation link */
+.nav-link:hover {
+    color: #083344;
+}
 
-/* Page Title Section */
+/* ===== PHẦN TIÊU ĐỀ TRANG ===== */
+
+/* Section chứa tiêu đề trang */
 .page-title-section {
     max-width: 920px;
     margin: 0 auto 2rem auto;
@@ -70,10 +81,12 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+/* Container chứa title */
 .title-container {
     text-align: center;
 }
 
+/* Tiêu đề chính của trang */
 .main-title {
     font-size: 2.5rem;
     font-weight: 1000;
@@ -116,20 +129,20 @@ body {
     cursor: pointer;
     transition: all 0.1s ease;
     background-color: #f1f1f1;
-    color: #083344;
+    color: #083344 !important;
 }
 
-    .tab-button.active {
-        background-color: #083344;
-        color: #ffffff !important;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
+.tab-button.active {
+    background-color: #083344;
+    color: #ffffff !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
-    .tab-button:not(.active):hover {
-        background-color: #083344;
-        color: #ffffff !important;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
+.tab-button:not(.active):hover {
+    background-color: #083344;
+    color: #ffffff !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
 
 /* Staff Grid */
 .staff-grid-section {
@@ -230,7 +243,7 @@ body {
         backdrop-filter: blur(6px);
     }
 
-/* Dropdown animation */
+/* Staff card animation - scoped to staff grid only */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -243,25 +256,26 @@ body {
     }
 }
 
-.navigation {
+/* Apply animation only to staff cards, NOT to header navigation */
+.staff-grid .staff-card {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-    .navigation:nth-child(1) {
-        animation-delay: 0.1s;
-    }
+.staff-grid .staff-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
 
-    .navigation:nth-child(2) {
-        animation-delay: 0.2s;
-    }
+.staff-grid .staff-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
 
-    .navigation:nth-child(3) {
-        animation-delay: 0.3s;
-    }
+.staff-grid .staff-card:nth-child(3) {
+    animation-delay: 0.15s;
+}
 
-    .navigation:nth-child(4) {
-        animation-delay: 0.4s;
-    }
+.staff-grid .staff-card:nth-child(4) {
+    animation-delay: 0.2s;
+}
 
 /* Hide element utility */
 .hidden {

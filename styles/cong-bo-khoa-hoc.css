@@ -1,0 +1,131 @@
+/* ===== STYLES RIÊNG CHO TRANG CÔNG BỐ KHOA HỌC ===== */
+
+/* ===== STYLES CHUNG ===== */
+
+/* Container chính */
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Tiêu đề trang */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #f0f0f0;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ===== CONTAINER CHỨA CÁC CÔNG BỐ ===== */
+
+/* Container chính chứa danh sách công bố */
+.publications-container {
+    margin-top: 2rem;
+}
+
+/* Section cho mỗi năm */
+.year-section {
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ===== NÚT TOGGLE NĂM ===== */
+
+/* Nút toggle để mở/đóng công bố theo năm */
+.year-toggle {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+/* Hiệu ứng hover cho toggle */
+.year-toggle:hover {
+    background-color: #f0f2f5;
+}
+
+/* Toggle khi đang active (đã mở) */
+.year-toggle.active {
+    background-color: #003366;
+    color: #ffffff;
+    border-bottom-color: #003366;
+}
+
+/* Icon + (expand) hoặc - (collapse) */
+.year-toggle::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: normal;
+    color: #0056b3;
+    transition: transform 0.3s ease;
+}
+
+.year-toggle.active::after {
+    content: '−';
+    color: #ffffff;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.publications-list {
+    padding: 0;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.publications-list.show {
+    padding: 20px;
+    max-height: 2000px; /* Adjust as needed */
+    transition: max-height 1s ease-in, padding 0.5s ease-in;
+}
+
+.publications-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publications-list li {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #555;
+    padding-left: 35px;
+    position: relative;
+}
+
+.pub-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.publications-list li strong {
+    color: #003366;
+    font-weight: 600;
+}
