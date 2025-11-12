@@ -33,7 +33,7 @@
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(.*)\\.(html)$",
       "headers": [
         {
           "key": "Content-Type",
@@ -41,5 +41,7 @@
         }
       ]
     }
-  ]
+  ],
+  "trailingSlash": false,
+  "cleanUrls": true
 }
