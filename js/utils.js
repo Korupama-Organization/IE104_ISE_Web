@@ -1,7 +1,15 @@
 // Hàm tải header và footer động dựa trên đường dẫn trang hiện tại
 function loadHeaderAndFooter() {
-    // Sử dụng đường dẫn tuyệt đối cho GitHub Pages
-    const componentsPath = '/ISE_Web/components/';
+    const currentPath = window.location.pathname; // Lấy đường dẫn hiện tại
+    let componentsPath = '../components/'; // Đường dẫn mặc định đến thư mục components
+    
+    // Điều chỉnh đường dẫn cho các trang trong thư mục con
+    if (currentPath.includes('/nhom-nghien-cuu/') || 
+        currentPath.includes('/doi-ngu-nhan-su/') || 
+        currentPath.includes('/gioi-thieu/') ||
+        currentPath.includes('/tin-tuc/')) {
+        componentsPath = '../../components/';
+    }
     
     // Sử dụng Promise.all để đợi cả header và footer load xong
     const headerPromise = fetch(componentsPath + 'header.html')
