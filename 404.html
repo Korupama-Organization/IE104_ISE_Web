@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages SPA routing handler
+        (function() {
+            const path = window.location.pathname;
+            const repo = '/ISE_Web'; // Repository name
+            
+            // Route mapping
+            const routes = {
+                '/': '/pages/home.html',
+                '/home': '/pages/home.html',
+                '/dao-tao': '/pages/dao-tao.html',
+                '/lien-he': '/pages/lien-he.html',
+                '/cac-nhom-nghien-cuu': '/pages/cac-nhom-nghien-cuu.html',
+                '/cong-bo-khoa-hoc': '/pages/cong-bo-khoa-hoc.html',
+                '/bai-bao-nckh-sinh-vien': '/pages/bai-bao-nckh-sinh-vien.html',
+                
+                '/tin-tuc/tin-hoc-vu': '/pages/tin-tuc/tin-hoc-vu.html',
+                '/tin-tuc/tin-tot-nghiep': '/pages/tin-tuc/tin-tot-nghiep.html',
+                '/tin-tuc/tin-tuyen-dung': '/pages/tin-tuc/tin-tuyen-dung.html',
+                '/tin-tuc/tin-khoa-hoc-cong-nghe': '/pages/tin-tuc/tin-khoa-hoc-cong-nghe.html',
+                
+                '/gioi-thieu': '/pages/gioi-thieu/gioi-thieu-chung.html',
+                '/gioi-thieu-chung': '/pages/gioi-thieu/gioi-thieu-chung.html',
+                '/doi-ngu-nhan-su': '/pages/gioi-thieu/doi-ngu-nhan-su.html',
+                
+                '/nhom-nghien-cuu/bao-mat-blockchain-iot': '/pages/nhom-nghien-cuu/bao-mat-blockchain-iot.html',
+                '/nhom-nghien-cuu/khoa-hoc-du-lieu': '/pages/nhom-nghien-cuu/khoa-hoc-du-lieu.html',
+                '/nhom-nghien-cuu/khoa-hoc-thong-tin-dia-ly': '/pages/nhom-nghien-cuu/khoa-hoc-thong-tin-dia-ly.html',
+                '/nhom-nghien-cuu/phat-trien-he-thong': '/pages/nhom-nghien-cuu/phat-trien-he-thong.html',
+                '/nhom-nghien-cuu/tinh-toan-ky-thuat-nang-cao': '/pages/nhom-nghien-cuu/tinh-toan-ky-thuat-nang-cao.html',
+                '/nhom-nghien-cuu/xu-ly-du-lieu': '/pages/nhom-nghien-cuu/xu-ly-du-lieu.html',
+                '/nhom-nghien-cuu/xu-ly-ngon-ngu': '/pages/nhom-nghien-cuu/xu-ly-ngon-ngu.html',
+                
+                '/giang-vien/camnt': '/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_camnt.html',
+                '/giang-vien/khoavt': '/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_khoavt.html',
+                '/giang-vien/kietnv': '/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_kietnv.html',
+                '/giang-vien/thunta': '/pages/doi-ngu-nhan-su/doi-ngu-nhan-su_thunta.html'
+            };
+            
+            // Remove repo prefix if present
+            let cleanPath = path;
+            if (path.startsWith(repo)) {
+                cleanPath = path.substring(repo.length);
+            }
+            
+            // Find matching route
+            if (routes[cleanPath]) {
+                window.location.replace(repo + routes[cleanPath]);
+            } else {
+                // Default to home
+                window.location.replace(repo + '/pages/home.html');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>Đang chuyển hướng...</p>
+</body>
+</html>
