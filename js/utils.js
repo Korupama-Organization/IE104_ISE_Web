@@ -6,7 +6,8 @@ function loadHeaderAndFooter() {
     // Điều chỉnh đường dẫn cho các trang trong thư mục con
     if (currentPath.includes('/nhom-nghien-cuu/') || 
         currentPath.includes('/doi-ngu-nhan-su/') || 
-        currentPath.includes('/gioi-thieu/')) {
+        currentPath.includes('/gioi-thieu/') ||
+        currentPath.includes('/tin-tuc/')) {
         componentsPath = '../../components/';
     }
     

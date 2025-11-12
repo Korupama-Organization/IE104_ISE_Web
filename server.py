@@ -26,10 +26,15 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             '/home': 'pages/home.html',
             '/dao-tao': 'pages/dao-tao.html',
             '/lien-he': 'pages/lien-he.html',
-            '/tin-tuc': 'pages/tin-tuc.html',
             '/cac-nhom-nghien-cuu': 'pages/cac-nhom-nghien-cuu.html',
             '/cong-bo-khoa-hoc': 'pages/cong-bo-khoa-hoc.html',
             '/bai-bao-nckh-sinh-vien': 'pages/bai-bao-nckh-sinh-vien.html',
+            
+            # Tin tức
+            '/tin-tuc/tin-hoc-vu': 'pages/tin-tuc/tin-hoc-vu.html',
+            '/tin-tuc/tin-tot-nghiep': 'pages/tin-tuc/tin-tot-nghiep.html',
+            '/tin-tuc/tin-tuyen-dung': 'pages/tin-tuc/tin-tuyen-dung.html',
+            '/tin-tuc/tin-khoa-hoc-cong-nghe': 'pages/tin-tuc/tin-khoa-hoc-cong-nghe.html',
             
             # Giới thiệu
             '/gioi-thieu': 'pages/gioi-thieu/gioi-thieu-chung.html',
@@ -89,11 +94,15 @@ def run_server():
             print(f"  Home page:        http://localhost:{PORT}/")
             print(f"  Đào tạo:          http://localhost:{PORT}/dao-tao")
             print(f"  Liên hệ:          http://localhost:{PORT}/lien-he")
-            print(f"  Tin tức:          http://localhost:{PORT}/tin-tuc")
             print(f"  Giới thiệu:       http://localhost:{PORT}/gioi-thieu")
             print(f"  Nhóm nghiên cứu:  http://localhost:{PORT}/cac-nhom-nghien-cuu")
             print(f"  Công bố KH:       http://localhost:{PORT}/cong-bo-khoa-hoc")
             print(f"  Bài báo NCKH SV:  http://localhost:{PORT}/bai-bao-nckh-sinh-vien")
+            print(f"\n📰 Tin tức:")
+            print(f"  Tin học vụ:       http://localhost:{PORT}/tin-tuc/tin-hoc-vu")
+            print(f"  Tin tốt nghiệp:   http://localhost:{PORT}/tin-tuc/tin-tot-nghiep")
+            print(f"  Tin tuyển dụng:   http://localhost:{PORT}/tin-tuc/tin-tuyen-dung")
+            print(f"  Tin KHCN:         http://localhost:{PORT}/tin-tuc/tin-khoa-hoc-cong-nghe")
             print(f"\n")
             
             httpd.serve_forever()
