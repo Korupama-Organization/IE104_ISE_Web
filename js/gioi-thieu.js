@@ -28,9 +28,8 @@ document.getElementById("tab-mobile-web").addEventListener("click", showMobileWe
 const params = new URLSearchParams(window.location.search);
 const selectedTab = params.get("tab");
 
-// Hiển thị tab được chọn hoặc mặc định là Mobile Web
-if (selectedTab === "dataScience") {
-    showDataScience();
+if (selectedTab === "mobileWeb") {
+    showMobileWeb();
 } else {
-    showMobileWeb(); // Mặc định
+    showDataScience(); // Mặc định
 }
