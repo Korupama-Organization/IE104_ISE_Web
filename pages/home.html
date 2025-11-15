@@ -4,313 +4,216 @@
     <!-- Thiết lập charset và viewport cho responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trang chủ - Khoa Khoa học và Kỹ thuật Thông tin</title>
     <!-- Import CSS chung từ components -->
-    <link rel="stylesheet" href="/ISE_Web/styles/components.css">
-    <style>
-        /* ===== RESET & GLOBALS ===== */
-        * {
-            box-sizing: border-box;
-        }
-        
-        /* Body style cơ bản */
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #e8e8ee;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; /* Ngăn cuộn ngang */
-        }
-
-        /* ===== HERO SECTION ===== */
-        /* Section banner chính với gradient background */
-        .hero-section {
-            background: linear-gradient(135deg, #083344 0%, #0a4a5c 100%);
-            color: white;
-            padding: 120px 20px 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        /* Hiệu ứng pulse animation cho background */
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 15s ease-in-out infinite; /* Animation xung nhẹ */
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .hero-description {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            font-size: 1.125rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .cta-button-primary {
-            background: white;
-            color: #083344;
-        }
-
-        .cta-button-primary:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-        }
-
-        .cta-button-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .cta-button-secondary:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-2px);
-        }
-
-        .features-section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #083344;
-            margin-bottom: 3rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #083344 0%, #0a4a5c 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-        }
-
-        .feature-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #083344;
-            margin-bottom: 1rem;
-        }
-
-        .feature-description {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .quick-link-card {
-            background: linear-gradient(135deg, #083344 0%, #0a4a5c 100%);
-            color: white;
-            border-radius: 12px;
-            padding: 2rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .quick-link-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .quick-link-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .quick-link-description {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.25rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .features-section {
-                padding: 60px 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="../js/home.js"></script>
+    <script src="../js/utils.js"></script>
 </head>
 <body>
-    <!-- Header -->
-    <div id="header-container"></div>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Khoa Khoa học và Kỹ thuật Thông tin</h1>
-            <p class="hero-subtitle">Trường Đại học Công nghệ Thông tin - ĐHQG-HCM</p>
-            <p class="hero-description">
-                Đào tạo nguồn nhân lực chất lượng cao trong lĩnh vực Công nghệ Thông tin, 
-                nghiên cứu khoa học và phát triển công nghệ tiên tiến, 
-                góp phần xây dựng và phát triển xã hội tri thức.
-            </p>
-            <div class="cta-buttons">
-                <a href="/ISE_Web/gioi-thieu" class="cta-button cta-button-primary">Tìm hiểu thêm</a>
-                <a href="/lien_he" class="cta-button cta-button-secondary">Liên hệ</a>
+<body>
+    
+    <div class="slider">
+        <div class="slider-content">
+            <h3>Trường Đại học Công nghệ Thông tin</h3>
+            <h2>KHOA KHOA HỌC VÀ KỸ THUẬT THÔNG TIN </h2>
+            <p>Với nhiệm vụ nghiên cứu khoa học và đào tạo đội ngũ cử nhân, thạc sĩ, tiến sĩ Công nghệ thông tin, hướng ngành chủ chốt của Trường, đáp ứng nhu cầu đào tạo cán bộ có trình độ cao phục vụ cho sự nghiệp công nghiệp hóa của khu vực phía Nam và cả nước nói chung</p>
+        </div>
+        <div class="list">
+            <div class="item">
+                <img src="ISE_Web/assets/1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="ISE_Web/assets/2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="ISE_Web/assets/3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="ISE_Web/assets/4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="ISE_Web/assets/5.jpg" alt="">
             </div>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-        <h2 class="section-title">Điểm nổi bật</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🎓</div>
-                <h3 class="feature-title">Đào tạo chất lượng cao</h3>
-                <p class="feature-description">
-                    Chương trình đào tạo hiện đại, đa dạng từ Đại học đến Sau Đại học, 
-                    cập nhật xu hướng công nghệ mới nhất.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🔬</div>
-                <h3 class="feature-title">Nghiên cứu khoa học</h3>
-                <p class="feature-description">
-                    Các nhóm nghiên cứu mạnh về AI, Data Science, Blockchain, IoT, 
-                    với nhiều công trình quốc tế uy tín.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3 class="feature-title">Đội ngũ giảng viên</h3>
-                <p class="feature-description">
-                    Đội ngũ giảng viên giàu kinh nghiệm, nhiệt huyết, 
-                    có trình độ chuyên môn cao và tâm huyết với giảng dạy.
-                </p>
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- Lời chào mừng -->
+    <div class="welcome">
+        <div class="welcome-img">
+            <img src="ISE_Web/assets/home-welcome-img.png">
+        </div>
+        <div class="welcome-content">
+            <p>Chào mừng đến với</p>
+            <h3>KHOA KHOA HỌC VÀ KỸ THUẬT THÔNG TIN</h3>
+            <p>Khoa Khoa học và Kỹ thuật Thông tin được thành lập ngày 09 tháng 11 năm 2018 theo QĐ của Trường Đại học Công nghệ Thông tin. Với nhiệm vụ nghiên cứu khoa học và đào tạo đội ngũ cử nhân, thạc sĩ, tiến sĩ Công nghệ thông tin, hướng ngành chủ chốt của Trường, đáp ứng nhu cầu đào tạo cán bộ có trình độ cao phục vụ cho sự nghiệp công nghiệp hóa của khu vực phía Nam và cả nước nói chung.</p>
+            <div class="welcome-number">
+                <div>
+                    <h3>1000+</h3>
+                    <p>Sinh viên đại học</p>
+                </div>
+                <div>
+                    <h3>620+</h3>
+                    <p>Sinh viên sau đại học</p>
+                </div>
             </div>
         </div>
-
-        <h2 class="section-title">Truy cập nhanh</h2>
-        <div class="quick-links">
-            <a href="/dao_tao" class="quick-link-card">
-                <div class="quick-link-title">📚 Đào tạo</div>
-                <p class="quick-link-description">Thông tin về các chương trình đào tạo</p>
-            </a>
-
-            <a href="/ISE_Web/cac-nhom-nghien-cuu" class="quick-link-card">
-                <div class="quick-link-title">🔍 Nhóm nghiên cứu</div>
-                <p class="quick-link-description">Các nhóm nghiên cứu của khoa</p>
-            </a>
-
-            <a href="/tin_tuc" class="quick-link-card">
-                <div class="quick-link-title">📰 Tin tức</div>
-                <p class="quick-link-description">Tin tức và sự kiện mới nhất</p>
-            </a>
-
-            <a href="/ISE_Web/cong-bo-khoa-hoc" class="quick-link-card">
-                <div class="quick-link-title">📄 Công bố khoa học</div>
-                <p class="quick-link-description">Các công trình nghiên cứu tiêu biểu</p>
-            </a>
+    </div>
+    <!--Các ngành đào tạo-->
+    <div class="field-introduction">
+        <div class="intro-content">
+            <hr>
+            <h3>CÁC NGÀNH ĐÀO TẠO</h3>
+            <hr>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <div id="footer-container"></div>
-
-    <script src="/ISE_Web/js/utils.js"></script>
+        <div class="field">
+            <div class="tabs">
+                <ul class="tabs-nav">
+                    <li class="tabs-nav-item active" data-target="KHDL">
+                        <img src="ISE_Web/assets/home-tab-img-1.png">
+                        <div class="tabs-nav-content">
+                            <h4>KHOA HỌC DỮ LIỆU</h4>
+                            <p>Bậc cử nhân・4 năm</p>
+                            <p>Phân tích nâng cao, học máy thống kê, xây dựng giải pháp </p>
+                        </div>
+                    </li>
+                    <li class="tabs-nav-item" data-target="CNTT">
+                        <img src="ISE_Web/assets/home-tab-img-2.png">
+                        <div class="tabs-nav-content">
+                            <h4>CÔNG NGHỆ THÔNG TIN </h4>
+                            <p>Bậc cử nhân / Bậc thạc sĩ / Bậc tiến sĩ</p>
+                            <p>Mạng máy tính, tương tác người và máy, hệ thống website và ứng dụng</p>
+                        </div>
+                    </li>
+                    <li class="tabs-nav-item" data-target="CNNB">
+                        <img src="ISE_Web/assets/home-tab-img-3.png">
+                        <div class="tabs-nav-content">
+                            <h4>CÔNG NGHỆ THÔNG TIN VIỆT NHẬT </h4>
+                            <p>Bậc cử nhân・4 năm</p>
+                            <p>Dữ liệu lớn, truyền thông xã hội và công nghệ website, cầu nối Việt - Nhật</p>
+                        </div>
+                    </li>
+                    <div class="bg-active"></div>
+                </ul>
+                <div class="tabs-content">
+                    <div class="tabs-content-items active" id="KHDL">
+                        <img src="ISE_Web/assets/home-tab-img-1.png">
+                        <h4>KHOA HỌC DỮ LIỆU</h4>
+                        <p>Bậc cử nhân・4 năm</p>
+                        <p>Trang bị kiến thức về thống kê, học máy, trí tuệ nhân tạo và trực quan hóa dữ liệu để phân tích, dự đoán và xây dựng giải pháp dựa trên dữ liệu thực tế</p>
+                        <ul class="tab-con-item-list">
+                            <li>Học máy thống kê</li>
+                            <li>Trực quan dữ liệu</li>
+                            <li>Khai phá dữ liệu</li>
+                            <li>Học sâu</li>
+                        </ul>
+                        <a href="">Tìm hiểu thêm &#8594</a>
+                    </div>
+                    <div class="tabs-content-items" id="CNTT">
+                        <img src="ISE_Web/assets/home-tab-img-2.png">
+                        <h4>CÔNG NGHỆ THÔNG TIN</h4>
+                        <p>Bậc cử nhân / Bậc thạc sĩ / Bậc tiến sĩ</p>
+                        <p>Trang bị kiến thức về lập trình, hệ thống, mạng và bảo mật, giúp sinh viên phát triển phần mềm xây dựng giải pháp số </p>
+                        <ul class="tab-con-item-list">
+                            <li>Dữ liệu truyền thông</li>
+                            <li>Mô hình mạng</li>
+                            <li>Phát triển Website</li>
+                            <li>Công nghệ dữ liệu lớn</li>
+                        </ul>
+                        <a href="">Tìm hiểu thêm &#8594</a>
+                    </div>
+                    <div class="tabs-content-items" id="CNNB">
+                        <img src="ISE_Web/assets/home-tab-img-3.png">
+                        <h4>CÔNG NGHỆ THÔNG TIN VIỆT - NHẬT</h4>
+                        <p>Bậc cử nhân・4 năm</p>
+                        <p>Trang bị kiến thức về khoa học dữ liệu lớn và công nghệ web cùng hướng phát triển làm việc với các doanh nghiệp Nhật Bản</p>
+                        <ul class="tab-con-item-list">
+                            <li>Học máy thống kê</li>
+                            <li>Trực quan dữ liệu</li>
+                            <li>Kiểm chứng phần mềm</li>
+                            <li>Văn hóa doanh nghiệp</li>
+                        </ul>
+                        <a href="">Tìm hiểu thêm &#8594</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="specific">
+    <!--Các kết quả nổi bật-->
+    <div class="remarkable-result">
+        <div class="scientific-articles">
+            <h4>2022</h4>
+            <a>Real-time traffic congestion forecasting using prophet and spark streaming</a>
+            <p>Traffic prediction system is one of the principal components of an intelligent traffic system (ITS). This system relies on data collected through vehicle-to-vehicle communication, probe vehicle monitoring, speed estimation, and vehicle counting based on vehicle tracking to predict the state of traffic...</p>
+            <h4>Các tác giả</h4>
+            <ul>
+                <li>Đỗ Trọng Hợp</li>
+                <li>Nguyễn Ngân Linh</li>
+                <li>Võ Hoàng Thông</li>
+                <li>Lâm Gia Huy</li>
+                <li>Nguyễn Thanh Bình</li>
+            </ul>
+        </div>
+        <div class="result">
+            <h4>Khoa học - công nghệ</h4>
+            <h3>MỘT SỐ KẾT QUẢ NỔI BẬT</h3>
+            <p>Khoa Khoa học và Kỹ thuật Thông tin tập hợp một đội ngũ nghiên cứu với các chuyên gia có kinh nghiệm trong nghiên cứu cơ bản cũng như phát triển các giải pháp ứng dụng về trí tuệ nhân tạo, học máy, dữ liệu lớn, thị giác máy tính, xử lý ngôn ngữ tự nhiên...</p>
+            <a href="">Tìm hiểu thêm &#8594</a>
+        </div>
+    </div>
+    <!--Doanh nghiệp - Đối tác-->
+    <div class="partner">
+        <div class="intro">
+            <h3>DOANH NGHIỆP ĐỐI TÁC</h3>
+            <hr>
+        </div>
+        <div class="auto-slider" style="--width: 100px; --height: 192px; --quantity:10;">
+            <div class="wrapper">
+                <div class="img-item" style="--position: 1;">
+                    <img src="ISE_Web/assets/home-scroll-img-1.png">
+                </div> 
+                <div class="img-item" style="--position: 2;">
+                    <img src="ISE_Web/assets/home-scroll-img-2.png">
+                </div> 
+                <div class="img-item" style="--position: 3;">
+                    <img src="ISE_Web/assets/home-scroll-img-3.png">
+                </div> 
+                <div class="img-item" style="--position: 4;">
+                    <img src="ISE_Web/assets/home-scroll-img-4.png">
+                </div> 
+                <div class="img-item"  style="--position: 5;"> 
+                    <img src="ISE_Web/assets/home-scroll-img-5.png">
+                </div> 
+                <div class="img-item"  style="--position: 6;">
+                    <img src="ISE_Web/assets/home-scroll-img-6.png">
+                </div> 
+                <div class="img-item"  style="--position: 7;">
+                    <img src="ISE_Web/assets/home-scroll-img-7.png">
+                </div> 
+                <div class="img-item"  style="--position: 8;">
+                    <img src="ISE_Web/assets/home-scroll-img-8.png">
+                </div> 
+                <div class="img-item"  style="--position: 9;">
+                    <img src="ISE_Web/assets/home-scroll-img-9.png">
+                </div> 
+                <div class="img-item" style="--position: 10;">
+                    <img src="ISE_Web/assets/home-scroll-img-10.png">
+                </div> 
+            </div>
+        </div>
+    </div>>
 </body>
 </html>
