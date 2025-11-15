@@ -222,29 +222,30 @@ function initializePage() {
     // Kiểm tra URL parameters để xác định tab nào cần hiển thị
     const urlParams = new URLSearchParams(window.location.search);
     const tabParam = urlParams.get('tab'); // Lấy giá trị của ?tab=
+    const programParam = urlParams.get('program'); // Lấy giá trị của ?program=
     
     // Xác định tab mặc định dựa trên URL parameter
     let initialTab = 'bachelor'; // Mặc định là đại học
-    let initialProgram = 'cntt-bachelor';
+    let initialProgram = programParam || 'cntt-bachelor'; // Dùng program param nếu có
     
     if (tabParam) {
         switch(tabParam.toLowerCase()) {
             case 'bachelor':
                 initialTab = 'bachelor';
-                initialProgram = 'cntt-bachelor';
+                if (!programParam) initialProgram = 'cntt-bachelor';
                 break;
             case 'master':
                 initialTab = 'master';
-                initialProgram = 'cntt-master';
+                if (!programParam) initialProgram = 'cntt-master';
                 break;
             case 'phd':
                 initialTab = 'phd';
-                initialProgram = 'cntt-phd';
+                if (!programParam) initialProgram = 'cntt-phd';
                 break;
             default:
                 // Giữ giá trị mặc định nếu parameter không hợp lệ
                 initialTab = 'bachelor';
-                initialProgram = 'cntt-bachelor';
+                if (!programParam) initialProgram = 'cntt-bachelor';
         }
     }
     
@@ -257,7 +258,7 @@ function initializePage() {
             // Các elements đã sẵn sàng, chuyển tab
             switchTab(initialTab);
             selectProgram(initialProgram);
-            console.log('Page initialized successfully with tab:', initialTab);
+            console.log('Page initialized successfully with tab:', initialTab, 'program:', initialProgram);
         } else {
             // Chưa sẵn sàng, thử lại sau 100ms
             console.log('Elements not ready, retrying...');
