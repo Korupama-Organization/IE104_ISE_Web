@@ -22,9 +22,9 @@ a {
     color: inherit
 }
 
-img {
+.banner {
     width: 1100px;
-    height: 320px;
+    height: 520px;
     border-radius: 32px;
     margin-bottom: 32px;
     margin-top: 32px;
