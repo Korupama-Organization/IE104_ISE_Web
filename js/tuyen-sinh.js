@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
     (function () {
-  const PAGES = ["thpt", "đgnl"];  // id hai "trang" trong cùng file
+  const PAGES = ["thpt", "dgnl"];  // id hai "trang" trong cùng file
 
     function showFromHash() {
     const hash = decodeURIComponent(location.hash || "#thpt");

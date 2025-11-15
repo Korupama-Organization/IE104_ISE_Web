@@ -7,7 +7,8 @@ function loadHeaderAndFooter() {
     if (currentPath.includes('/nhom-nghien-cuu/') || 
         currentPath.includes('/doi-ngu-nhan-su/') || 
         currentPath.includes('/gioi-thieu/') ||
-        currentPath.includes('/tin-tuc/')) {
+        currentPath.includes('/tin-tuc/') ||
+        currentPath.includes('/tuyen-sinh/')) {
         componentsPath = '../../components/';
     }
     
