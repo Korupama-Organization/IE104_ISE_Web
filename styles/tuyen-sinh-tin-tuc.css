@@ -38,20 +38,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-primary-dark);
 }
-/* --- Virtual pages --- */
-/* --- Hiển thị một trang theo hash --- */
-.vpage {
-    display: none;
-}
-    /* ẩn mặc định */
-    .vpage:target {
-        display: block;
-    }
-    /* trang khớp hash sẽ xuất hiện */
-    .vpage:first-of-type {
-        display: block;
-    }
-/* nếu không có hash, mở trang đầu */
+
 
 
 * {
