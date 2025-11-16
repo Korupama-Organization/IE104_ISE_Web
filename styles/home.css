@@ -178,7 +178,7 @@
 /* Các ngành đào tạo*/
 .field-introduction{
     width:1231px;
-    margin: 60px auto;
+    margin: 60px auto 60px auto;
     gap:50px;
 }
 /*Tiêu đề - CÁC NGÀNH ĐÀO TẠO*/
@@ -219,8 +219,10 @@
 .tabs-nav{
     display:flex;
     flex-direction: column;
-    gap: 48px;
+    justify-content: left;
+    gap: 58px;
     width: 510px;
+    height:580px;
     cursor:pointer;
     transition: ease-out 0.5s;
 }
@@ -229,15 +231,21 @@
     list-style-type: none;
     width: 420px;
     height: 140px;
-    display:flex;
     align-items: center;
     gap:20px;
-    padding: 22px;
+    padding:  20px 40px;
     border-radius: 30px;
     border: 1.5px solid rgba(166, 166, 166, 0.45);
     background: #FFF;
     box-shadow: 0 4px 10px 0 rgba(128, 128, 128, 0.20);
+    color: #083344;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
+
 /*Tab đang hoạt động*/
 .tabs-nav-item.active{
     border-radius: 30px;
@@ -245,45 +253,7 @@
     background: rgba(176, 218, 255, 0.30);
     box-shadow: 2px 4px 20px 0 rgba(128, 128, 128, 0.30);
 }
-/*Hình ảnh minh họa của tab*/
-.tabs-nav-item img{
-    border-radius: 15px;
-    background: linear-gradient(135deg, #003038 0%, #00879E 100%);
-    width: 54px;
-    height: 54px;
-    flex-shrink: 0;
-}
 
-.tabs-nav-content{
-    display: flex;
-    width: 384px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 6px;
-}
-
-.tabs-nav-content h4{
-    color: #083344;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin:0px;
-    padding:0px;
-}
-
-.tabs-nav-content p{
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin:0px;
-    padding:0px;
-}
 /*Phần nội dung chính của mỗi tab*/
 .tabs-content{
     width: 580px;
@@ -388,6 +358,7 @@
     width: 1003.04px;
     height: 1.5px;
     background: #083344;
+    margin:140px auto 60px auto;
 }
 
 /*Các thành tựu đạt được*/
