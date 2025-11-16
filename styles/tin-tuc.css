@@ -534,6 +534,7 @@ body {
 .tuyendung-list-items img{
   width:228px;
   height:124px;
+  box-shadow: 0 4px 30px 0 rgba(166, 166, 166, 0.60);
 }
   /*từng dòng*/
 .tuyendung-group{
