@@ -2,7 +2,7 @@
 .slider{
     width: 1440px;
     max-width: 100vw;
-    height: 700px;
+    height: 582px;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -94,7 +94,7 @@
 /*Dấu chấm thể hiện vị trí*/
 .slider .dots{
     position: absolute;
-    bottom: 10px;
+    bottom: 24px;
     left: 0;
     color: #fff;
     width: 100%;
