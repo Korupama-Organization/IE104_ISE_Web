@@ -73,31 +73,63 @@ body {
 
 /* Section chứa tiêu đề trang */
 .page-title-section {
-    max-width: 920px;
-    margin: 0 auto 2rem auto;
-    background-color: #ffffff;
+    max-width: 1140px;
+    height: 320px;
+    margin: 3rem auto 2rem auto;
     border-radius: 1.5rem;
-    padding: 3rem 2rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    /* để card chứa ảnh + overlay */
+    position: relative;
+    overflow: hidden; /* bo tròn cả ảnh và lớp phủ */
+    background-color: transparent;
 }
+.page-title-bg {
+    position: absolute;
+    inset: 0; /* phủ kín toàn bộ box */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ảnh vừa khung, không méo */
+    border-radius: inherit;
+    z-index: 0;
+}
+.page-title-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient( to left, rgba(31, 41, 55, 0.98) 0%, /* xám rất đậm ở bên phải */
+    rgba(31, 41, 55, 0.9) 35%, rgba(31, 41, 55, 0.0) 75% );
+    z-index: 1;
+}
+
 
 /* Container chứa title */
 .title-container {
-    text-align: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* căn phải */
+    text-align: right;
 }
 
 /* Tiêu đề chính của trang */
 .main-title {
-    font-size: 2.5rem;
-    font-weight: 1000;
-    letter-spacing: 0.025em;
-    margin-bottom: 0.25rem;
+    font-size: 2.4rem; /* hoặc size bạn đang dùng */
+    font-weight: 800;
+    line-height: 1.0; /* 👈 tăng line-height cho chữ dễ thở hơn */
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem; /* nếu muốn nhìn “đậm” và sang hơn */
+    color: #FFFFFF
 }
 
 .sub-title {
-    font-size: 1.25rem;
+    font-size: 1.4rem; /* 👈 nhỏ hơn main-title một chút */
     font-weight: 500;
-    letter-spacing: 0.025em;
+    line-height: 1.4;
+    color: #FFFFFF
 }
 
 /* Tabs */
@@ -146,7 +178,7 @@ body {
 
 /* Staff Grid */
 .staff-grid-section {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto 2rem auto;
     background-color: #ffffff;
     border-radius: 1.5rem;
@@ -158,7 +190,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    max-width: 960px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
@@ -171,7 +203,7 @@ body {
 .staff-card {
     background-color: #f9fafb;
     border-radius: 1.25rem;
-    padding: 1.25rem;
+    padding: 1.25rem 2.25rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
