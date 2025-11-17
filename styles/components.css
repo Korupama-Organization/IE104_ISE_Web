@@ -93,9 +93,8 @@ body.loaded {
 
 /* Style cho item trong dropdown */
 .dropdown-item{
-    word-wrap: break-word;
     justify-content: space-between;
-    min-width: 160px;
+    min-width: 200px;
     list-style-type: none;
     color: var(--Neutral-50, #FAFAFA);
     font-family: "Gelasio", Noto Sans Arabic, Time New Roman;
