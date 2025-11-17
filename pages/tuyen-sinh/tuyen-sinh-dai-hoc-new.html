@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tuyển sinh 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="/ISE_Web/styles/tuyen-sinh.css">
+    <link rel="stylesheet" href="/ISE_Web/styles/components.css">
+    <script src="/ISE_Web/js/utils.js"></script>
+    <script src="/ISE_Web/js/tuyen-sinh.js" defer></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <section id="hero" class="hero-wrapper">
+        <div class="container">
+            <div class="hero-banner">
+                <img class="hero-image" src="/ISE_Web/assets/banner-tuyen-sinh.png" alt="Banner Tuyển sinh">
+                <div class="hero-content">
+                    <h1 class="hero-title">THÔNG TIN TUYỂN SINH</h1>
+                    <p class="hero-subtitle">TUYỂN SINH NĂM 2025</p>
+                </div>
+            </div>
+            <div class="hero-buttons" role="tablist" aria-label="Chọn bậc đào tạo">
+                <a href="#" id="btn-undergrad" class="btn btn-primary active-tab" role="tab" aria-selected="true" aria-controls="undergrad-section">Đại học</a>
+                <a href="#" id="btn-postgrad" class="btn btn-secondary" role="tab" aria-selected="false" aria-controls="postgrad-section">Sau Đại học</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TAB 1: ĐẠI HỌC -->
+
+    <section id="undergrad-section" class="tab-section active" role="tabpanel" aria-labelledby="btn-undergrad">
+        <div class="main-content-wrapper">
+            <div class="main-content">
+                <div class="content-left">
+                    <article class="content-card programs-card" aria-labelledby="programs-title-undergrad">
+                        <h2 id="programs-title-undergrad" class="card-title">Các ngành đào tạo</h2>
+
+                        <div class="programs-grid">
+                            <!-- Ô 1 -->
+                            <div class="program-item">
+                                <h3 class="program-title">Công nghệ thông tin</h3>
+                                <p class="program-meta">
+                                    Mã ngành: 7480201</br>
+                                    Chương trình Việt - Nhật: 7480201_VN
+                                </p>
+                                <p class="program-desc">Chương trình đào tạo chuyên sâu về phần mềm, mạng và hệ thống...</p>
+                                <a class="program-link" href="/ISE_Web/dao-tao?tab=bachelor">Xem chi tiết →</a>
+                            </div>
+
+                            <!-- Ô 2 -->
+                            <div class="program-item">
+                                <h3 class="program-title">Khoa học dữ liệu</h3>
+                                <p class="program-meta">Mã ngành: 7460108</p>
+                                <p class="program-desc">Chương trình đào tạo chuyên sâu về phân tích và xử lý dữ liệu...</p>
+                                <a class="program-link" href="/ISE_Web/dao-tao?tab=bachelor&program=khdl-bachelor">Xem chi tiết →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="content-card news-card" aria-labelledby="news-title-undergrad">
+                        <h2 id="news-title-undergrad" class="card-title news-title">
+                            <img class="news-title-icon" src="/ISE_Web/assets/more-option-icon.png" alt="" aria-hidden="true">
+                            Tin tuyển sinh
+                        </h2>
+
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="/ISE_Web/pages/tuyen-sinh/phuong-thuc-tuyen-sinh.html">
+                                        Phương thức tuyển sinh đại học năm 2025
+                                    </a>
+
+                                    <div class="news-item-meta">
+                                        <span class="news-date">10/01/2025</span>
+                                        <span class="news-tag tag-blue">Tuyển sinh</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 567
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="/ISE_Web/pages/tuyen-sinh/tin-tuyen-sinh-dai-hoc.html#dgnl">Điểm trúng tuyển phương thức xét tuyển dựa trên kết quả Kỳ thi ĐGNL do ĐHQG-HCM tổ chức các năm</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">05/01/2025</span>
+                                        <span class="news-tag tag-dark-blue">Kết quả</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 1.9K
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="/ISE_Web/pages/tuyen-sinh/tin-tuyen-sinh-dai-hoc.html#thpt">
+                                        Điểm trúng tuyển phương thức xét tuyển dựa trên kết quả Kỳ thi tốt nghiệp THPT qua các năm
+                                    </a>
+
+                                    <div class="news-item-meta">
+                                        <span class="news-date">05/01/2025</span>
+                                        <span class="news-tag tag-dark-blue">Kết quả</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 1.9K
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="/ISE_Web/pages/tuyen-sinh/hoc-bong-tuyen-sinh.html">Chế độ học bổng năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">03/01/2025</span>
+                                        <span class="news-tag tag-gray">Quy định</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 756
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="#">Thông báo điểm trúng tuyển phương thức Xét kết quả thi tốt nghiệp THPT năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">02/01/2025</span>
+                                        <span class="news-tag tag-gray">Thông báo</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 234
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="#">Thông báo điểm trúng tuyển phương thức xét tuyển dựa trên kết quả Kỳ thi ĐGNL do ĐHQG-HCM tổ chức năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">30/12/2024</span>
+                                        <span class="news-tag tag-gray">Thông báo</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 345
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+                        </ul>
+
+                        <nav class="pagination" aria-label="Phân trang tin tuyển sinh">
+                            <a href="#" aria-label="Trang đầu"><img src="/ISE_Web/assets/chevron-double-left.png" alt="Trang đầu"></a>
+                            <a href="#" aria-label="Trang 1"><img src="/ISE_Web/assets/one-square.png" alt="Trang 1"></a>
+                            <a href="#" aria-label="Trang 2"><img src="/ISE_Web/assets/two-square.png" alt="Trang 2"></a>
+                            <a href="#" aria-label="Trang 3"><img src="/ISE_Web/assets/three-square.png" alt="Trang 3"></a>
+                            <a href="#" aria-label="Xem thêm"><img src="/ISE_Web/assets/dots-square.png" alt="Xem thêm"></a>
+                            <a href="#" aria-label="Trang cuối"><img src="/ISE_Web/assets/chevron-double-right.png" alt="Trang cuối"></a>
+                        </nav>
+                    </article>
+                </div>
+
+                <aside class="content-right" aria-labelledby="timeline-title-undergrad">
+                    <div class="content-card timeline-card">
+                        <h2 id="timeline-title-undergrad" class="card-title">Lịch trình tuyển sinh</h2>
+                        <ul class="timeline-list">
+                            <li class="timeline-item">
+                                <h3 class="timeline-title">Đăng ký xét tuyển</h3>
+                                <p class="timeline-date">01/02 - 31/03/2025</p>
+                            </li>
+                            <li class="timeline-item">
+                                <h3 class="timeline-title">Công bố kết quả</h3>
+                                <p class="timeline-date">30/04/2025</p>
+                            </li>
+                            <li class="timeline-item">
+                                <h3 class="timeline-title">Nhập học</h3>
+                                <p class="timeline-date">15/08/2025</p>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TAB 2: SAU ĐẠI HỌC -->
+
+    <section id="postgrad-section" class="tab-section" role="tabpanel" aria-labelledby="btn-postgrad">
+        <div class="main-content-wrapper">
+            <div class="main-content">
+                <div class="content-left">
+                    <article class="content-card programs-card" aria-labelledby="programs-title-postgrad">
+                        <h2 id="programs-title-postgrad" class="card-title">Các ngành đào tạo</h2>
+
+                        <div class="programs-grid">
+                            <div class="program-item">
+                                <h3 class="program-title">Thạc sĩ Công nghệ thông tin</h3>
+                                <p class="program-meta">Mã ngành: 8480201</p>
+                                <p class="program-desc">Chương trình đào tạo chuyên sâu về ...</p>
+                                <a class="program-link" href="/ISE_Web/dao-tao?tab=master">Xem chi tiết →</a>
+                            </div>
+
+                            <div class="program-item">
+                                <h3 class="program-title">Tiến sĩ Công nghệ thông tin</h3>
+                                <p class="program-meta">Mã ngành: 9480201</p>
+                                <p class="program-desc">Chương trình đào tạo chuyên sâu về ...</p>
+                                <a class="program-link" href="/ISE_Web/dao-tao?tab=phd">Xem chi tiết →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="content-card news-card" aria-labelledby="news-title-postgrad">
+                        <h2 id="news-title-postgrad" class="card-title news-title">
+                            <img class="news-title-icon" src="more-option-icon.png" alt="" aria-hidden="true">
+                            Tin tuyển sinh
+                        </h2>
+
+                        <ul class="news-list">
+                            <!-- Tin 1 -->
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="#">Thông báo buổi tư vấn tuyển sinh CTĐT trình độ Thạc sĩ Đợt 2 - Năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">10/01/2025</span>
+                                        <span class="news-tag tag-blue">Tuyển sinh</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 567
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <!-- Tin 2 -->
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="/ISE_Web/tuyen-sinh/tin-tuyen-sinh-sau-dai-hoc.html">Thông báo tuyển sinh chương trình đào tạo trình độ Thạc sĩ Đợt 2 - Năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">08/01/2025</span>
+                                        <span class="news-tag tag-dark-blue">Thông báo</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 423
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <!-- Tin 3 -->
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="#">Thông báo nhận giấy báo trúng tuyển và làm thủ tục nhập học CTĐT trình độ Thạc sĩ khóa 20 Đợt 1 - Năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">05/01/2025</span>
+                                        <span class="news-tag tag-dark-blue">Thông báo</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 1.9K
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <!-- Tin 4 -->
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="#">Thông báo điểm chuẩn trúng tuyển Kỳ thi tuyển sinh sau đại học Đợt 1 - Năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">03/01/2025</span>
+                                        <span class="news-tag tag-gray">Kết quả</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 756
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <!-- Tin 5 -->
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="#">Thông báo kết quả xét tuyển trình độ Thạc sĩ Đợt 1 - Năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">02/01/2025</span>
+                                        <span class="news-tag tag-gray">Kết quả</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 234
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+
+                            <!-- Tin 6 -->
+                            <li class="news-item">
+                                <div class="news-item-content">
+                                    <a class="news-item-title" href="#">Thông báo kết quả xét tuyển thẳng trình độ Thạc sĩ Đợt 1 - Năm 2025</a>
+                                    <div class="news-item-meta">
+                                        <span class="news-date">30/12/2024</span>
+                                        <span class="news-tag tag-gray">Kết quả</span>
+                                        <span class="news-views">
+                                            <img src="/ISE_Web/assets/eye-icon.png" alt="Lượt xem"> 345
+                                        </span>
+                                    </div>
+                                </div>
+                                <img class="news-arrow" src="/ISE_Web/assets/next-button-icon.png" alt="" aria-hidden="true">
+                            </li>
+                        </ul>
+
+                        <nav class="pagination" aria-label="Phân trang tin tuyển sinh">
+                            <a href="#" aria-label="Trang đầu"><img src="/ISE_Web/assets/chevron-double-left.png" alt="Trang đầu"></a>
+                            <a href="#" aria-label="Trang 1"><img src="/ISE_Web/assets/one-square.png" alt="Trang 1"></a>
+                            <a href="#" aria-label="Trang 2"><img src="/ISE_Web/assets/two-square.png" alt="Trang 2"></a>
+                            <a href="#" aria-label="Trang 3"><img src="/ISE_Web/assets/three-square.png" alt="Trang 3"></a>
+                            <a href="#" aria-label="Xem thêm"><img src="/ISE_Web/assets/dots-square.png" alt="Xem thêm"></a>
+                            <a href="#" aria-label="Trang cuối"><img src="/ISE_Web/assets/chevron-double-right.png" alt="Trang cuối"></a>
+                        </nav>
+                    </article>
+
+                </div>
+
+                <aside class="content-right" aria-labelledby="timeline-title-postgrad">
+                    <div class="content-card timeline-card">
+                        <h2 id="timeline-title-postgrad" class="card-title">Lịch trình tuyển sinh</h2>
+                        <ul class="timeline-list">
+                            <li class="timeline-item">
+                                <h3 class="timeline-title">Đăng ký xét tuyển</h3>
+                                <p class="timeline-date">01/02 - 31/03/2025</p>
+                            </li>
+                            <li class="timeline-item">
+                                <h3 class="timeline-title">Công bố kết quả</h3>
+                                <p class="timeline-date">30/04/2025</p>
+                            </li>
+                            <li class="timeline-item">
+                                <h3 class="timeline-title">Nhập học</h3>
+                                <p class="timeline-date">15/08/2025</p>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="footer-container"></div>
+</body>
+</html>

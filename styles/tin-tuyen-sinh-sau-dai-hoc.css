@@ -1,0 +1,758 @@
+﻿/* ========= Base & tokens ========= */
+:root {
+    --c-primary: #083344;
+    --c-bg: #fff;
+    --c-surface: #fafafa;
+    --c-text: #083344;
+    --c-border: #d9d9d9;
+    --shadow-1: 0 4px 12px rgba(0,0,0,.25);
+    --shadow-2: 0 12px 32px rgba(0,0,0,.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+body {
+    font-family: Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    background: #fff;
+    color: var(--c-text)
+}
+
+.container {
+    max-width: 1208px;
+    margin: 0 auto;
+    padding: 0 16px
+}
+
+/* ========= HERO ========= */
+#hero {
+    padding: 24px 16px
+}
+
+    #hero .container {
+        max-width: 1208px;
+        margin: 0 auto;
+        padding: 0 16px
+    }
+
+    #hero .card {
+        width: 1140px;
+        height: 220px;
+        border-radius: 16px;
+        background: var(--c-surface);
+        box-shadow: var(--shadow-2);
+        backdrop-filter: blur(4px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+        padding: 16px 24px;
+        margin: 0 auto;
+    }
+
+        #hero .card h1 {
+            color: var(--c-primary);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 48px
+        }
+
+        #hero .card p {
+            color: var(--c-primary);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px
+        }
+
+@media (max-width:768px) {
+    #hero .card h1 {
+        font-size: 36px;
+        line-height: 40px
+    }
+
+    #hero .card p {
+        font-size: 18px;
+        line-height: 20px
+    }
+}
+
+/* ========= ANNOUNCEMENT ========= */
+#announcement .container {
+    max-width: 1100px;
+    margin: 0 auto
+}
+
+#announcement .bar {
+    display: flex;
+    width: 1100px;
+    height: 96px;
+    padding: 18px 17px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    box-sizing: border-box;
+    margin: 0 auto 32px;
+    box-shadow: var(--shadow-1);
+}
+
+    #announcement .bar p {
+        color: #FAFAFA;
+        font: 700 24px/28px Inter,sans-serif;
+        text-align: center
+    }
+
+@media (max-width:1240px) {
+    #announcement .container {
+        max-width: 100%;
+        padding: 0 16px
+    }
+
+    #announcement .bar {
+        width: 100%
+    }
+}
+
+/* ========= I. NGÀNH TUYỂN SINH … ========= */
+#admission-info .container.grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+#admission-info .media {
+    width: 360px;
+    height: 360px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: transparent !important;
+    margin: 0;
+}
+
+    #admission-info .media::before, #admission-info .media::after {
+        content: none !important
+    }
+
+    #admission-info .media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 28px;
+        box-shadow: 0 12px 32px rgba(0,0,0,.25);
+    }
+
+#admission-info .content .title {
+    display: flex;
+    height: 96px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 28px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    box-shadow: var(--shadow-1);
+    color: #FAFAFA;
+    text-align: center;
+    font: 700 24px/28px Inter,sans-serif;
+    margin: 0 0 16px;
+}
+
+#admission-info .content .card {
+    display: flex;
+    width: 616px;
+    max-width: 100%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    border: 1px solid var(--c-border);
+    background: #FFF;
+    box-shadow: var(--shadow-1);
+    margin: 0 auto;
+}
+
+    #admission-info .content .card p {
+        margin: 0;
+        text-align: center;
+        color: var(--c-text);
+        font: 600 16px/24px Inter,sans-serif
+    }
+
+@media (max-width:992px) {
+    #admission-info .container.grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        justify-items: center;
+        text-align: center
+    }
+
+    #admission-info .content .title {
+        height: 84px
+    }
+}
+
+@media (max-width:480px) {
+    #admission-info .content .title {
+        height: 72px;
+        font-size: 20px;
+        line-height: 24px
+    }
+}
+
+/* ========= II. HÌNH THỨC/THỜI GIAN/ĐỊA ĐIỂM ========= */
+#training-info .container.grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+    align-items: center;
+}
+
+#training-info .content .title {
+    display: flex;
+    height: 120px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 28px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    box-shadow: var(--shadow-1);
+    color: #FAFAFA;
+    text-align: center;
+    font: 700 24px/28px Inter,sans-serif;
+    margin: 0 0 16px;
+}
+
+#training-info .content .card {
+    display: flex;
+    width: 616px;
+    height: 120px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    border: 1px solid var(--c-border);
+    background: #FFF;
+    box-shadow: var(--shadow-1);
+    margin: 0 auto;
+    text-align: center;
+}
+
+    #training-info .content .card p {
+        margin: 0;
+        color: var(--c-text);
+        font: 600 20px/32px Inter,sans-serif
+    }
+
+#training-info .media {
+    width: 360px;
+    height: 360px;
+    margin: 0;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+    #training-info .media::before, #training-info .media::after {
+        content: none !important
+    }
+
+    #training-info .media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 28px;
+        box-shadow: 0 12px 32px rgba(0,0,0,.25)
+    }
+
+@media (max-width:992px) {
+    #training-info .container.grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        justify-items: center
+    }
+
+    #training-info .content .card {
+        width: 100%;
+        height: auto;
+        padding: 20px
+    }
+
+    #training-info .media {
+        order: 2
+    }
+}
+
+@media (max-width:480px) {
+    #training-info .content .title {
+        height: 96px;
+        font-size: 20px;
+        line-height: 24px
+    }
+}
+
+/* ========= III. THỜI GIAN XÉT TUYỂN ========= */
+#schedule .title {
+    display: flex;
+    width: 1140px;
+    height: 88px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 28px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    box-shadow: var(--shadow-1);
+    color: #FAFAFA;
+    font: 700 24px/28px Inter,sans-serif;
+    text-align: center;
+    margin: 0 auto 24px;
+}
+
+#schedule .table-like {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-1);
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    background: #fff;
+}
+
+    #schedule .table-like .row {
+        display: flex;
+        min-height: 96px;
+        border-bottom: 1px solid var(--c-border)
+    }
+
+        #schedule .table-like .row:last-child {
+            border-bottom: none
+        }
+
+    #schedule .table-like .cell.label {
+        flex: 0 0 44%;
+        background: var(--c-primary);
+        color: #FAFAFA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 16px 18px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1.35;
+        border-right: 1px solid var(--c-border)
+    }
+
+    #schedule .table-like .cell.value {
+        flex: 1;
+        background: #fff;
+        color: var(--c-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 16px 18px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1.45
+    }
+
+    #schedule .table-like .row:first-child .cell.label {
+        border-top-left-radius: 20px
+    }
+
+    #schedule .table-like .row:first-child .cell.value {
+        border-top-right-radius: 20px
+    }
+
+    #schedule .table-like .row:last-child .cell.label {
+        border-bottom-left-radius: 20px
+    }
+
+    #schedule .table-like .row:last-child .cell.value {
+        border-bottom-right-radius: 20px
+    }
+
+@media (max-width:900px) {
+    #schedule .title {
+        width: 100%;
+        min-height: 64px;
+        padding: 12px 16px;
+        font-size: 20px
+    }
+
+    #schedule .table-like {
+        max-width: 100%;
+        border-radius: 16px
+    }
+
+        #schedule .table-like .row {
+            flex-direction: column
+        }
+
+        #schedule .table-like .cell.label {
+            border-right: none;
+            border-bottom: 1px solid var(--c-border);
+            font-size: 16px;
+            padding: 14px
+        }
+
+        #schedule .table-like .cell.value {
+            font-size: 16px;
+            padding: 14px
+        }
+}
+
+/* ========= IV. PHƯƠNG THỨC TUYỂN SINH ========= */
+#admission-methods .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#admission-methods .title {
+    display: flex;
+    width: 1140px;
+    height: 88px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 28px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    box-shadow: var(--shadow-1);
+    color: #FAFAFA;
+    font-weight: 700;
+    text-align: center;
+    margin: 32px auto 20px;
+    max-width: 1193px;
+}
+/* Nút – layout dọc đúng mock */
+#admission-methods .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 16px 0 24px;
+    counter-reset: method;
+}
+
+    #admission-methods .actions .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 360px;
+        height: 56px;
+        padding: 10px;
+        border-radius: 32px;
+        border: 1px solid var(--c-border);
+        background: #FFF;
+        box-shadow: var(--shadow-1);
+        color: var(--c-text);
+        font: 700 20px/1.2 Inter,sans-serif;
+        letter-spacing: .3px;
+        position: relative;
+    }
+
+        #admission-methods .actions .btn::before {
+            counter-increment: method;
+            content: counter(method) ".";
+            font-weight: 800;
+            margin-right: 8px
+        }
+
+        #admission-methods .actions .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(0,0,0,.28)
+        }
+
+        #admission-methods .actions .btn:active {
+            transform: translateY(0);
+            box-shadow: var(--shadow-1)
+        }
+
+#admission-methods .card {
+    display: flex;
+    height: 577px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 32px;
+    border: 1px solid var(--c-border);
+    background: #FFF;
+    box-shadow: var(--shadow-1);
+    max-width: 1140px;
+    margin: 0 auto 40px;
+}
+
+    #admission-methods .card p {
+        color: var(--c-text);
+        font: 500 24px/28px Inter,sans-serif;
+        padding: 18px 22px;
+        text-align: left
+    }
+
+    #admission-methods .card .link {
+        color: var(--c-text);
+        text-decoration: underline;
+        font-weight: 700
+    }
+
+@media (max-width:992px) {
+    #admission-methods .card {
+        height: auto;
+        padding: 16px
+    }
+
+        #admission-methods .card p {
+            font-size: 18px;
+            line-height: 28px
+        }
+}
+
+/* ========= V. LỆ PHÍ THI ========= */
+#fees .container.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 58px
+}
+
+#fees .title {
+    display: flex;
+    height: 96px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 28px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    box-shadow: var(--shadow-1);
+    color: #FAFAFA;
+    font: 700 24px/28px Inter,sans-serif;
+    text-align: center;
+    margin: 64px 0 16px;
+}
+
+#fees .card {
+    display: flex;
+    width: 616px;
+    height: 400px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    border: 1px solid var(--c-border);
+    background: #FFF;
+    box-shadow: var(--shadow-1);
+    margin: 0 auto 40px;
+}
+
+    #fees .card p {
+        color: var(--c-text);
+        font: 500 20px/28px Inter,sans-serif;
+        text-align: center;
+        margin: 0
+    }
+
+@media (max-width:992px) {
+    #fees .container.grid {
+        grid-template-columns: 1fr;
+        gap: 28px
+    }
+
+    #fees .card {
+        width: 100%;
+        height: auto;
+        padding: 20px
+    }
+}
+
+/* ========= VI. HỌC PHÍ ========= */
+#tuition .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center
+}
+
+#tuition .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 88px;
+    padding: 10px;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 28px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    box-shadow: var(--shadow-1);
+    color: #FAFAFA;
+    font: 700 24px/28px Inter,sans-serif;
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+#tuition .card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0
+}
+
+#tuition table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08)
+}
+
+#tuition thead th {
+    background: var(--c-primary);
+    color: #FAFAFA;
+    font-weight: 700;
+    padding: 14px 16px;
+    text-align: center
+}
+
+#tuition tbody td {
+    background: #FFF;
+    color: var(--c-text);
+    font-weight: 600;
+    padding: 14px 16px;
+    border-top: 1px solid #E5E7EB;
+    text-align: center
+}
+
+#tuition table th:nth-child(2), #tuition table td:nth-child(2) {
+    width: 40%;
+    text-align: left
+}
+
+/* ========= VII. LIÊN HỆ ========= */
+#contact-info .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#contact-info .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1140px;
+    max-width: 100%;
+    height: 88px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 28px;
+    border: 1px solid var(--c-border);
+    background: var(--c-primary);
+    color: #FAFAFA;
+    box-shadow: var(--shadow-1);
+    margin: 0 auto 28px;
+    font: 700 24px/28px Inter,sans-serif;
+    text-align: center;
+}
+
+#contact-info .grid.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%
+}
+
+#contact-info .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 784px;
+    max-width: 100%;
+    padding: 10px 24px;
+    gap: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--c-border);
+    background: #FFF;
+    box-shadow: var(--shadow-1);
+    text-align: left;
+    color: var(--c-text);
+    font: 500 20px/28px Inter,sans-serif;
+}
+
+    #contact-info .card h3 {
+        width: 100%;
+        text-align: center;
+        margin: 4px 0 10px;
+        font-weight: 700;
+        font-size: 22px
+    }
+
+    #contact-info .card a {
+        color: var(--c-text);
+        text-decoration: underline
+    }
+
+@media (max-width:992px) {
+    #contact-info .title {
+        height: 76px;
+        font-size: 20px
+    }
+
+    #contact-info .card {
+        font-size: 18px;
+        line-height: 26px
+    }
+}
+
+@media (max-width:640px) {
+    #contact-info .title {
+        border-radius: 20px
+    }
+
+    #contact-info .card {
+        width: 100%;
+        border-radius: 16px;
+        padding: 12px 16px
+    }
+}
