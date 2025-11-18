@@ -6,7 +6,7 @@
     margin: 20px auto;
     position: relative;
     overflow: hidden;
-}
+}   
 /*Phần nội dung nổi lên trên*/
 .slider-content{
     position:absolute;
@@ -620,27 +620,41 @@
     
     .field{
         width: 100%;
+        height:auto;
     }
     
+    .tabs{
+        gap: 60px;
+        height:auto;
+    }
+
     .tabs-nav{
-        width: 100%;
+        width: 80%;
+        gap:12px;
     }
     
     .tabs-nav-item{
-        width: 90%;
+        width: 80%;
+        height:auto;
+        font-size: 16px;
     }
     
     .tabs-content{
-        width: 100%;
+        width: 80%;
+        height:auto;
     }
     
     .tabs-content-items{
-        width: 100%;
+        width: 80%;
         padding: 30px;
+        height:auto;
     }
     
-    .tab-con-item-list{
-        width: 100%;
+    .tab-con-item-list {
+        flex-direction: column;
+    }
+    .tab-con-item-list li{
+        width: 60%;
     }
     
     .remarkable-result{
@@ -788,20 +802,20 @@
     }
     
     .tabs-nav{
-        width: 100%;
+        width: 95%;
         gap: 20px;
         height: auto;
     }
     
     .tabs-nav-item{
-        width: 100%;
+        width: 95%;
         height: auto;
         padding: 15px 20px;
         font-size: 18px;
     }
     
     .tabs-content{
-        width: 100%;
+        width: 90%;
         height: auto;
     }
     
@@ -817,12 +831,12 @@
     }
     
     .tab-con-item-list li{
-        width: 100%;
+        width:  80%;
         font-size: 18px;
     }
     
     .tabs-content-items a{
-        width: 100%;
+        width: 90%;
         font-size: 18px;
     }
     
@@ -986,10 +1000,12 @@
     .tabs-nav-item{
         font-size: 16px;
         padding: 12px 15px;
+        width: 90%;
     }
     
     .tabs-content-items{
         padding: 20px;
+        width: 90%;
     }
     
     .tabs-content-items h4{
@@ -1012,7 +1028,7 @@
     .tabs-content-items a{
         font-size: 16px;
         padding: 15px 18px;
-        width: auto;
+        width: 80%;
     }
     
     .specific{
@@ -1111,8 +1127,18 @@
     
     .tabs-nav-item{
         font-size: 14px;
+        width: 90%; 
+
     }
     
+    .tabs-content{
+        width: 90%;
+    }
+
+    .tabs-content-items a{
+        width: 80%;
+    }
+
     .tabs-content-items h4,
     .scientific-articles a{
         font-size: 16px;
