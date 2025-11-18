@@ -430,70 +430,7 @@
     line-height: normal;
     list-style-type: circle;
 }
-/*Phần thành tựu phía bên phải*/
-.result{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-    align-self: stretch;
-    width: 583px;
-}
-
-.result h4{
-    color: var(--Cyan-950, #083344);
-    height:fit-content;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding:0px;
-    margin:0px;
-}
-
-.result h3{
-    color: var(--Cyan-950, #083344);
-    font-family: Inter;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding:0px;
-    margin:0px;
-}
-
-.result p{
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding:0px;
-    margin:0px;
-}
-
-.result a{
-    width:216px;
-    padding:20px;
-    border-radius: 30px;
-    border: 4px solid #083344;
-    color: #083344;
-    align-items: center;
-    text-align: center;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-decoration: none;
-}
-/*Hiệu ứng khi hover*/
-.result a:hover{
-    color: white;
-    background-color: #083344;
-}
+/*Phần thành tựu đã được chuyển lên science-tech-header*/
 
 /*Doanh nghiệp đối tác*/
 .partner{
@@ -638,18 +575,26 @@
         width: 100%;
     }
     
+    .science-tech-header {
+        width: 90%;
+        gap: 15px;
+    }
+    
+    .science-tech-header h3 {
+        font-size: 28px;
+    }
+    
+    .science-tech-header p {
+        font-size: 18px;
+    }
+    
     .remarkable-result{
         width: 90%;
-        gap: 60px;
     }
     
     .scientific-articles{
         width: 100%;
         padding: 40px;
-    }
-    
-    .result{
-        width: 100%;
     }
     
     .partner{
@@ -803,10 +748,33 @@
         width: 90%;
     }
     
-    .remarkable-result{
-        flex-direction: column;
+    .science-tech-header {
         width: 90%;
-        gap: 40px;
+        gap: 15px;
+        margin: 40px auto 30px;
+    }
+    
+    .science-tech-header h4 {
+        font-size: 20px;
+    }
+    
+    .science-tech-header h3 {
+        font-size: 26px;
+    }
+    
+    .science-tech-header p {
+        font-size: 17px;
+    }
+    
+    .science-tech-header a {
+        font-size: 18px;
+        padding: 16px;
+        width: 200px;
+    }
+    
+    .remarkable-result{
+        width: 90%;
+        margin: 25px auto 50px;
     }
     
     .scientific-articles{
@@ -827,27 +795,6 @@
     }
     
     .scientific-articles li{
-        font-size: 18px;
-    }
-    
-    .result{
-        width: 100%;
-    }
-    
-    .result h4{
-        font-size: 20px;
-    }
-    
-    .result h3{
-        font-size: 24px;
-    }
-    
-    .result p{
-        font-size: 18px;
-    }
-    
-    .result a{
-        width: 100%;
         font-size: 18px;
     }
     
@@ -988,10 +935,32 @@
         margin: 80px auto 40px auto;
     }
     
+    .science-tech-header {
+        margin: 30px auto 25px;
+        gap: 12px;
+    }
+    
+    .science-tech-header h4 {
+        font-size: 18px;
+    }
+    
+    .science-tech-header h3 {
+        font-size: 22px;
+    }
+    
+    .science-tech-header p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    .science-tech-header a {
+        font-size: 16px;
+        padding: 14px;
+        width: 180px;
+    }
+    
     .remarkable-result{
-        margin-top: 40px;
-        margin-bottom: 40px;
-        gap: 30px;
+        margin: 20px auto 40px;
     }
     
     .scientific-articles{
@@ -1010,27 +979,6 @@
     .scientific-articles p,
     .scientific-articles li{
         font-size: 16px;
-    }
-    
-    .result{
-        gap: 20px;
-    }
-    
-    .result h4{
-        font-size: 18px;
-    }
-    
-    .result h3{
-        font-size: 20px;
-    }
-    
-    .result p{
-        font-size: 16px;
-    }
-    
-    .result a{
-        font-size: 16px;
-        padding: 15px;
     }
     
     .partner{

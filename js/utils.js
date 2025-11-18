@@ -19,6 +19,7 @@ function loadHeaderAndFooter() {
             const headerContainer = document.getElementById('header-container');
             if (headerContainer) {
                 headerContainer.innerHTML = data; // Chèn nội dung header vào container
+                initMobileMenu(); // Khởi tạo mobile menu sau khi header load xong
             }
         })
         .catch(error => console.error('Lỗi khi tải header:', error));
@@ -50,6 +51,74 @@ function loadHeaderAndFooter() {
 // Khởi tạo các thành phần chung (header, footer)
 function initCommonElements() {
     loadHeaderAndFooter();
+}
+
+// Hàm khởi tạo mobile menu (hamburger menu)
+function initMobileMenu() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const rHeader = document.querySelector('.rHeader');
+    const overlay = document.querySelector('.mobile-menu-overlay');
+    const navigationItems = document.querySelectorAll('.navigation');
+    
+    if (!hamburger || !rHeader || !overlay) return;
+    
+    // Toggle menu khi click vào hamburger
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        rHeader.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Update aria-expanded
+        const isExpanded = this.classList.contains('active');
+        this.setAttribute('aria-expanded', isExpanded);
+        
+        // Ngăn scroll khi menu mở
+        if (isExpanded) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Đóng menu khi click vào overlay
+    overlay.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        rHeader.classList.remove('active');
+        overlay.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        // Xóa active class khỏi tất cả navigation items
+        navigationItems.forEach(nav => nav.classList.remove('active'));
+    });
+    
+    // Toggle dropdown khi click vào navigation item trên mobile
+    navigationItems.forEach(nav => {
+        const navName = nav.querySelector('.nav-name');
+        const dropdownMenu = nav.querySelector('.dropdown-menu');
+        
+        if (navName && dropdownMenu) {
+            navName.addEventListener('click', function(e) {
+                // Chỉ xử lý trên mobile (khi rHeader có class active)
+                if (rHeader.classList.contains('active')) {
+                    e.preventDefault();
+                    nav.classList.toggle('active');
+                }
+            });
+        }
+    });
+    
+    // Đóng menu khi resize về desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            rHeader.classList.remove('active');
+            overlay.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            // Xóa active class khỏi tất cả navigation items
+            navigationItems.forEach(nav => nav.classList.remove('active'));
+        }
+    });
 }
 
 // Khởi động khi DOM đã sẵn sàng

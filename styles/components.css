@@ -121,25 +121,78 @@ body.loaded {
 /* Hiện dropdown khi hover vào navigation */
 .navigation:hover .dropdown-menu{display:block}
 
+/* Hamburger Menu - ẩn mặc định */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--Cyan-950, #083344);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi menu mở */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Overlay khi menu mobile mở */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
 .footer {
   display: flex; 
   align-items: flex-start;
   justify-content: center; 
-  position: relative;
-  bottom: 0;
   width: 100%;
-  z-index: 10;
-  background-color: var(--Cyan-950, #083344); 
+  margin-top: auto;
+  background-color: var(--Cyan-950, #083344);
+  box-sizing: border-box;
 }
 
 .footer .class {
   display: flex;
   width: 100%;
   max-width: 1440px; 
-  align-items: center;
+  align-items: flex-start;
   gap: 64px;
   padding: 32px 64px 64px;
-  position: relative;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -502,7 +555,8 @@ body.loaded {
 
 @media (max-width: 768px) {
     .header, #header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 20px;
         padding: 16px;
         min-height: auto;
@@ -518,31 +572,71 @@ body.loaded {
         height: 75px !important;
     }
 
+    /* Hiện hamburger menu trên mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Ẩn navigation mặc định */
     .rHeader {
-        width: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--Neutral-50, #FAFAFA);
+        box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        padding: 100px 20px 20px;
+    }
+
+    /* Hiện navigation khi active */
+    .rHeader.active {
+        left: 0;
     }
 
     .rHeader .navbar {
-        align-items: center;
-        gap: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
     }
     
     .navigation {
-        padding: 6px 0;
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
     }
     
     .navigation .nav-name {
-        font-size: 16px;
-        padding: 10px 12px;
+        font-size: 18px;
+        padding: 12px 0;
+        display: block;
+        width: 100%;
     }
     
     .dropdown-menu {
-        padding: 0 0 0 15px;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        padding: 10px 0 10px 20px;
+        display: none;
+    }
+    
+    .navigation.active .dropdown-menu {
+        display: block;
     }
     
     .dropdown-item {
-        font-size: 14px;
-        padding: 6px 0;
+        font-size: 16px;
+        padding: 8px 0;
+        color: var(--Cyan-950, #083344);
+    }
+    
+    .dropdown-item:hover {
+        color: var(--Cyan-600, #0891B2);
     }
 
     .footer .class {
