@@ -361,76 +361,144 @@
     margin:140px auto 60px auto;
 }
 
-/*Các thành tựu đạt được*/
+/*Các kết quả nổi bật (công bố khoa học)*/
 .remarkable-result{
-    display:flex;
-    width: 1231px;
+    width: 1200px;
+    max-width: 90%;
+    display: flex;
     flex-direction: row;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    margin-left: auto;
-    margin-right: auto; 
-    gap: 80px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px auto 64px;
 }
-/*Phần bài báo phía bên trái*/
+/*Phần bài báo*/
 .scientific-articles{
-    width: 668px;
-    height: fit-content;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
+    flex-direction: column;
+    align-items: flex-start;
     border-radius: 20px;
     background: #FAFAFA;
     box-shadow: 0 4px 30px 0 rgba(166, 166, 166, 0.60);
-    display:flex;
-    flex-direction: column;
-    padding:56px;
-    gap: 20px;
+    padding: 40px;
+    gap: 18px;
 }
 
 .scientific-articles h4{
     color: #083344;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     margin:0px;
-    padding:0xp;
+    padding:0px;
 }
 
 .scientific-articles a{
     color: #083344;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.3;
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-underline-position: from-font;
     margin:0px;
-    padding:0xp;
+    padding:0px;
 }
 
 .scientific-articles p{
     color: #083344;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.5;
     margin:0px;
-    padding:0xp;
+    padding:0px;
 }
 
 .scientific-articles li{
     color: #083344;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.6;
     list-style-type: circle;
 }
-/*Phần thành tựu đã được chuyển lên science-tech-header*/
+
+/*Tiêu đề Khoa học - Công nghệ*/
+.science-tech-header {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    text-align: left;
+}
+
+.science-tech-header h4 {
+    color: var(--Cyan-950, #083344);
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    line-height: normal;
+    text-align: left;
+}
+
+.science-tech-header h3 {
+    color: var(--Cyan-950, #083344);
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.science-tech-header p {
+    color: #000;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+.science-tech-header a {
+    display: inline-flex;
+    width: auto;
+    min-width: 180px;
+    padding: 15px 26px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: linear-gradient(268deg, #00847C 0.87%, #001E1C 92.06%);
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+}
+
+.science-tech-header a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 132, 124, 0.3);
+}
 
 /*Doanh nghiệp đối tác*/
 .partner{
@@ -575,9 +643,23 @@
         width: 100%;
     }
     
-    .science-tech-header {
+    .remarkable-result{
         width: 90%;
-        gap: 15px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .science-tech-header {
+        width: 100%;
+        gap: 18px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .science-tech-header h4,
+    .science-tech-header h3,
+    .science-tech-header p {
+        text-align: center;
     }
     
     .science-tech-header h3 {
@@ -588,8 +670,8 @@
         font-size: 18px;
     }
     
-    .remarkable-result{
-        width: 90%;
+    .science-tech-header a {
+        align-self: center;
     }
     
     .scientific-articles{
@@ -748,10 +830,17 @@
         width: 90%;
     }
     
-    .science-tech-header {
+    .remarkable-result{
         width: 90%;
-        gap: 15px;
-        margin: 40px auto 30px;
+        flex-direction: column;
+        gap: 30px;
+        margin: 30px auto 50px;
+    }
+    
+    .science-tech-header {
+        width: 100%;
+        gap: 16px;
+        order: -1;
     }
     
     .science-tech-header h4 {
@@ -768,17 +857,12 @@
     
     .science-tech-header a {
         font-size: 18px;
-        padding: 16px;
-        width: 200px;
-    }
-    
-    .remarkable-result{
-        width: 90%;
-        margin: 25px auto 50px;
+        padding: 16px 24px;
     }
     
     .scientific-articles{
         width: 100%;
+        max-width: 300px;
         padding: 30px;
     }
     
@@ -935,9 +1019,13 @@
         margin: 80px auto 40px auto;
     }
     
+    .remarkable-result{
+        margin: 20px auto 40px;
+        gap: 25px;
+    }
+    
     .science-tech-header {
-        margin: 30px auto 25px;
-        gap: 12px;
+        gap: 14px;
     }
     
     .science-tech-header h4 {
@@ -955,15 +1043,11 @@
     
     .science-tech-header a {
         font-size: 16px;
-        padding: 14px;
-        width: 180px;
-    }
-    
-    .remarkable-result{
-        margin: 20px auto 40px;
+        padding: 14px 20px;
     }
     
     .scientific-articles{
+        max-width: 300px;
         padding: 25px;
         gap: 15px;
     }

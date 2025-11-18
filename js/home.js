@@ -99,23 +99,44 @@ window.onresize = function(event) {
     reloadSlider();
 };
 
-//Tab-slider
+//Tab-slider - Xử lý khi click vào các ngành đào tạo
 let navtabs = document.querySelectorAll('.tabs');
 navtabs.forEach(item => {
     item.addEventListener('click', function(event){
         if(event.target.classList.contains('tabs-nav-item')){
             let lastActive = item.querySelector('li.active');
             let newActive = event.target;
-            let bgActive = item.querySelector('.bg-active');
 
-            lastActive.classList.remove('active');
+            // Nếu click vào tab đã active, không làm gì
+            if (lastActive === newActive) {
+                return;
+            }
+
+            // Xóa active class khỏi tab cũ nếu có
+            if (lastActive) {
+                lastActive.classList.remove('active');
+            }
+            
+            // Thêm active class cho tab mới
             newActive.classList.add('active');
-            bgActive.style.left = newActive.offsetLeft + 'px';
 
+            // Xóa active class khỏi content cũ nếu có
             let lastContentActive = item.querySelector('.tabs-content-items.active');
+            if (lastContentActive) {
+                lastContentActive.classList.remove('active');
+            }
+            
+            // Hiển thị content mới
             let newContentActive = document.getElementById(newActive.dataset.target);
-            lastContentActive.classList.remove('active');
             newContentActive.classList.add('active');
+            
+            // Scroll xuống phần content với animation mượt
+            setTimeout(() => {
+                newContentActive.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest'
+                });
+            }, 100);
         }
     })
 })
