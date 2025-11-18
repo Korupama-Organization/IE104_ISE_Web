@@ -434,7 +434,7 @@ body.loaded {
 @media (max-width: 1440px) {
   .header, #header {
     width: 100%;
-    padding: 12px 32px; /* Reduce padding for smaller screens */
+    padding: 12px 32px;
   }
 
   .footer .class {
@@ -443,48 +443,60 @@ body.loaded {
   }
 }
 
-
 @media (max-width: 1024px) {
     .rHeader .navbar {
         flex-direction: column;
-        align-items: flex-start; /* Align items to the left */
+        align-items: flex-start;
         gap: 10px;
     }
 
     .header, #header {
         height: auto;
         padding: 20px;
+        gap: 30px;
     }
 
     .navigation {
         padding: 8px 0;
-        width: 100%; /* Make nav items take full width */
+        width: 100%;
     }
 
     .navigation .nav-name {
         padding: 12px 16px;
-        display: block; /* Make the link fill the container */
+        display: block;
+        font-size: 18px;
     }
 
     .dropdown-menu {
-        position: static; /* Un-do the absolute positioning */
-        display: none; /* Keep it hidden by default */
+        position: static;
+        display: none;
         background-color: transparent;
         line-height: normal;
-        padding: 0 0 0 20px; /* Indent dropdown items */
+        padding: 0 0 0 20px;
     }
 
     .navigation:hover .dropdown-menu {
-        display: block; /* Show on hover */
+        display: block;
     }
 
     .dropdown-item {
-        color: var(--Cyan-950, #083344); /* Change color to match parent */
-        font-size: 18px; /* Slightly smaller font */
+        color: var(--Cyan-950, #083344);
+        font-size: 16px;
+        padding: 8px 0;
     }
 
-     .dropdown-item:hover{
+    .dropdown-item:hover{
         color: var(--Cyan-600,#0891B2);
+    }
+    
+    .footer .class {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer .frame,
+    .footer .frame-4 {
+        max-width: 100%;
     }
 }
 
@@ -492,7 +504,18 @@ body.loaded {
     .header, #header {
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
+        padding: 16px;
+        min-height: auto;
+    }
+    
+    .header a[href="/ISE_Web/"] {
+        width: 150px !important;
+        height: 75px !important;
+    }
+    
+    .header a[href="/ISE_Web/"] img {
+        width: 150px !important;
+        height: 75px !important;
     }
 
     .rHeader {
@@ -500,20 +523,175 @@ body.loaded {
     }
 
     .rHeader .navbar {
-        align-items: center; /* Center items in column layout */
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .navigation {
+        padding: 6px 0;
+    }
+    
+    .navigation .nav-name {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+    
+    .dropdown-menu {
+        padding: 0 0 0 15px;
+    }
+    
+    .dropdown-item {
+        font-size: 14px;
+        padding: 6px 0;
     }
 
     .footer .class {
-      flex-direction: column;
-      gap: 32px;
-      padding: 32px;
+        flex-direction: column;
+        gap: 32px;
+        padding: 24px 16px;
     }
 
-    .footer .frame, .footer .frame-4, .footer .frame-9 {
+    .footer .frame,
+    .footer .frame-4,
+    .footer .frame-9 {
         width: 100%;
+        max-width: 100%;
     }
 
     .footer .p {
         width: 100%;
+        font-size: 18px;
+    }
+    
+    .footer .fit-uit-edu-vn {
+        font-size: 32px;
+    }
+    
+    .footer .element-khoa-khoa-h-c-v {
+        font-size: 18px;
+    }
+    
+    .footer .text-wrapper,
+    .footer .text-wrapper-2 {
+        font-size: 24px;
+    }
+    
+    .footer .text-wrapper-3 {
+        font-size: 20px;
+    }
+    
+    .footer .div-2 {
+        font-size: 18px;
+    }
+    
+    .footer .frame-9 {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, #header {
+        padding: 12px;
+        gap: 15px;
+    }
+    
+    .header a[href="/ISE_Web/"] {
+        width: 120px !important;
+        height: 60px !important;
+    }
+    
+    .header a[href="/ISE_Web/"] img {
+        width: 120px !important;
+        height: 60px !important;
+    }
+    
+    .navigation .nav-name {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    
+    .dropdown-item {
+        font-size: 13px;
+    }
+    
+    .footer .class {
+        padding: 20px 12px;
+        gap: 24px;
+    }
+    
+    .footer .fit-uit-edu-vn {
+        font-size: 28px;
+    }
+    
+    .footer .element-khoa-khoa-h-c-v {
+        font-size: 16px;
+    }
+    
+    .footer .text-wrapper,
+    .footer .text-wrapper-2 {
+        font-size: 20px;
+    }
+    
+    .footer .text-wrapper-3 {
+        font-size: 18px;
+    }
+    
+    .footer .p {
+        font-size: 16px;
+    }
+    
+    .footer .div-2 {
+        font-size: 16px;
+    }
+    
+    .footer .img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .footer .letter-c-circle {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header, #header {
+        padding: 10px;
+    }
+    
+    .header a[href="/ISE_Web/"] {
+        width: 100px !important;
+        height: 50px !important;
+    }
+    
+    .header a[href="/ISE_Web/"] img {
+        width: 100px !important;
+        height: 50px !important;
+    }
+    
+    .navigation .nav-name {
+        font-size: 13px;
+    }
+    
+    .footer .fit-uit-edu-vn {
+        font-size: 24px;
+    }
+    
+    .footer .element-khoa-khoa-h-c-v {
+        font-size: 14px;
+    }
+    
+    .footer .text-wrapper,
+    .footer .text-wrapper-2 {
+        font-size: 18px;
+    }
+    
+    .footer .p,
+    .footer .text-wrapper-3,
+    .footer .div-2 {
+        font-size: 14px;
     }
 }

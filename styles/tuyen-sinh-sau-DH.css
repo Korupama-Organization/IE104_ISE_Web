@@ -75,14 +75,42 @@ body {
             line-height: 32px
         }
 
-@media (max-width:768px) {
-    #hero .card h1 {
-        font-size: 36px;
-        line-height: 40px
+@media (max-width: 1200px) {
+    #hero .card {
+        width: 95%;
+        max-width: 95%;
     }
+}
 
+@media (max-width: 768px) {
+    #hero .card {
+        width: 95%;
+        height: auto;
+        min-height: 180px;
+        padding: 16px 20px;
+    }
+    #hero .card h1 {
+        font-size: 32px;
+        line-height: 36px
+    }
     #hero .card p {
         font-size: 18px;
+        line-height: 24px
+    }
+}
+
+@media (max-width: 480px) {
+    #hero .card {
+        min-height: 160px;
+        padding: 12px 16px;
+        border-radius: 12px;
+    }
+    #hero .card h1 {
+        font-size: 24px;
+        line-height: 28px
+    }
+    #hero .card p {
+        font-size: 16px;
         line-height: 20px
     }
 }
@@ -115,14 +143,38 @@ body {
         text-align: center
     }
 
-@media (max-width:1240px) {
+@media (max-width: 1240px) {
     #announcement .container {
         max-width: 100%;
         padding: 0 16px
     }
-
     #announcement .bar {
-        width: 100%
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #announcement .bar {
+        height: auto;
+        min-height: 70px;
+        padding: 12px 16px;
+        border-radius: 16px;
+    }
+    #announcement .bar p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #announcement .bar {
+        min-height: 60px;
+        padding: 10px 12px;
+    }
+    #announcement .bar p {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
@@ -198,24 +250,63 @@ body {
         font: 600 16px/24px Inter,sans-serif
     }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
     #admission-info .container.grid {
         grid-template-columns: 1fr;
         gap: 24px;
         justify-items: center;
-        text-align: center
+        text-align: center;
+        padding: 0 16px;
     }
-
+    #admission-info .media {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        aspect-ratio: 1;
+    }
     #admission-info .content .title {
-        height: 84px
+        height: auto;
+        min-height: 80px;
+        width: 100%;
+    }
+    #admission-info .content .card {
+        width: 100%;
     }
 }
 
-@media (max-width:480px) {
+@media (max-width: 768px) {
+    #admission-info .media {
+        max-width: 300px;
+    }
     #admission-info .content .title {
-        height: 72px;
+        min-height: 70px;
         font-size: 20px;
-        line-height: 24px
+        line-height: 24px;
+        border-radius: 20px;
+    }
+    #admission-info .content .card {
+        padding: 12px;
+        border-radius: 24px;
+    }
+    #admission-info .content .card p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #admission-info .media {
+        max-width: 250px;
+        border-radius: 20px;
+    }
+    #admission-info .content .title {
+        min-height: 60px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    #admission-info .content .card p {
+        font-size: 13px;
+        line-height: 18px;
     }
 }
 
@@ -292,29 +383,71 @@ body {
         box-shadow: 0 12px 32px rgba(0,0,0,.25)
     }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
     #training-info .container.grid {
         grid-template-columns: 1fr;
         gap: 24px;
-        justify-items: center
+        justify-items: center;
+        padding: 0 16px;
     }
-
+    #training-info .media {
+        order: 2;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+    #training-info .content .title {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+    }
     #training-info .content .card {
         width: 100%;
         height: auto;
-        padding: 20px
-    }
-
-    #training-info .media {
-        order: 2
+        min-height: 100px;
+        padding: 16px;
     }
 }
 
-@media (max-width:480px) {
+@media (max-width: 768px) {
+    #training-info .media {
+        max-width: 300px;
+    }
     #training-info .content .title {
-        height: 96px;
+        min-height: 90px;
         font-size: 20px;
-        line-height: 24px
+        line-height: 24px;
+        border-radius: 20px;
+    }
+    #training-info .content .card {
+        min-height: 90px;
+        padding: 14px;
+        border-radius: 24px;
+    }
+    #training-info .content .card p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #training-info .media {
+        max-width: 250px;
+        border-radius: 20px;
+    }
+    #training-info .content .title {
+        min-height: 80px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    #training-info .content .card {
+        min-height: 80px;
+        padding: 12px;
+    }
+    #training-info .content .card p {
+        font-size: 15px;
+        line-height: 22px;
     }
 }
 
@@ -404,34 +537,58 @@ body {
         border-bottom-right-radius: 20px
     }
 
-@media (max-width:900px) {
+@media (max-width: 1200px) {
+    #schedule .title {
+        width: 95%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 900px) {
     #schedule .title {
         width: 100%;
-        min-height: 64px;
+        height: auto;
+        min-height: 70px;
         padding: 12px 16px;
-        font-size: 20px
+        font-size: 20px;
+        border-radius: 20px;
     }
-
     #schedule .table-like {
         max-width: 100%;
         border-radius: 16px
     }
+    #schedule .table-like .row {
+        flex-direction: column;
+        min-height: auto;
+    }
+    #schedule .table-like .cell.label {
+        border-right: none;
+        border-bottom: 1px solid var(--c-border);
+        font-size: 18px;
+        line-height: 1.3;
+        padding: 14px
+    }
+    #schedule .table-like .cell.value {
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 14px
+    }
+}
 
-        #schedule .table-like .row {
-            flex-direction: column
-        }
-
-        #schedule .table-like .cell.label {
-            border-right: none;
-            border-bottom: 1px solid var(--c-border);
-            font-size: 16px;
-            padding: 14px
-        }
-
-        #schedule .table-like .cell.value {
-            font-size: 16px;
-            padding: 14px
-        }
+@media (max-width: 480px) {
+    #schedule .title {
+        min-height: 60px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    #schedule .table-like .cell.label {
+        font-size: 15px;
+        padding: 12px;
+    }
+    #schedule .table-like .cell.value {
+        font-size: 15px;
+        padding: 12px;
+    }
 }
 
 /* ========= IV. PHƯƠNG THỨC TUYỂN SINH ========= */
@@ -532,16 +689,71 @@ body {
         font-weight: 700
     }
 
-@media (max-width:992px) {
+@media (max-width: 1200px) {
+    #admission-methods .title {
+        width: 95%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    #admission-methods .container {
+        padding: 0 16px;
+    }
+    #admission-methods .title {
+        width: 100%;
+        height: auto;
+        min-height: 70px;
+        font-size: 20px;
+        line-height: 24px;
+        border-radius: 20px;
+    }
+    #admission-methods .actions .btn {
+        width: 100%;
+        max-width: 360px;
+    }
     #admission-methods .card {
         height: auto;
-        padding: 16px
+        padding: 16px;
+        border-radius: 24px;
     }
+    #admission-methods .card p {
+        font-size: 18px;
+        line-height: 26px;
+        padding: 12px 16px;
+    }
+}
 
-        #admission-methods .card p {
-            font-size: 18px;
-            line-height: 28px
-        }
+@media (max-width: 768px) {
+    #admission-methods .title {
+        min-height: 60px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    #admission-methods .actions {
+        gap: 16px;
+    }
+    #admission-methods .actions .btn {
+        font-size: 18px;
+        height: 52px;
+    }
+    #admission-methods .card p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #admission-methods .actions .btn {
+        font-size: 16px;
+        height: 48px;
+        padding: 8px;
+    }
+    #admission-methods .card p {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 10px 12px;
+    }
 }
 
 /* ========= V. LỆ PHÍ THI ========= */
@@ -592,16 +804,91 @@ body {
         margin: 0
     }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
     #fees .container.grid {
         grid-template-columns: 1fr;
-        gap: 28px
+        gap: 24px;
+        padding: 0 16px;
     }
-
+    #fees .title {
+        width: 100%;
+        height: auto;
+        min-height: 80px;
+    }
     #fees .card {
         width: 100%;
         height: auto;
-        padding: 20px
+        min-height: 300px;
+        padding: 20px;
+    }
+    #tuition .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 16px;
+    }
+    #tuition .title {
+        width: 100%;
+    }
+    #tuition table {
+        font-size: 14px;
+    }
+    #tuition thead th,
+    #tuition tbody td {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #fees .title {
+        min-height: 70px;
+        font-size: 20px;
+        line-height: 24px;
+        border-radius: 20px;
+    }
+    #fees .card {
+        min-height: 250px;
+        padding: 16px;
+        border-radius: 24px;
+    }
+    #fees .card p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #tuition .title {
+        min-height: 70px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    #tuition table {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    #fees .title {
+        min-height: 60px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    #fees .card {
+        min-height: 200px;
+        padding: 14px;
+    }
+    #fees .card p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #tuition .title {
+        min-height: 60px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    #tuition table {
+        font-size: 12px;
+    }
+    #tuition thead th,
+    #tuition tbody td {
+        padding: 8px 10px;
     }
 }
 
@@ -733,26 +1020,62 @@ body {
         text-decoration: underline
     }
 
-@media (max-width:992px) {
-    #contact-info .title {
-        height: 76px;
-        font-size: 20px
+@media (max-width: 992px) {
+    #contact-info .container {
+        padding: 0 16px;
     }
-
+    #contact-info .title {
+        height: auto;
+        min-height: 70px;
+        font-size: 20px;
+        line-height: 24px;
+    }
     #contact-info .card {
         font-size: 18px;
-        line-height: 26px
+        line-height: 26px;
+        padding: 12px 20px;
     }
 }
 
-@media (max-width:640px) {
+@media (max-width: 768px) {
+    #contact-info .title {
+        min-height: 60px;
+        font-size: 18px;
+        line-height: 22px;
+        border-radius: 20px;
+    }
+    #contact-info .card {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #contact-info .card h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 640px) {
     #contact-info .title {
         border-radius: 20px
     }
-
     #contact-info .card {
         width: 100%;
         border-radius: 16px;
         padding: 12px 16px
+    }
+}
+
+@media (max-width: 480px) {
+    #contact-info .title {
+        min-height: 56px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #contact-info .card {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 10px 14px;
+    }
+    #contact-info .card h3 {
+        font-size: 16px;
     }
 }

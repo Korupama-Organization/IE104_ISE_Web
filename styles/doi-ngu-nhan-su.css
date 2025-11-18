@@ -313,3 +313,150 @@ body {
 .hidden {
     display: none !important;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .page-title-section {
+        max-width: 95%;
+        height: 280px;
+        margin: 2rem auto 1.5rem auto;
+    }
+    
+    .title-container {
+        padding: 2.5rem 2rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .sub-title {
+        font-size: 1.2rem;
+    }
+    
+    .staff-grid-section {
+        max-width: 95%;
+        padding: 2.5rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .page-title-section {
+        height: 240px;
+        margin: 1.5rem auto 1rem auto;
+    }
+    
+    .title-container {
+        padding: 2rem 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .main-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+    
+    .sub-title {
+        font-size: 1rem;
+    }
+    
+    .tabs-wrapper {
+        padding: 0.75rem;
+        width: 100%;
+    }
+    
+    .tabs-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    .tab-button {
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+    
+    .staff-grid-section {
+        padding: 2rem;
+    }
+    
+    .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .staff-card {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .staff-image-container {
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .staff-name {
+        font-size: 1rem;
+    }
+    
+    .staff-position {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title-section {
+        height: 200px;
+    }
+    
+    .title-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+    }
+    
+    .sub-title {
+        font-size: 0.9375rem;
+    }
+    
+    .tabs-wrapper {
+        padding: 0.5rem;
+    }
+    
+    .tab-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+    }
+    
+    .staff-grid-section {
+        padding: 1.5rem;
+    }
+    
+    .staff-card {
+        padding: 1rem;
+    }
+    
+    .staff-image-container {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    
+    .staff-name {
+        font-size: 0.9375rem;
+    }
+    
+    .staff-position {
+        font-size: 0.75rem;
+    }
+}

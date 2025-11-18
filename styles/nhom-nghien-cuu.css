@@ -92,27 +92,118 @@ body {
     margin-bottom: 10px;
 }
 
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        padding: 18px;
+    }
+    
+    .page-title h1 {
+        font-size: 32px;
+    }
+    
+    .research-directions h2, 
+    .lecturers h2 {
+        font-size: 26px;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
+        max-width: 100%;
         padding: 15px;
+    }
+    
+    .page-title {
+        margin-bottom: 20px;
     }
     
     .page-title h1 {
         font-size: 28px;
     }
     
+    .page-content .main-image {
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
     .research-directions h2, 
     .lecturers h2 {
         font-size: 24px;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+    
+    .research-directions ul {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+    
+    .lecturers .lecturer {
+        margin-bottom: 20px;
     }
     
     .lecturers h3 {
         font-size: 20px;
+        margin-bottom: 8px;
+    }
+    
+    .lecturers h4 {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 8px;
     }
     
     .lecturers p, 
     .lecturers ul,
     .research-directions ul {
         font-size: 16px;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+    
+    .page-title h1 {
+        font-size: 24px;
+    }
+    
+    .page-content .main-image {
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+    
+    .research-directions h2, 
+    .lecturers h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+    }
+    
+    .research-directions ul {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+    
+    .lecturers .lecturer {
+        margin-bottom: 15px;
+    }
+    
+    .lecturers h3 {
+        font-size: 18px;
+    }
+    
+    .lecturers h4 {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    
+    .lecturers p, 
+    .lecturers ul {
+        font-size: 14px;
+        margin-left: 12px;
     }
 }

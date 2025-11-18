@@ -217,13 +217,87 @@ body{
 @media (max-width: 1260px) {
     .table-wrap {
         width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .table {
-        width: 1207px;
+        width: 1200px;
     }
-    /* giữ độ rộng chuẩn, phần bọc sẽ cuộn */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+    
+    .banner {
+        height: 240px;
+        border-radius: 24px;
+    }
+    
+    .banner__img,
+    .banner__overlay {
+        height: 240px;
+    }
+    
+    .banner__subtitle {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .banner__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
     .table-wrap {
-        overflow: auto;
+        margin: 20px auto 32px;
+    }
+    
+    .table thead th {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+    
+    .table td {
+        font-size: 14px;
+        padding: 14px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+    
+    .banner {
+        height: 200px;
+        border-radius: 20px;
+    }
+    
+    .banner__img,
+    .banner__overlay {
+        height: 200px;
+    }
+    
+    .banner__subtitle {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .banner__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    .table thead th {
+        font-size: 12px;
+        padding: 8px 6px;
+    }
+    
+    .table td {
+        font-size: 12px;
+        padding: 12px 10px;
     }
 }

@@ -301,14 +301,63 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
 }
 
 /* Responsive điều chỉnh cỡ chữ & ảnh */
+@media (max-width: 1024px) {
+    .profile-container {
+        max-width: 90%;
+        padding: 1.5rem 1rem;
+    }
+    
+    .profile-card-inner {
+        gap: 1.5rem;
+    }
+    
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .prev-btn {
+        left: -60px;
+    }
+    
+    .next-btn {
+        right: -60px;
+    }
+}
+
 @media (max-width: 768px) {
+    .profile-container {
+        max-width: 95%;
+        padding: 1.25rem 0.75rem;
+    }
+    
     .profile-image {
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 192px;
+    }
+    
+    .profile-card-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    
+    .profile-info h1,
+    .profile-info p {
+        text-align: center;
     }
 
     .profile-name {
         font-size: 1.5rem;
+    }
+    
+    .profile-title {
+        font-size: 1rem;
+    }
+    
+    .profile-faculty,
+    .profile-university {
+        font-size: 0.9375rem;
     }
 
     .profile-container,
@@ -316,18 +365,155 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, div {
     .profile-bio,
     .research-fields,
     .publications {
-        padding: 1.25rem;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+    }
+    
+    .profile-bio h2,
+    .research-fields h2,
+    .publications h2 {
+        font-size: 1.25rem;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .research-item {
+        padding: 1rem 0.875rem;
+        min-height: 160px;
+    }
+    
+    .research-item h3 {
+        font-size: 0.9375rem;
+    }
+    
+    .research-item p {
+        font-size: 0.875rem;
+    }
+    
+    .prev-btn,
+    .next-btn {
+        width: 40px;
+        height: 40px;
+        display: none; /* Ẩn nút trên mobile */
+    }
+    
+    .publication-item {
+        padding: 0.875rem 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .publication-item h3 {
+        font-size: 1rem;
+    }
+    
+    .publication-item p {
+        font-size: 0.75rem;
+    }
+    
+    .return-left-button {
+        left: 10px;
+    }
+    
+    .return-left-button img {
+        width: 32px;
+        height: 32px;
     }
 }
 
 @media (max-width: 480px) {
+    .profile-container {
+        padding: 1rem 0.5rem;
+        gap: 1.5rem;
+    }
+    
+    .profile-image {
+        width: 140px;
+        height: 168px;
+    }
+
     .profile-name {
         font-size: 1.25rem;
+    }
+    
+    .profile-title {
+        font-size: 0.9375rem;
+    }
+    
+    .profile-faculty,
+    .profile-university {
+        font-size: 0.875rem;
     }
 
     .contact-email,
     .contact-phone {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
+    }
+    
+    .contact-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .profile-intro,
+    .profile-bio,
+    .research-fields,
+    .publications {
+        padding: 1.25rem;
+    }
+    
+    .profile-bio h2,
+    .research-fields h2,
+    .publications h2 {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .profile-bio p {
+        font-size: 0.875rem;
+    }
+    
+    .research-item {
+        padding: 0.875rem 0.75rem;
+        min-height: 140px;
+    }
+    
+    .research-item h3 {
+        font-size: 0.875rem;
+    }
+    
+    .research-item p {
+        font-size: 0.8125rem;
+    }
+    
+    .research-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .publication-item {
+        padding: 0.75rem 0.875rem;
+        border-left-width: 4px;
+    }
+    
+    .publication-item h3 {
+        font-size: 0.9375rem;
+    }
+    
+    .publication-item p {
+        font-size: 0.6875rem;
+    }
+    
+    .return-left-button {
+        left: 5px;
+        top: 45%;
+    }
+    
+    .return-left-button img {
+        width: 28px;
+        height: 28px;
     }
 }
 /* Điều chỉnh layout cho phần nút và các ô lĩnh vực */

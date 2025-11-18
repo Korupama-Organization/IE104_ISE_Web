@@ -129,3 +129,73 @@
     color: #003366;
     font-weight: 600;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+        padding: 15px;
+    }
+    
+    .year-toggle {
+        font-size: 1.25rem;
+        padding: 12px 15px;
+    }
+    
+    .year-toggle::after {
+        font-size: 1.5rem;
+        right: 15px;
+    }
+    
+    .publications-list {
+        padding: 0;
+    }
+    
+    .publications-list.show {
+        padding: 15px;
+    }
+    
+    .publications-list li {
+        font-size: 0.9rem;
+        padding-left: 30px;
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 1rem auto;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+    
+    .year-toggle {
+        font-size: 1.125rem;
+        padding: 10px 12px;
+    }
+    
+    .year-toggle::after {
+        font-size: 1.25rem;
+        right: 12px;
+    }
+    
+    .publications-list.show {
+        padding: 12px;
+    }
+    
+    .publications-list li {
+        font-size: 0.85rem;
+        padding-left: 25px;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+}

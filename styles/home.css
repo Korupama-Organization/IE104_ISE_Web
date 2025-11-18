@@ -561,35 +561,536 @@
 }
 
 /*Cài đặt reponsive*/
+
+/* Tablet - 1024px */
+@media screen and (max-width: 1024px){
+    .slider{
+        width: 100%;
+        height: 500px;
+    }
+    
+    .slider-content{
+        left: 10%;
+        top: 20%;
+        gap: 30px;
+    }
+    
+    .slider-content h3{
+        width: 90%;
+        font-size: 14px;
+    }
+    
+    .slider-content h2{
+        width: 90%;
+        font-size: 48px;
+    }
+    
+    .slider-content p{
+        width: 90%;
+        font-size: 16px;
+    }
+    
+    .welcome{
+        width: 90%;
+        gap: 30px;
+    }
+    
+    .welcome-img img{
+        width: 480px;
+        height: 400px;
+    }
+    
+    .welcome-content{
+        width: 100%;
+    }
+    
+    .welcome-number{
+        width: 100%;
+        gap: 60px;
+    }
+    
+    .field-introduction{
+        width: 90%;
+    }
+    
+    .field{
+        width: 100%;
+    }
+    
+    .tabs-nav{
+        width: 100%;
+    }
+    
+    .tabs-nav-item{
+        width: 90%;
+    }
+    
+    .tabs-content{
+        width: 100%;
+    }
+    
+    .tabs-content-items{
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .tab-con-item-list{
+        width: 100%;
+    }
+    
+    .remarkable-result{
+        width: 90%;
+        gap: 60px;
+    }
+    
+    .scientific-articles{
+        width: 100%;
+        padding: 40px;
+    }
+    
+    .result{
+        width: 100%;
+    }
+    
+    .partner{
+        width: 90%;
+    }
+    
+    .intro{
+        width: 100%;
+    }
+}
+
+/* Tablet nhỏ - 768px */
 @media screen and (max-width: 768px){
     .slider{
         height: 400px;
     }
+    
+    .slider-content{
+        left: 5%;
+        top: 15%;
+        gap: 20px;
+        width: 90%;
+    }
+    
+    .slider-content h3{
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    .slider-content h2{
+        width: 100%;
+        font-size: 36px;
+    }
+    
+    .slider-content p{
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .slider .buttons{
+        left: 2%;
+        width: 96%;
+    }
+    
+    .slider .buttons button{
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
     .welcome{
         flex-direction: column;
+        width: 90%;
+        gap: 20px;
     }
+    
+    .welcome-img img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .welcome-content{
+        width: 100%;
+    }
+    
     .welcome-content h3{
         font-size: 24px;
     }
+    
     .welcome-content p{
         font-size: 16px;
     }
+    
+    .welcome-number{
+        width: 100%;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .field-introduction{
+        width: 90%;
+    }
+    
     .intro-content{
-        width: 760px;
-        gap:4px;
+        width: 100%;
+        gap: 10px;
+        flex-wrap: wrap;
     }
+    
     .intro-content hr{
-        width: 60px;
+        width: 80px;
+        flex-grow: 1;
     }
+    
     .intro-content h3{
-        font-size: 24px;
-        margin:0px;
-        padding:0px;
+        font-size: 22px;
+        margin: 0px;
+        padding: 0px;
+        white-space: nowrap;
     }
+    
+    .field{
+        width: 100%;
+    }
+    
     .tabs {
         flex-direction: column;
+        gap: 20px;
     }
+    
+    .tabs-nav{
+        width: 100%;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .tabs-nav-item{
+        width: 100%;
+        height: auto;
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+    
+    .tabs-content{
+        width: 100%;
+        height: auto;
+    }
+    
+    .tabs-content-items{
+        width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+    
+    .tab-con-item-list{
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .tab-con-item-list li{
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .tabs-content-items a{
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .specific{
+        width: 90%;
+    }
+    
     .remarkable-result{
         flex-direction: column;
+        width: 90%;
+        gap: 40px;
+    }
+    
+    .scientific-articles{
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .scientific-articles h4{
+        font-size: 18px;
+    }
+    
+    .scientific-articles a{
+        font-size: 20px;
+    }
+    
+    .scientific-articles p{
+        font-size: 18px;
+    }
+    
+    .scientific-articles li{
+        font-size: 18px;
+    }
+    
+    .result{
+        width: 100%;
+    }
+    
+    .result h4{
+        font-size: 20px;
+    }
+    
+    .result h3{
+        font-size: 24px;
+    }
+    
+    .result p{
+        font-size: 18px;
+    }
+    
+    .result a{
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .partner{
+        width: 90%;
+    }
+    
+    .intro{
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .intro h3{
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .intro hr{
+        width: 100%;
+    }
+}
+
+/* Mobile - 480px */
+@media screen and (max-width: 480px){
+    .slider{
+        height: 300px;
+        margin: 10px auto;
+    }
+    
+    .slider-content{
+        left: 5%;
+        top: 10%;
+        gap: 15px;
+        width: 90%;
+    }
+    
+    .slider-content h3{
+        font-size: 10px;
+    }
+    
+    .slider-content h2{
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    
+    .slider-content p{
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    
+    .slider .buttons button{
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .slider .dots li{
+        width: 8px;
+        height: 8px;
+        margin: 5px;
+    }
+    
+    .slider .dots li.active{
+        width: 20px;
+    }
+    
+    .welcome{
+        margin-top: 30px;
+        gap: 15px;
+    }
+    
+    .welcome-content p{
+        font-size: 14px;
+    }
+    
+    .welcome-content h3{
+        font-size: 20px;
+    }
+    
+    .welcome-number{
+        gap: 20px;
+    }
+    
+    .welcome-number h3{
+        font-size: 28px;
+    }
+    
+    .welcome-number p{
+        font-size: 14px;
+    }
+    
+    .field-introduction{
+        margin: 40px auto;
+    }
+    
+    .intro-content h3{
+        font-size: 18px;
+    }
+    
+    .intro-content hr{
+        width: 40px;
+    }
+    
+    .tabs-nav-item{
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    .tabs-content-items{
+        padding: 20px;
+    }
+    
+    .tabs-content-items h4{
+        font-size: 18px;
+    }
+    
+    .tabs-content-items p{
+        font-size: 16px;
+    }
+    
+    .tab-con-item-list{
+        gap: 15px;
+    }
+    
+    .tab-con-item-list li{
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .tabs-content-items a{
+        font-size: 16px;
+        padding: 15px 18px;
+        width: auto;
+    }
+    
+    .specific{
+        margin: 80px auto 40px auto;
+    }
+    
+    .remarkable-result{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 30px;
+    }
+    
+    .scientific-articles{
+        padding: 25px;
+        gap: 15px;
+    }
+    
+    .scientific-articles h4{
+        font-size: 16px;
+    }
+    
+    .scientific-articles a{
+        font-size: 18px;
+    }
+    
+    .scientific-articles p,
+    .scientific-articles li{
+        font-size: 16px;
+    }
+    
+    .result{
+        gap: 20px;
+    }
+    
+    .result h4{
+        font-size: 18px;
+    }
+    
+    .result h3{
+        font-size: 20px;
+    }
+    
+    .result p{
+        font-size: 16px;
+    }
+    
+    .result a{
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .partner{
+        margin: 40px auto;
+    }
+    
+    .intro h3{
+        font-size: 20px;
+    }
+    
+    .auto-slider{
+        height: calc(var(--height) * 0.8);
+    }
+}
+
+/* Mobile nhỏ - 320px */
+@media screen and (max-width: 320px){
+    .slider{
+        height: 250px;
+    }
+    
+    .slider-content h2{
+        font-size: 20px;
+    }
+    
+    .slider-content p{
+        font-size: 11px;
+    }
+    
+    .slider .buttons button{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .welcome-content h3{
+        font-size: 18px;
+    }
+    
+    .welcome-content p{
+        font-size: 13px;
+    }
+    
+    .intro-content h3{
+        font-size: 16px;
+    }
+    
+    .tabs-nav-item{
+        font-size: 14px;
+    }
+    
+    .tabs-content-items h4,
+    .scientific-articles a{
+        font-size: 16px;
+    }
+    
+    .result h3{
+        font-size: 18px;
+    }
+    
+    .intro h3{
+        font-size: 18px;
     }
 }
