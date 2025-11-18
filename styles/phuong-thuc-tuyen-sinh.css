@@ -119,11 +119,137 @@ a {
     backdrop-filter: blur(4px);
 }
 
-@media (max-width:768px) {
-    .section-head h3 {
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .banner {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 20/9;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .banner {
+        height: auto;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        border-radius: 24px;
+    }
+    
+    .hero {
+        padding: 40px 0 20px;
+    }
+    
+    .hero-card {
+        padding: 32px 20px;
+        min-height: 220px;
+    }
+    
+    .title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .subtitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    .section {
+        padding: 20px 0 40px;
+    }
+    
+    .section-head {
+        height: 50px;
+        border-radius: 10px;
+        padding: 0 12px;
+    }
+    
+    .section-head h2 {
+        font-size: 20px;
+    }
+    
+    .section-banner {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    
+    .method-nav {
+        gap: 10px;
+        margin: 12px 0;
+    }
+    
+    .method-link {
+        padding: 12px 16px;
         font-size: 16px;
+        border-radius: 10px;
+    }
+    
+    .method .panel-inner {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+    
+    .certs.table {
+        max-width: 100%;
+        margin: 12px auto;
+    }
+    
+    .certs.table .label {
+        height: 80px;
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .certs.table .value {
+        height: 44px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-card {
+        padding: 24px 16px;
+    }
+    
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    .section-head h2 {
+        font-size: 18px;
+    }
+    
+    .method-link {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+    
+    .method .panel-inner {
+        padding: 20px 16px;
+    }
+    
+    .certs.table .label {
+        height: 70px;
+        font-size: 13px;
+    }
+    
+    .certs.table .value {
         height: 40px;
-        padding: 8px 16px;
+        font-size: 13px;
     }
 }
 /* ===== Accordion ===== */

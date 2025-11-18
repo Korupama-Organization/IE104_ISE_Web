@@ -497,22 +497,341 @@ body > #footer-container {
     .container {
         width: 100%;
         max-width: 1440px;
+        padding: 30px 20px;
     }
 }
 
 @media (max-width: 1024px) {
+    .hero-section {
+        width: 95%;
+        padding: 24px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    
+    .hero-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    .tab-container {
+        width: 90%;
+        height: auto;
+        padding: 6px;
+    }
+    
+    .tab {
+        font-size: 16px;
+    }
+    
     .content-wrapper {
         flex-direction: column;
+        padding: 0 10px;
+        gap: 24px;
     }
+    
     .program-cards {
-        position: static; /* Unset sticky position on mobile */
+        position: static;
         width: 100%;
-        flex: 0 0 auto; /* Reset flex property */
-        box-sizing: border-box; /* Ensure padding is included */
+        flex: 0 0 auto;
+        box-sizing: border-box;
     }
+    
     .main-content {
         width: 100%;
         box-sizing: border-box;
+    }
+    
+    .banner-image {
+        height: 280px;
+    }
+    
+    .banner-title {
+        font-size: 28px;
+        line-height: 32px;
+        width: 90%;
+        left: 20px;
+        top: 100px;
+    }
+    
+    .content-section {
+        padding: 24px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+    
+    .section-content {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+    }
+    
+    .hero-section {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 100%;
+    }
+    
+    .tab-container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        padding: 8px;
+    }
+    
+    .tab {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .content-wrapper {
+        padding: 0 5px;
+        gap: 20px;
+    }
+    
+    .program-cards {
+        padding: 16px;
+    }
+    
+    .program-title {
+        font-size: 18px;
+    }
+    
+    .program-card {
+        padding: 12px;
+    }
+    
+    .program-name {
+        font-size: 15px;
+    }
+    
+    .program-info {
+        font-size: 13px;
+    }
+    
+    .banner-image {
+        height: 240px;
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .banner-overlay {
+        width: 100%;
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .banner-title {
+        font-size: 24px;
+        line-height: 28px;
+        width: calc(100% - 40px);
+        left: 20px;
+        top: 80px;
+    }
+    
+    .content-section {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 24px;
+    }
+    
+    .section-content {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    .main-content ul,
+    .main-content ol {
+        font-size: 16px;
+        line-height: 26px;
+        margin: 0 0 20px 16px;
+    }
+    
+    .job-item {
+        padding: 12px 20px;
+    }
+    
+    .job-item p,
+    .job-item a {
+        font-size: 15px;
+    }
+    
+    .curriculum-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .program-table {
+        min-width: 600px;
+    }
+    
+    .program-table thead th {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+    
+    .program-table tbody td {
+        font-size: 13px;
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    .tab-container {
+        width: 95%;
+        padding: 6px;
+    }
+    
+    .tab {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .program-cards {
+        padding: 12px;
+    }
+    
+    .program-title {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .program-card {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .program-name {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .program-info {
+        font-size: 12px;
+    }
+    
+    .banner-image {
+        height: 200px;
+    }
+    
+    .banner-title {
+        font-size: 20px;
+        line-height: 24px;
+        top: 70px;
+    }
+    
+    .content-section {
+        padding: 16px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .section-content {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .main-content ul,
+    .main-content ol {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 0 16px 12px;
+        padding-left: 16px;
+    }
+    
+    .job-item {
+        padding: 10px 16px;
+        margin-bottom: 10px;
+    }
+    
+    .job-item p,
+    .job-item a {
+        font-size: 14px;
+    }
+    
+    .program-table {
+        min-width: 500px;
+    }
+    
+    .program-table thead th {
+        font-size: 12px;
+        padding: 10px 6px;
+    }
+    
+    .program-table tbody td {
+        font-size: 12px;
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 20px;
+    }
+    
+    .hero-description {
+        font-size: 13px;
+    }
+    
+    .tab {
+        font-size: 13px;
+    }
+    
+    .banner-title {
+        font-size: 18px;
+    }
+    
+    .section-title {
+        font-size: 16px;
+    }
+    
+    .section-content,
+    .main-content ul,
+    .main-content ol {
+        font-size: 13px;
     }
 }
 
