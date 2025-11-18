@@ -604,6 +604,10 @@ body > #footer-container {
         font-size: 16px;
     }
     
+    .tab.active {
+        transform: none;
+    }
+    
     .content-wrapper {
         padding: 0 5px;
         gap: 20px;
@@ -636,6 +640,7 @@ body > #footer-container {
     
     .banner-overlay {
         width: 100%;
+        height: 240px;
         border-radius: 16px 16px 0 0;
     }
     
@@ -748,6 +753,10 @@ body > #footer-container {
     }
     
     .banner-image {
+        height: 200px;
+    }
+    
+    .banner-overlay {
         height: 200px;
     }
     
