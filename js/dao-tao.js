@@ -33,8 +33,14 @@ function applyResponsiveAdjustments() {
     document.querySelectorAll('.tab').forEach(tab => {
         if (isMobile) {
             tab.style.transform = 'none';
+            if (tab.classList.contains('active')) {
+                tab.style.boxShadow = 'none';
+            } else {
+                tab.style.removeProperty('box-shadow');
+            }
         } else {
             tab.style.removeProperty('transform');
+            tab.style.removeProperty('box-shadow');
         }
     });
 }
