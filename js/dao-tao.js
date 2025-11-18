@@ -5,6 +5,40 @@
 let currentProgram = 'cntt-bachelor';
 let currentTab = 'bachelor';
 
+function applyResponsiveAdjustments() {
+    const viewportWidth = window.innerWidth;
+
+    let overlayHeight = 326;
+    if (viewportWidth <= 480) {
+        overlayHeight = 200;
+    } else if (viewportWidth <= 768) {
+        overlayHeight = 240;
+    } else if (viewportWidth <= 1024) {
+        overlayHeight = 280;
+    }
+
+    const isMobile = viewportWidth <= 768;
+
+    document.querySelectorAll('.banner-overlay').forEach(overlay => {
+        overlay.style.height = `${overlayHeight}px`;
+        if (isMobile) {
+            overlay.style.width = '100%';
+            overlay.style.borderRadius = '16px 16px 0 0';
+        } else {
+            overlay.style.width = '464px';
+            overlay.style.borderRadius = '16px 0 0 0';
+        }
+    });
+
+    document.querySelectorAll('.tab').forEach(tab => {
+        if (isMobile) {
+            tab.style.transform = 'none';
+        } else {
+            tab.style.removeProperty('transform');
+        }
+    });
+}
+
 // Dữ liệu chương trình cho tất cả các cấp
 const programData = {
     // Bachelor programs
@@ -143,6 +177,8 @@ function switchTab(tabType) {
             selectProgram('cntt-phd');
             break;
     }
+
+    applyResponsiveAdjustments();
 }
 
 // ===== CHỨC NĂNG CHỌN CHƯƠNG TRÌNH =====
@@ -195,6 +231,8 @@ function selectProgram(programType) {
     }
     
     console.log(`Selected program: ${programType} in ${currentTab} tab`);
+
+    applyResponsiveAdjustments();
 }
 
 // ===== HÀM TIỆN ÍCH =====
@@ -210,10 +248,7 @@ function smoothScroll(target) {
 }
 
 // Xử lý phản hồi (responsive)
-window.addEventListener('resize', function() {
-    // Add responsive handling if needed
-    console.log('Window resized');
-});
+window.addEventListener('resize', applyResponsiveAdjustments);
 
 // ===== KHỞI TẠO =====
 
@@ -258,6 +293,7 @@ function initializePage() {
             // Các elements đã sẵn sàng, chuyển tab
             switchTab(initialTab);
             selectProgram(initialProgram);
+            applyResponsiveAdjustments();
             console.log('Page initialized successfully with tab:', initialTab, 'program:', initialProgram);
         } else {
             // Chưa sẵn sàng, thử lại sau 100ms
